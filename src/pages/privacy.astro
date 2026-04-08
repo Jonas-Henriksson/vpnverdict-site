@@ -1,0 +1,46 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Privacy Policy" description="VPNVerdict privacy policy. How we collect, use, and protect your data.">
+  <div class="container">
+    <div class="legal-page">
+      <h1>Privacy Policy</h1>
+      <p class="updated">Last updated: April 2026</p>
+
+      <section>
+        <h2>Information We Collect</h2>
+        <p>VPNVerdict is a static website. We do not require account creation, and we do not collect personal information directly. When you visit our site, standard web server logs may record your IP address, browser type, and pages visited.</p>
+      </section>
+
+      <section>
+        <h2>Cookies and Tracking</h2>
+        <p>We may use cookies for basic site functionality and analytics. Third-party services (such as Cloudflare for hosting) may set their own cookies. We do not use tracking cookies for advertising purposes.</p>
+      </section>
+
+      <section>
+        <h2>Affiliate Links</h2>
+        <p>Our site contains affiliate links to VPN providers. When you click these links, the VPN provider may collect information according to their own privacy policy. We encourage you to review the privacy policies of any service you sign up for through our links.</p>
+      </section>
+
+      <section>
+        <h2>Data Sharing</h2>
+        <p>We do not sell, trade, or transfer your personal information to third parties. We may share anonymized, aggregate data for analytics purposes.</p>
+      </section>
+
+      <section>
+        <h2>Contact</h2>
+        <p>Questions about this policy? Email us at <a href="mailto:info@vpnverdict.net">info@vpnverdict.net</a>.</p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .legal-page { max-width: 700px; margin: 0 auto; padding: 3rem 0; }
+  .legal-page h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
+  .updated { color: #6b7280; font-size: 0.9rem; margin-bottom: 2rem; }
+  .legal-page section { margin-bottom: 2rem; }
+  .legal-page h2 { font-size: 1.3rem; margin-bottom: 0.75rem; color: #10b981; }
+  .legal-page p { color: #d1d8e0; line-height: 1.8; }
+</style>
