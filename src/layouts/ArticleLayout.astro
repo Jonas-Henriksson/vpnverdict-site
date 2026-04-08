@@ -1,5 +1,6 @@
 ---
 import BaseLayout from './BaseLayout.astro';
+import NewsletterSignup from '../components/NewsletterSignup.astro';
 
 interface Props {
   title: string;
@@ -131,6 +132,8 @@ const structuredData = {
                 </div>
               </div>
             )}
+
+            <NewsletterSignup variant="sidebar" />
 
             <div class="info-box">
               <h4>About This Article</h4>
