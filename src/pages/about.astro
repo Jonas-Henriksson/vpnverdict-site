@@ -1,0 +1,83 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="About VPNVerdict" description="Learn about VPNVerdict's mission, testing methodology, and editorial standards.">
+  <div class="container">
+    <div class="about-page">
+      <h1>About VPNVerdict</h1>
+
+      <section>
+        <h2>Our Mission</h2>
+        <p>VPNVerdict exists to help you make informed decisions about VPN services. We provide independent, unbiased reviews and comparisons based on real-world testing and analysis.</p>
+      </section>
+
+      <section>
+        <h2>How We Test</h2>
+        <p>Every VPN we review goes through a comprehensive testing process:</p>
+        <ul>
+          <li><strong>Speed tests</strong> across multiple server locations at different times of day</li>
+          <li><strong>Security audits</strong> including DNS leak tests, WebRTC leak checks, and kill switch verification</li>
+          <li><strong>Streaming tests</strong> with Netflix, Disney+, BBC iPlayer, and other major platforms</li>
+          <li><strong>Usability evaluation</strong> across Windows, Mac, iOS, Android, and Linux</li>
+          <li><strong>Privacy policy analysis</strong> reviewing logging practices, jurisdiction, and audit history</li>
+          <li><strong>Value assessment</strong> comparing features, pricing, and simultaneous connection limits</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Editorial Independence</h2>
+        <p>Our reviews are based on objective testing, not affiliate relationships. While we earn commissions when you purchase through our links, this never influences our ratings or recommendations. We recommend VPNs we'd use ourselves.</p>
+      </section>
+
+      <section>
+        <h2>Contact Us</h2>
+        <p>Have questions, feedback, or a VPN you'd like us to review? Reach out at <a href="mailto:info@vpnverdict.net">info@vpnverdict.net</a>.</p>
+      </section>
+    </div>
+  </div>
+</BaseLayout>
+
+<style>
+  .about-page {
+    max-width: 700px;
+    margin: 0 auto;
+    padding: 3rem 0;
+  }
+
+  .about-page h1 {
+    font-size: 2.5rem;
+    margin-bottom: 2rem;
+  }
+
+  .about-page section {
+    margin-bottom: 2.5rem;
+  }
+
+  .about-page h2 {
+    font-size: 1.5rem;
+    margin-bottom: 1rem;
+    color: #10b981;
+  }
+
+  .about-page p {
+    color: #d1d8e0;
+    line-height: 1.8;
+    margin-bottom: 1rem;
+  }
+
+  .about-page ul {
+    margin-left: 1.5rem;
+    margin-bottom: 1rem;
+  }
+
+  .about-page li {
+    color: #d1d8e0;
+    line-height: 1.8;
+    margin-bottom: 0.5rem;
+  }
+
+  .about-page strong {
+    color: #ffffff;
+  }
+</style>
