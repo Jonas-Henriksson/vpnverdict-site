@@ -11,6 +11,7 @@ interface Props {
   updated?: Date;
   vpnRatings?: Record<string, any>;
   affiliateLinks?: Array<{ vpn: string; url: string }>;
+  faqPairs?: Array<{ question: string; answer: string }>;
 }
 
 const {
@@ -22,6 +23,7 @@ const {
   updated,
   vpnRatings = {},
   affiliateLinks = [],
+  faqPairs = [],
 } = Astro.props;
 
 const formatDate = (d: Date) => {
@@ -43,19 +45,30 @@ const categoryColors: Record<string, string> = {
 
 const categoryColor = categoryColors[category] || '#10b981';
 
-const structuredData = {
-  '@context': 'https://schema.org',
-  '@type': 'Article',
-  'headline': title,
-  'description': description,
-  'image': 'https://vpnverdict.net/og-image.png',
-  'datePublished': date.toISOString(),
-  'dateModified': updated?.toISOString() || date.toISOString(),
-  'author': {
-    '@type': 'Organization',
-    'name': 'VPNVerdict',
+const structuredData: Record<string, any>[] = [
+  {
+    '@context': 'https://schema.org',
+    '@type': 'Article',
+    headline: title,
+    description,
+    image: 'https://vpnverdict.net/og-image.png',
+    datePublished: date.toISOString(),
+    dateModified: updated?.toISOString() || date.toISOString(),
+    author: { '@type': 'Organization', name: 'VPNVerdict' },
   },
-};
+];
+
+if (faqPairs.length > 0) {
+  structuredData.push({
+    '@context': 'https://schema.org',
+    '@type': 'FAQPage',
+    mainEntity: faqPairs.map((faq) => ({
+      '@type': 'Question',
+      name: faq.question,
+      acceptedAnswer: { '@type': 'Answer', text: faq.answer },
+    })),
+  });
+}
 ---
 
 <BaseLayout

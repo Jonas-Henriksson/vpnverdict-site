@@ -12,6 +12,23 @@ export async function getStaticPaths() {
 
 const { article } = Astro.props;
 const { Content } = await article.render();
+
+// Extract FAQ pairs from raw markdown for schema
+const faqPairs: Array<{ question: string; answer: string }> = [];
+const rawBody = article.body || '';
+const faqMatch = rawBody.match(/##\s*FAQ[\s\S]*$/im);
+if (faqMatch) {
+  const faqSection = faqMatch[0];
+  const qaParts = faqSection.split(/###\s+/).slice(1);
+  for (const part of qaParts) {
+    const lines = part.trim().split('\n');
+    const question = lines[0].replace(/\??\s*$/, '?').trim();
+    const answer = lines.slice(1).join(' ').trim();
+    if (question && answer) {
+      faqPairs.push({ question, answer });
+    }
+  }
+}
 ---
 
 <ArticleLayout
@@ -23,6 +40,7 @@ const { Content } = await article.render();
   updated={article.data.updated}
   vpnRatings={article.data.vpnRatings || {}}
   affiliateLinks={article.data.affiliateLinks || []}
+  faqPairs={faqPairs}
 >
   <Content />
 </ArticleLayout>
