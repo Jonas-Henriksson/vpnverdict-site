@@ -1,0 +1,16 @@
+{
+  "name": "vpnverdict",
+  "version": "1.0.0",
+  "description": "VPNVerdict - Professional VPN Reviews and Comparisons",
+  "type": "module",
+  "scripts": {
+    "dev": "astro dev",
+    "build": "astro build",
+    "preview": "astro preview"
+  },
+  "dependencies": {
+    "astro": "^4.0.0",
+    "@astrojs/mdx": "^2.0.0"
+  },
+  "devDependencies": {}
+}

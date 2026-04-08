@@ -1,0 +1,353 @@
+---
+import { siteConfig } from '../site.config';
+
+interface Props {
+  title: string;
+  description?: string;
+  ogImage?: string;
+  canonical?: string;
+  structuredData?: Record<string, any>;
+}
+
+const {
+  title,
+  description = siteConfig.description,
+  ogImage = siteConfig.og.image,
+  canonical,
+  structuredData
+} = Astro.props;
+
+const fullTitle = `${title} | ${siteConfig.name}`;
+const canonicalUrl = canonical || `${siteConfig.url}${Astro.url.pathname}`;
+---
+
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content={description} />
+  <meta name="keywords" content={siteConfig.keywords} />
+  <meta name="author" content={siteConfig.author} />
+
+  <!-- Impact Verification -->
+  <meta name="impact-site-verification" value="0702cea6-0336-4910-b67c-a7671741e912" />
+
+  <!-- Open Graph -->
+  <meta property="og:title" content={fullTitle} />
+  <meta property="og:description" content={description} />
+  <meta property="og:image" content={ogImage} />
+  <meta property="og:type" content={siteConfig.og.type} />
+  <meta property="og:url" content={canonicalUrl} />
+
+  <!-- Twitter Card -->
+  <meta name="twitter:card" content="summary_large_image" />
+  <meta name="twitter:title" content={fullTitle} />
+  <meta name="twitter:description" content={description} />
+  <meta name="twitter:image" content={ogImage} />
+
+  <!-- Canonical -->
+  <link rel="canonical" href={canonicalUrl} />
+
+  <!-- JSON-LD Schema -->
+  {structuredData && (
+    <script type="application/ld+json" set:html={JSON.stringify(structuredData)} />
+  )}
+
+  <!-- Fonts -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet" />
+
+  <title>{fullTitle}</title>
+
+  <style is:global>
+    * {
+      margin: 0;
+      padding: 0;
+      box-sizing: border-box;
+    }
+
+    html {
+      font-family: 'Inter', sans-serif;
+      scroll-behavior: smooth;
+    }
+
+    body {
+      background-color: #0f1419;
+      color: #e4e9f0;
+      line-height: 1.6;
+    }
+
+    h1 {
+      font-size: 2.5rem;
+      font-weight: 700;
+      margin-bottom: 1rem;
+      color: #ffffff;
+      line-height: 1.2;
+    }
+
+    h2 {
+      font-size: 2rem;
+      font-weight: 700;
+      margin-top: 2rem;
+      margin-bottom: 1rem;
+      color: #ffffff;
+    }
+
+    h3 {
+      font-size: 1.5rem;
+      font-weight: 600;
+      margin-top: 1.5rem;
+      margin-bottom: 0.75rem;
+      color: #ffffff;
+    }
+
+    h4, h5, h6 {
+      font-weight: 600;
+      margin-top: 1rem;
+      margin-bottom: 0.5rem;
+      color: #ffffff;
+    }
+
+    p {
+      margin-bottom: 1rem;
+      font-size: 1rem;
+      color: #d1d8e0;
+    }
+
+    a {
+      color: #10b981;
+      text-decoration: none;
+      transition: color 0.3s ease;
+    }
+
+    a:hover {
+      color: #059669;
+    }
+
+    button {
+      font-family: inherit;
+    }
+
+    ul, ol {
+      margin-left: 2rem;
+      margin-bottom: 1rem;
+    }
+
+    li {
+      margin-bottom: 0.5rem;
+    }
+
+    code {
+      background-color: #1a1f2b;
+      color: #10b981;
+      padding: 0.2rem 0.5rem;
+      border-radius: 0.25rem;
+      font-family: 'Monaco', monospace;
+      font-size: 0.9em;
+    }
+
+    pre {
+      background-color: #1a1f2b;
+      padding: 1.5rem;
+      border-radius: 0.5rem;
+      overflow-x: auto;
+      margin-bottom: 1rem;
+      border-left: 4px solid #10b981;
+    }
+
+    blockquote {
+      border-left: 4px solid #10b981;
+      padding-left: 1.5rem;
+      margin-left: 0;
+      margin-bottom: 1rem;
+      color: #a8b3bf;
+      font-style: italic;
+    }
+
+    .container {
+      max-width: 1200px;
+      margin: 0 auto;
+      padding: 0 1.5rem;
+    }
+
+    nav {
+      background-color: #0a0e13;
+      border-bottom: 1px solid #1a1f2b;
+      position: sticky;
+      top: 0;
+      z-index: 100;
+    }
+
+    nav .container {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      height: 70px;
+    }
+
+    .nav-logo {
+      font-size: 1.5rem;
+      font-weight: 700;
+      background: linear-gradient(135deg, #10b981 0%, #06b6d4 100%);
+      -webkit-background-clip: text;
+      -webkit-text-fill-color: transparent;
+      background-clip: text;
+    }
+
+    .nav-links {
+      display: flex;
+      gap: 2rem;
+      list-style: none;
+    }
+
+    .nav-links a {
+      color: #d1d8e0;
+      font-weight: 500;
+      transition: color 0.3s ease;
+    }
+
+    .nav-links a:hover {
+      color: #10b981;
+    }
+
+    .nav-links a.active {
+      color: #10b981;
+      border-bottom: 2px solid #10b981;
+      padding-bottom: 0.5rem;
+    }
+
+    footer {
+      background-color: #0a0e13;
+      border-top: 1px solid #1a1f2b;
+      margin-top: 4rem;
+      padding: 3rem 0;
+    }
+
+    footer .container {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+      gap: 2rem;
+      margin-bottom: 2rem;
+    }
+
+    footer h4 {
+      font-size: 1rem;
+      margin-bottom: 1rem;
+    }
+
+    footer a {
+      display: block;
+      margin-bottom: 0.5rem;
+      color: #a8b3bf;
+    }
+
+    footer a:hover {
+      color: #10b981;
+    }
+
+    .footer-bottom {
+      border-top: 1px solid #1a1f2b;
+      padding-top: 2rem;
+      text-align: center;
+      color: #6b7280;
+      font-size: 0.9rem;
+    }
+
+    .affiliate-disclosure {
+      background-color: #1a1f2b;
+      border-left: 4px solid #10b981;
+      padding: 1rem;
+      margin-bottom: 2rem;
+      border-radius: 0.25rem;
+      font-size: 0.9rem;
+      color: #a8b3bf;
+    }
+
+    main {
+      min-height: calc(100vh - 70px);
+      padding: 2rem 0;
+    }
+
+    @media (max-width: 768px) {
+      h1 {
+        font-size: 1.875rem;
+      }
+
+      h2 {
+        font-size: 1.5rem;
+      }
+
+      h3 {
+        font-size: 1.25rem;
+      }
+
+      .nav-links {
+        gap: 1rem;
+        font-size: 0.9rem;
+      }
+
+      footer .container {
+        grid-template-columns: 1fr;
+      }
+    }
+  </style>
+</head>
+<body>
+  <nav>
+    <div class="container">
+      <a href="/" class="nav-logo">{siteConfig.logo}</a>
+      <ul class="nav-links">
+        {siteConfig.nav.map((item) => (
+          <li>
+            <a href={item.href}>{item.label}</a>
+          </li>
+        ))}
+      </ul>
+    </div>
+  </nav>
+
+  <main>
+    <slot />
+  </main>
+
+  <footer>
+    <div class="container">
+      <div>
+        <h4>About VPNVerdict</h4>
+        <p>We provide independent, unbiased VPN reviews and comparisons to help you find the perfect VPN service for your needs.</p>
+      </div>
+      <div>
+        <h4>Quick Links</h4>
+        <a href="/">Home</a>
+        <a href="/reviews">Reviews</a>
+        <a href="/comparisons">Comparisons</a>
+        <a href="/guides">Guides</a>
+      </div>
+      <div>
+        <h4>Follow Us</h4>
+        <a href={siteConfig.social.twitter}>Twitter</a>
+        <a href={siteConfig.social.facebook}>Facebook</a>
+        <a href={siteConfig.social.linkedin}>LinkedIn</a>
+      </div>
+      <div>
+        <h4>Legal</h4>
+        <a href="/privacy">Privacy Policy</a>
+        <a href="/terms">Terms of Service</a>
+        <a href="/disclosure">Affiliate Disclosure</a>
+      </div>
+    </div>
+
+    <div class="container">
+      <div class="affiliate-disclosure">
+        <strong>Affiliate Disclosure:</strong> VPNVerdict is a participant in affiliate programs with NordVPN, ExpressVPN, Surfshark, CyberGhost, and ProtonVPN. When you click on these links and make a purchase, we earn a commission. We only recommend VPNs we've personally tested and believe are the best in their category. Our reviews are based on objective testing, not our affiliate relationships.
+      </div>
+    </div>
+
+    <div class="footer-bottom">
+      <p>&copy; {new Date().getFullYear()} {siteConfig.name}. All rights reserved. | {siteConfig.email}</p>
+    </div>
+  </footer>
+</body>
+</html>

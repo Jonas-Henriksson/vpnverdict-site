@@ -1,0 +1,30 @@
+export const siteConfig = {
+  name: 'VPNVerdict',
+  description: 'Comprehensive VPN reviews, comparisons, and guides. Find the best VPN for your needs with in-depth analysis and expert recommendations.',
+  url: 'https://vpnverdict.net',
+  logo: 'VPNVerdict',
+  author: 'VPNVerdict Team',
+  email: 'info@vpnverdict.net',
+  social: {
+    twitter: 'https://twitter.com/vpnverdict',
+    facebook: 'https://facebook.com/vpnverdict',
+    linkedin: 'https://linkedin.com/company/vpnverdict',
+  },
+  nav: [
+    { label: 'Home', href: '/' },
+    { label: 'Reviews', href: '/reviews' },
+    { label: 'Comparisons', href: '/comparisons' },
+    { label: 'Guides', href: '/guides' },
+    { label: 'About', href: '/about' },
+  ],
+  affiliatePrograms: {
+    nordvpn: { name: 'NordVPN', affiliateUrl: 'https://vpnverdict.net/go/nordvpn', program: 'Impact', commission: '30-50% commission', cookie: 30 },
+    expressvpn: { name: 'ExpressVPN', affiliateUrl: 'https://vpnverdict.net/go/expressvpn', program: 'Impact', commission: 'Up to 45%', cookie: 30 },
+    surfshark: { name: 'Surfshark', affiliateUrl: 'https://vpnverdict.net/go/surfshark', program: 'Impact', commission: 'Up to 40%', cookie: 30 },
+    cyberghost: { name: 'CyberGhost', affiliateUrl: 'https://vpnverdict.net/go/cyberghost', program: 'Impact', commission: 'Up to 30%', cookie: 30 },
+    protonvpn: { name: 'ProtonVPN', affiliateUrl: 'https://vpnverdict.net/go/protonvpn', program: 'Impact', commission: 'Up to 25%', cookie: 30 },
+  },
+  impactVerification: '0702cea6-0336-4910-b67c-a7671741e912',
+  keywords: 'VPN reviews, VPN comparison, best VPN, VPN service, privacy VPN, fast VPN, VPN for streaming',
+  og: { image: 'https://vpnverdict.net/og-image.png', type: 'website' },
+};
