@@ -1,108 +1,83 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import ArticleCard from '../components/ArticleCard.astro';
 import { getCollection } from 'astro:content';
 
 const articles = await getCollection('articles');
 const guides = articles
   .filter((a) => {
     const t = a.data.title.toLowerCase();
-    return t.includes('guide') || t.includes('how to') || t.includes('explained') || t.includes('what is') || t.includes('free vs') || t.includes('worth it');
+    return t.includes('guide') || t.includes('how to') || t.includes('explained') || t.includes('what is') || t.includes('free vs') || t.includes('worth it') || t.includes('myth');
   })
-  .sort((a, b) => new Date(b.data.date).getTime() - new Date(a.data.date).getTime());
-
-const categoryColors: Record<string, string> = {
-  privacy: '#10b981',
-  streaming: '#06b6d4',
-  speed: '#f59e0b',
-  security: '#ef4444',
-  business: '#8b5cf6',
-  gaming: '#ec4899',
-};
+  .sort((a, b) => {
+    const scoreA = a.data.score || 0;
+    const scoreB = b.data.score || 0;
+    if (scoreB !== scoreA) return scoreB - scoreA;
+    return new Date(b.data.date).getTime() - new Date(a.data.date).getTime();
+  });
 ---
 
 <BaseLayout title="VPN Guides" description="VPN guides and tutorials. Learn about VPN protocols, security features, setup guides, and more.">
-  <div class="container">
-    <div class="page-header">
-      <h1>VPN Guides</h1>
-      <p>Everything you need to know about VPNs, from beginner basics to advanced setup</p>
-    </div>
+  <article class="page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Guides</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-label">Guides</span>
+      <h1>VPN knowledge,<br/><em>demystified.</em></h1>
+      <div class="header-rule"></div>
+    </header>
 
     <div class="articles-grid">
-      {guides.map((article) => {
-        const date = new Intl.DateTimeFormat('en-US', { year: 'numeric', month: 'short', day: 'numeric' }).format(article.data.date);
-        const color = categoryColors[article.data.category] || '#10b981';
-        return (
-          <article class="article-card">
-            <div class="article-card-header">
-              <span class="article-date">{date}</span>
-              <span class="article-category" style={`background-color: ${color}20; color: ${color}`}>{article.data.category}</span>
-            </div>
-            <h3><a href={`/${article.slug}`}>{article.data.title}</a></h3>
-            <p>{article.data.description}</p>
-            <a href={`/${article.slug}`} class="article-link">Read Guide</a>
-          </article>
-        );
-      })}
+      {guides.map((article, i) => (
+        <ArticleCard
+          title={article.data.title}
+          description={article.data.description}
+          date={article.data.date}
+          author={article.data.author}
+          category={article.data.category}
+          slug={article.slug}
+          score={article.data.score}
+          badge={article.data.badge}
+        />
+      ))}
     </div>
 
     {guides.length === 0 && (
       <p class="empty-state">No guides yet. Check back soon!</p>
     )}
-  </div>
+  </article>
 </BaseLayout>
 
 <style>
-  .page-header {
-    text-align: center;
-    padding: 3rem 0;
-    border-bottom: 1px solid #1a1f2b;
-    margin-bottom: 3rem;
-  }
+  .page { max-width: var(--max-width-wide); margin: 0 auto; }
 
-  .page-header h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-  .page-header p { color: #a8b3bf; font-size: 1.1rem; }
+  .breadcrumb {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.8rem; color: var(--ink-400); margin-bottom: var(--space-xl);
+  }
+  .breadcrumb a { color: var(--ink-500); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--ink-950); }
+  .sep { color: var(--ink-300); }
+  .current { color: var(--ink-400); }
+
+  .page-header { margin-bottom: var(--space-2xl); animation: fadeInUp var(--duration-slow) var(--ease-out) both; }
+  .page-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-400); }
+  .page-header h1 { margin-top: var(--space-sm); margin-bottom: var(--space-md); }
+  .page-header h1 em { font-style: italic; color: var(--ink-500); }
+  .header-rule { height: 2px; width: 48px; background: var(--ink-950); }
 
   .articles-grid {
     display: grid;
-    grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
-    gap: 2rem;
-    padding-bottom: 3rem;
+    grid-template-columns: repeat(auto-fill, minmax(340px, 1fr));
+    gap: var(--space-lg);
+    padding-bottom: var(--space-3xl);
   }
 
-  .article-card {
-    background-color: #1a1f2b;
-    border: 1px solid #2d3748;
-    border-radius: 0.5rem;
-    padding: 1.5rem;
-    transition: all 0.3s ease;
-  }
+  .empty-state { text-align: center; color: var(--ink-400); padding: var(--space-4xl) 0; }
 
-  .article-card:hover {
-    border-color: #10b981;
-    box-shadow: 0 8px 16px rgba(16, 185, 129, 0.15);
-  }
-
-  .article-card-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    margin-bottom: 1rem;
-  }
-
-  .article-date { color: #a8b3bf; font-size: 0.85rem; }
-
-  .article-category {
-    padding: 0.25rem 0.75rem;
-    border-radius: 0.25rem;
-    font-size: 0.75rem;
-    font-weight: 600;
-    text-transform: uppercase;
-  }
-
-  .article-card h3 { margin-top: 0; margin-bottom: 0.75rem; font-size: 1.15rem; }
-  .article-card h3 a { color: #ffffff; }
-  .article-card h3 a:hover { color: #10b981; }
-  .article-card p { color: #d1d8e0; margin-bottom: 1rem; font-size: 0.95rem; line-height: 1.6; }
-  .article-link { color: #10b981; font-weight: 600; font-size: 0.9rem; }
-  .empty-state { text-align: center; color: #a8b3bf; padding: 4rem 0; }
+  @media (max-width: 768px) { .articles-grid { grid-template-columns: 1fr; } }
 </style>

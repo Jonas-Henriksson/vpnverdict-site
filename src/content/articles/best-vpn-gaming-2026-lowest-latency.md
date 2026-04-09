@@ -6,6 +6,10 @@ category: gaming
 author: VPNVerdict Team
 keywords: ["best VPN for gaming", "gaming VPN", "low latency VPN", "VPN gaming performance", "fastest VPN for games"]
 featured: false
+score: 8.7
+badge: tested
+verdict: "ExpressVPN leads gaming VPN performance with just 12ms average latency increase. NordVPN's Meshnet is a standout feature for LAN gaming."
+winner: ExpressVPN
 affiliateLinks:
   - vpn: NordVPN
     url: https://vpnverdict.net/go/nordvpn

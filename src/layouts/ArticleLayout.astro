@@ -1,17 +1,24 @@
 ---
 import BaseLayout from './BaseLayout.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
+import VerdictBanner from '../components/VerdictBanner.astro';
+import { siteConfig } from '../site.config';
 
-interface Props {
+export interface Props {
   title: string;
   description: string;
   date: Date;
-  category: string;
+  category?: string;
   author?: string;
   updated?: Date;
   vpnRatings?: Record<string, any>;
   affiliateLinks?: Array<{ vpn: string; url: string }>;
   faqPairs?: Array<{ question: string; answer: string }>;
+  score?: number;
+  badge?: string;
+  verdict?: string;
+  winner?: string;
+  headings?: any[];
 }
 
 const {
@@ -24,26 +31,22 @@ const {
   vpnRatings = {},
   affiliateLinks = [],
   faqPairs = [],
+  score,
+  badge,
+  verdict,
+  winner,
+  headings = [],
 } = Astro.props;
 
-const formatDate = (d: Date) => {
-  return new Intl.DateTimeFormat('en-US', {
-    year: 'numeric',
-    month: 'long',
-    day: 'numeric',
-  }).format(d);
-};
+const publishedDate = new Date(date);
+const formattedDate = publishedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
 
-const categoryColors: Record<string, string> = {
-  privacy: '#10b981',
-  streaming: '#06b6d4',
-  speed: '#f59e0b',
-  security: '#ef4444',
-  business: '#8b5cf6',
-  gaming: '#ec4899',
+const badgeLabels: Record<string, string> = {
+  'editors-pick': "Editor's Pick",
+  'best-value': 'Best Value',
+  'top-rated': 'Top Rated',
+  'tested': 'Tested',
 };
-
-const categoryColor = categoryColors[category] || '#10b981';
 
 const structuredData: Record<string, any>[] = [
   {
@@ -52,8 +55,8 @@ const structuredData: Record<string, any>[] = [
     headline: title,
     description,
     image: 'https://vpnverdict.net/og-image.png',
-    datePublished: date.toISOString(),
-    dateModified: updated?.toISOString() || date.toISOString(),
+    datePublished: publishedDate.toISOString(),
+    dateModified: updated?.toISOString() || publishedDate.toISOString(),
     author: { '@type': 'Organization', name: 'VPNVerdict' },
   },
 ];
@@ -76,322 +79,275 @@ if (faqPairs.length > 0) {
   description={description}
   structuredData={structuredData}
 >
-  <article class="article-container">
-    <div class="article-header">
-      <div class="container">
-        <div class="breadcrumb">
-          <a href="/">Home</a>
-          <span>/</span>
-          <a href="/">Reviews</a>
-          <span>/</span>
-          <span>{title}</span>
+  <article class="article">
+    <!-- Breadcrumb -->
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="breadcrumb-sep">/</span>
+      {category && (
+        <>
+          <span>{category.charAt(0).toUpperCase() + category.slice(1)}</span>
+          <span class="breadcrumb-sep">/</span>
+        </>
+      )}
+      <span class="breadcrumb-current">Review</span>
+    </nav>
+
+    <!-- Article Header -->
+    <header class="article-header">
+      <div class="header-top-row">
+        <div class="header-labels">
+          {category && <span class="article-category">{category.charAt(0).toUpperCase() + category.slice(1)}</span>}
+          {badge && (
+            <span class:list={['header-badge', `header-badge--${badge}`]}>
+              {badge === 'editors-pick' && <svg width="10" height="10" viewBox="0 0 10 10" fill="none"><path d="M5 0l1.5 3.1L10 3.6 7.5 6l.6 3.5L5 7.8 1.9 9.5l.6-3.5L0 3.6l3.5-.5L5 0z" fill="currentColor"/></svg>}
+              {badgeLabels[badge] || badge}
+            </span>
+          )}
         </div>
-
-        <h1>{title}</h1>
-        <p class="article-meta">
-          By {author} | {formatDate(date)}
-          {updated && <span> | Updated {formatDate(updated)}</span>}
-        </p>
-
-        <div class="category-badge" style={`background-color: ${categoryColor}20; border-left: 4px solid ${categoryColor}`}>
-          <span class="category-label" style={`color: ${categoryColor}`}>
-            {category.charAt(0).toUpperCase() + category.slice(1)}
-          </span>
-        </div>
-      </div>
-    </div>
-
-    <div class="article-content">
-      <div class="container">
-        <div class="content-wrapper">
-          <div class="main-content">
-            <slot />
+        {score && (
+          <div class="header-score">
+            <span class="header-score-value">{score.toFixed(1)}</span>
+            <span class="header-score-max">/10</span>
           </div>
-
-          <aside class="sidebar">
-            {affiliateLinks.length > 0 && (
-              <div class="affiliate-box">
-                <h3>Quick Links</h3>
-                <div class="affiliate-buttons">
-                  {affiliateLinks.map((link) => (
-                    <a href={link.url} class="cta-button" target="_blank" rel="noopener noreferrer">
-                      Visit {link.vpn}
-                    </a>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            {Object.keys(vpnRatings).length > 0 && (
-              <div class="vpn-ratings-box">
-                <h3>VPN Ratings</h3>
-                <div class="ratings-list">
-                  {Object.entries(vpnRatings).map(([vpnKey, vpn]: [string, any]) => (
-                    <div class="rating-item">
-                      <div class="rating-header">
-                        <h4>{vpn.name}</h4>
-                        <div class="stars">
-                          {'★'.repeat(Math.floor(vpn.rating))}{vpn.rating % 1 !== 0 ? '½' : ''}
-                        </div>
-                      </div>
-                      <p class="rating-value">{vpn.rating}/5</p>
-                      {vpn.affiliateLink && (
-                        <a href={vpn.affiliateLink} class="rating-link" target="_blank" rel="noopener noreferrer">
-                          View Details →
-                        </a>
-                      )}
-                    </div>
-                  ))}
-                </div>
-              </div>
-            )}
-
-            <NewsletterSignup variant="sidebar" />
-
-            <div class="info-box">
-              <h4>About This Article</h4>
-              <p>VPNVerdict reviews are based on rigorous testing, hands-on experience, and comprehensive analysis of VPN services. Our recommendations are independent and not influenced by affiliate relationships.</p>
-            </div>
-          </aside>
+        )}
+      </div>
+      <h1>{title}</h1>
+      <p class="article-lede">{description}</p>
+      <div class="article-meta">
+        <div class="meta-left">
+          <span class="meta-author">{author}</span>
+          <span class="meta-sep">&middot;</span>
+          <time datetime={publishedDate.toISOString()}>{formattedDate}</time>
         </div>
       </div>
+      <div class="header-rule"></div>
+    </header>
+
+    <!-- Verdict Banner -->
+    <VerdictBanner score={score} verdict={verdict} winner={winner} badge={badge} />
+
+    <!-- Content -->
+    <div class="article-content">
+      <slot />
     </div>
+
+    <!-- Newsletter -->
+    <NewsletterSignup variant="inline" />
+
+    <!-- Disclosure -->
+    <aside class="disclosure-box">
+      <div class="disclosure-icon">
+        <svg width="20" height="20" viewBox="0 0 20 20" fill="none">
+          <path d="M10 18a8 8 0 100-16 8 8 0 000 16zM10 6v4m0 4h.01" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/>
+        </svg>
+      </div>
+      <div class="disclosure-content">
+        <h4>Affiliate Disclosure</h4>
+        <p>{siteConfig.siteName} earns commissions from affiliate links. This supports our independent testing at no cost to you. <a href="/disclosure">Full methodology &rarr;</a></p>
+      </div>
+    </aside>
   </article>
-
-  <style is:global>
-    .article-container {
-      background-color: #0f1419;
-    }
-
-    .article-header {
-      background: linear-gradient(135deg, #0f1419 0%, #1a1f2b 100%);
-      border-bottom: 1px solid #1a1f2b;
-      padding: 3rem 0;
-      margin-bottom: 3rem;
-    }
-
-    .breadcrumb {
-      display: flex;
-      align-items: center;
-      gap: 0.5rem;
-      margin-bottom: 1.5rem;
-      font-size: 0.9rem;
-      color: #a8b3bf;
-    }
-
-    .breadcrumb a {
-      color: #10b981;
-    }
-
-    .article-header h1 {
-      margin-bottom: 1rem;
-      max-width: 900px;
-    }
-
-    .article-meta {
-      color: #a8b3bf;
-      font-size: 0.95rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .category-badge {
-      display: inline-block;
-      padding: 0.5rem 1rem;
-      border-radius: 0.25rem;
-      margin-bottom: 1rem;
-    }
-
-    .category-label {
-      font-weight: 600;
-      font-size: 0.85rem;
-      text-transform: uppercase;
-      letter-spacing: 0.5px;
-    }
-
-    .article-content {
-      padding: 0;
-    }
-
-    .content-wrapper {
-      display: grid;
-      grid-template-columns: 1fr 300px;
-      gap: 3rem;
-    }
-
-    .main-content {
-      line-height: 1.8;
-      font-size: 1.05rem;
-    }
-
-    .main-content p {
-      margin-bottom: 1.5rem;
-      color: #d1d8e0;
-    }
-
-    .main-content table {
-      width: 100%;
-      border-collapse: collapse;
-      margin: 2rem 0;
-      background-color: #1a1f2b;
-      border-radius: 0.5rem;
-      overflow: hidden;
-    }
-
-    .main-content th {
-      background-color: #0f1419;
-      color: #ffffff;
-      padding: 1rem;
-      text-align: left;
-      font-weight: 600;
-      border-bottom: 2px solid #10b981;
-    }
-
-    .main-content td {
-      padding: 1rem;
-      border-bottom: 1px solid #2d3748;
-    }
-
-    .main-content tr:last-child td {
-      border-bottom: none;
-    }
-
-    .main-content strong {
-      color: #ffffff;
-      font-weight: 600;
-    }
-
-    .main-content em {
-      color: #10b981;
-      font-style: italic;
-    }
-
-    .sidebar {
-      position: sticky;
-      top: 90px;
-      height: fit-content;
-    }
-
-    .affiliate-box,
-    .vpn-ratings-box,
-    .info-box {
-      background-color: #1a1f2b;
-      border: 1px solid #2d3748;
-      border-radius: 0.5rem;
-      padding: 1.5rem;
-      margin-bottom: 1.5rem;
-    }
-
-    .affiliate-box h3,
-    .vpn-ratings-box h3 {
-      font-size: 1.1rem;
-      margin-bottom: 1rem;
-      color: #ffffff;
-    }
-
-    .affiliate-buttons {
-      display: flex;
-      flex-direction: column;
-      gap: 0.75rem;
-    }
-
-    .cta-button {
-      display: block;
-      background: linear-gradient(135deg, #10b981 0%, #059669 100%);
-      color: #ffffff;
-      padding: 0.75rem 1rem;
-      border-radius: 0.375rem;
-      text-align: center;
-      font-weight: 600;
-      transition: all 0.3s ease;
-      font-size: 0.9rem;
-    }
-
-    .cta-button:hover {
-      background: linear-gradient(135deg, #059669 0%, #047857 100%);
-      transform: translateY(-2px);
-      box-shadow: 0 4px 12px rgba(16, 185, 129, 0.3);
-    }
-
-    .ratings-list {
-      display: flex;
-      flex-direction: column;
-      gap: 1rem;
-    }
-
-    .rating-item {
-      padding-bottom: 1rem;
-      border-bottom: 1px solid #2d3748;
-    }
-
-    .rating-item:last-child {
-      border-bottom: none;
-      padding-bottom: 0;
-    }
-
-    .rating-header {
-      display: flex;
-      justify-content: space-between;
-      align-items: center;
-      margin-bottom: 0.5rem;
-    }
-
-    .rating-header h4 {
-      font-size: 0.95rem;
-      margin: 0;
-      color: #ffffff;
-    }
-
-    .stars {
-      color: #f59e0b;
-      font-size: 0.9rem;
-    }
-
-    .rating-value {
-      font-size: 0.9rem;
-      color: #10b981;
-      margin-bottom: 0.5rem;
-      font-weight: 600;
-    }
-
-    .rating-link {
-      font-size: 0.85rem;
-      color: #10b981;
-    }
-
-    .info-box h4 {
-      margin-top: 0;
-      margin-bottom: 0.75rem;
-    }
-
-    .info-box p {
-      font-size: 0.9rem;
-      margin-bottom: 0;
-      color: #a8b3bf;
-    }
-
-    @media (max-width: 768px) {
-      .article-header {
-        padding: 2rem 0;
-        margin-bottom: 2rem;
-      }
-
-      .content-wrapper {
-        grid-template-columns: 1fr;
-        gap: 2rem;
-      }
-
-      .sidebar {
-        position: static;
-      }
-
-      .main-content table {
-        font-size: 0.9rem;
-      }
-
-      .main-content th,
-      .main-content td {
-        padding: 0.75rem;
-      }
-    }
-  </style>
 </BaseLayout>
+
+<style>
+  .article {
+    max-width: var(--max-width);
+    margin: 0 auto;
+  }
+
+  /* ── Breadcrumb ──────────────────────────────────── */
+  .breadcrumb {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    font-size: 0.8rem;
+    color: var(--ink-400);
+    margin-bottom: var(--space-xl);
+  }
+
+  .breadcrumb a { color: var(--ink-500); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--ink-950); }
+  .breadcrumb-sep { color: var(--ink-300); }
+  .breadcrumb-current { color: var(--ink-400); }
+
+  /* ── Article Header ──────────────────────────────── */
+  .article-header {
+    margin-bottom: var(--space-xl);
+    animation: fadeInUp var(--duration-slow) var(--ease-out) both;
+  }
+
+  .header-top-row {
+    display: flex;
+    align-items: flex-start;
+    justify-content: space-between;
+    gap: var(--space-md);
+    margin-bottom: var(--space-md);
+  }
+
+  .header-labels { display: flex; align-items: center; gap: 0.5rem; flex-wrap: wrap; }
+
+  .article-category {
+    font-size: 0.7rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--electric);
+  }
+
+  .header-badge {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.25rem;
+    font-size: 0.625rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.06em;
+    padding: 0.2rem 0.5rem;
+    border-radius: 3px;
+  }
+
+  .header-badge--editors-pick { background: var(--amber-light); color: var(--amber); }
+  .header-badge--top-rated { background: var(--electric-light); color: var(--electric); }
+  .header-badge--best-value { background: var(--emerald-light); color: var(--emerald); }
+  .header-badge--tested { background: var(--ink-50); color: var(--ink-500); }
+
+  .header-score { display: flex; align-items: baseline; gap: 2px; flex-shrink: 0; }
+
+  .header-score-value {
+    font-family: var(--font-display);
+    font-size: 2.25rem;
+    line-height: 1;
+    letter-spacing: -0.02em;
+    color: var(--ink-950);
+  }
+
+  .header-score-max { font-size: 0.85rem; font-weight: 500; color: var(--ink-400); }
+
+  .article-header h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: var(--space-md);
+  }
+
+  .article-lede {
+    font-family: var(--font-display);
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--ink-500);
+    margin-bottom: var(--space-lg);
+    max-width: 600px;
+  }
+
+  .article-meta {
+    display: flex;
+    align-items: center;
+    font-size: 0.85rem;
+    color: var(--ink-500);
+    margin-bottom: var(--space-lg);
+  }
+
+  .meta-left { display: flex; align-items: center; gap: 0.5rem; }
+  .meta-author { font-weight: 600; color: var(--ink-700); }
+  .meta-sep { color: var(--ink-300); }
+
+  .header-rule { height: 2px; background: var(--ink-950); width: 48px; }
+
+  /* ── Content ────────────────────────────────────── */
+  .article-content {
+    font-size: 1.05rem;
+    line-height: 1.8;
+  }
+
+  .article-content :global(h2) {
+    font-size: clamp(1.5rem, 3vw, 1.875rem);
+    margin-top: var(--space-3xl);
+    margin-bottom: var(--space-md);
+    padding-top: var(--space-xl);
+    border-top: 1px solid var(--ink-100);
+  }
+
+  .article-content :global(h2:first-child) { border-top: none; padding-top: 0; margin-top: 0; }
+
+  .article-content :global(h3) {
+    font-size: 1.25rem;
+    margin-top: var(--space-xl);
+    margin-bottom: var(--space-sm);
+  }
+
+  .article-content :global(p) { margin-bottom: var(--space-lg); color: var(--ink-800); }
+  .article-content :global(ul), .article-content :global(ol) { margin-bottom: var(--space-lg); padding-left: 1.75rem; }
+  .article-content :global(li) { margin-bottom: var(--space-sm); color: var(--ink-800); }
+  .article-content :global(strong) { color: var(--ink-950); font-weight: 600; }
+
+  .article-content :global(table) {
+    width: 100%;
+    border-collapse: collapse;
+    margin: var(--space-xl) 0;
+    font-size: 0.925rem;
+    border: 1px solid var(--ink-100);
+    border-radius: var(--border-radius);
+    overflow: hidden;
+  }
+
+  .article-content :global(thead) { background: var(--ink-950); color: white; }
+  .article-content :global(th) { padding: 0.75rem var(--space-md); text-align: left; font-weight: 600; font-size: 0.8rem; text-transform: uppercase; letter-spacing: 0.04em; border: none; }
+  .article-content :global(td) { padding: 0.75rem var(--space-md); border-bottom: 1px solid var(--ink-100); }
+  .article-content :global(tbody tr:last-child td) { border-bottom: none; }
+  .article-content :global(tbody tr:hover) { background: var(--ink-50); }
+
+  .article-content :global(blockquote) {
+    border-left: 3px solid var(--ink-950);
+    padding: var(--space-md) var(--space-lg);
+    margin: var(--space-xl) 0;
+    font-family: var(--font-display);
+    font-size: 1.15rem;
+    font-style: italic;
+    color: var(--ink-600);
+    background: var(--surface-raised);
+    border-radius: 0 var(--border-radius) var(--border-radius) 0;
+  }
+
+  /* ── Disclosure Box ──────────────────────────────── */
+  .disclosure-box {
+    display: flex;
+    gap: var(--space-md);
+    padding: var(--space-lg);
+    border: 1px solid var(--ink-100);
+    border-radius: var(--border-radius-lg);
+    background: var(--ink-50);
+    margin-top: var(--space-2xl);
+  }
+
+  .disclosure-icon { flex-shrink: 0; color: var(--ink-400); margin-top: 2px; }
+
+  .disclosure-content h4 {
+    font-family: var(--font-body);
+    font-weight: 600;
+    font-size: 0.85rem;
+    color: var(--ink-700);
+    margin-bottom: var(--space-xs);
+  }
+
+  .disclosure-content p {
+    font-size: 0.85rem;
+    line-height: 1.6;
+    color: var(--ink-500);
+    margin: 0;
+  }
+
+  .disclosure-content a {
+    color: var(--ink-600);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ── Responsive ──────────────────────────────────── */
+  @media (max-width: 640px) {
+    .article-header h1 { font-size: 1.75rem; }
+    .article-lede { font-size: 1.05rem; }
+    .header-score-value { font-size: 1.75rem; }
+    .disclosure-box { flex-direction: column; gap: var(--space-sm); }
+  }
+</style>

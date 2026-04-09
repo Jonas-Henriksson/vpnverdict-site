@@ -5,12 +5,14 @@ const articles = defineCollection({
   schema: z.object({
     title: z.string(),
     description: z.string(),
-    date: z.date(),
-    updated: z.date().optional(),
+    date: z.coerce.date(),
+    updated: z.coerce.date().optional(),
     category: z.enum(['privacy', 'streaming', 'speed', 'security', 'business', 'gaming']),
-    author: z.string().optional(),
-    keywords: z.array(z.string()),
+    author: z.string().optional().default('VPNVerdict Team'),
+    keywords: z.array(z.string()).optional().default([]),
     featured: z.boolean().default(false),
+    draft: z.boolean().optional().default(false),
+    tableOfContents: z.boolean().optional().default(true),
     vpnRatings: z.object({
       nordvpn: z.object({ name: z.string(), rating: z.number(), pros: z.array(z.string()), cons: z.array(z.string()), affiliateLink: z.string() }).optional(),
       expressvpn: z.object({ name: z.string(), rating: z.number(), pros: z.array(z.string()), cons: z.array(z.string()), affiliateLink: z.string() }).optional(),
@@ -19,6 +21,11 @@ const articles = defineCollection({
       protonvpn: z.object({ name: z.string(), rating: z.number(), pros: z.array(z.string()), cons: z.array(z.string()), affiliateLink: z.string() }).optional(),
     }).optional(),
     affiliateLinks: z.array(z.object({ vpn: z.string(), url: z.string() })).optional(),
+    // Arena fields
+    score: z.number().min(0).max(10).optional(),
+    badge: z.enum(['editors-pick', 'best-value', 'top-rated', 'tested']).optional(),
+    verdict: z.string().optional(),
+    winner: z.string().optional(),
   }),
 });
 

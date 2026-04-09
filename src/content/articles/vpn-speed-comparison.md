@@ -6,6 +6,10 @@ category: speed
 author: VPNVerdict Team
 keywords: [VPN speed test, fastest VPN, VPN speed comparison, VPN performance 2026]
 featured: false
+score: 9.0
+badge: tested
+verdict: "ExpressVPN dominates speed tests with 92.5% average baseline retention. NordVPN close behind with excellent consistency."
+winner: ExpressVPN
 vpnRatings:
   expressvpn:
     name: ExpressVPN

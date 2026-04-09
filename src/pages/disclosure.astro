@@ -1,46 +1,79 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../site.config';
 ---
 
-<BaseLayout title="Affiliate Disclosure" description="VPNVerdict affiliate disclosure. How we earn revenue and maintain editorial independence.">
-  <div class="container">
-    <div class="legal-page">
-      <h1>Affiliate Disclosure</h1>
-      <p class="updated">Last updated: April 2026</p>
+<BaseLayout title="Methodology & Disclosure" description="VPNVerdict testing methodology and affiliate disclosure.">
+  <article class="disclosure">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Methodology</span>
+    </nav>
 
-      <section>
-        <h2>How We Earn Revenue</h2>
-        <p>VPNVerdict is a participant in affiliate programs with NordVPN, ExpressVPN, Surfshark, CyberGhost, ProtonVPN, and other VPN providers. When you click our affiliate links and purchase a subscription, we earn a commission at no additional cost to you.</p>
-      </section>
+    <header class="page-header">
+      <span class="page-label">Transparency</span>
+      <h1>How we test.<br/><em>How we earn.</em></h1>
+      <div class="header-rule"></div>
+    </header>
 
+    <div class="content">
       <section>
-        <h2>Editorial Independence</h2>
-        <p>Affiliate commissions never influence our reviews, ratings, or recommendations. Our editorial team tests and evaluates every VPN independently. We include both pros and cons in every review, and our top picks are based on testing results, not affiliate payouts.</p>
-      </section>
-
-      <section>
-        <h2>How to Identify Affiliate Links</h2>
-        <p>Links to VPN providers on our site (such as "Visit NordVPN" buttons and in-article links) are affiliate links. When you click these links, a cookie tracks the referral so we receive credit if you purchase.</p>
+        <h2>Affiliate Disclosure</h2>
+        <p>{siteConfig.siteName} earns commissions when you click affiliate links to VPN services we review. These relationships fund our independent research at no cost to you.</p>
+        <p>Affiliate links are marked for full transparency. When you see a button or styled link to a VPN provider, assume it may be an affiliate link.</p>
       </section>
 
       <section>
         <h2>Our Testing Process</h2>
-        <p>Every VPN we review undergoes speed testing across multiple servers, security and leak testing, streaming platform checks, and usability evaluation on all major platforms. We re-test annually to keep our reviews current.</p>
+        <p>Every VPN on this site has been tested hands-on by our editorial team in real-world scenarios. We evaluate:</p>
+        <ul>
+          <li>Speed performance across multiple server locations</li>
+          <li>Security features including DNS leak protection and kill switch reliability</li>
+          <li>Streaming platform access and consistency</li>
+          <li>Privacy policy analysis and jurisdiction assessment</li>
+          <li>User experience and cross-platform compatibility</li>
+          <li>Customer support quality and responsiveness</li>
+          <li>Value for money and pricing fairness</li>
+        </ul>
       </section>
 
       <section>
+        <h2>Editorial Independence</h2>
+        <p>VPN providers cannot pay for higher rankings or more favorable reviews. We include both strengths and weaknesses for every service. All recommendations come from our editorial team based on testing, not affiliate potential.</p>
+      </section>
+
+      <section class="contact">
         <h2>Questions?</h2>
-        <p>If you have questions about our affiliate relationships or testing methodology, email us at <a href="mailto:info@vpnverdict.net">info@vpnverdict.net</a>.</p>
+        <p>Reach us at <a href="mailto:info@vpnverdict.net">info@vpnverdict.net</a></p>
       </section>
     </div>
-  </div>
+  </article>
 </BaseLayout>
 
 <style>
-  .legal-page { max-width: 700px; margin: 0 auto; padding: 3rem 0; }
-  .legal-page h1 { font-size: 2.5rem; margin-bottom: 0.5rem; }
-  .updated { color: #6b7280; font-size: 0.9rem; margin-bottom: 2rem; }
-  .legal-page section { margin-bottom: 2rem; }
-  .legal-page h2 { font-size: 1.3rem; margin-bottom: 0.75rem; color: #10b981; }
-  .legal-page p { color: #d1d8e0; line-height: 1.8; }
+  .disclosure { max-width: var(--max-width); margin: 0 auto; }
+
+  .breadcrumb {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.8rem; color: var(--ink-400); margin-bottom: var(--space-xl);
+  }
+  .breadcrumb a { color: var(--ink-500); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--ink-950); }
+  .sep { color: var(--ink-300); }
+  .current { color: var(--ink-400); }
+
+  .page-header { margin-bottom: var(--space-2xl); animation: fadeInUp var(--duration-slow) var(--ease-out) both; }
+  .page-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-400); }
+  .page-header h1 { margin-top: var(--space-sm); margin-bottom: var(--space-md); }
+  .page-header h1 em { font-style: italic; color: var(--ink-500); }
+  .header-rule { height: 2px; width: 48px; background: var(--ink-950); }
+
+  .content section { margin-bottom: var(--space-2xl); }
+  .content h2 { margin-top: 0; margin-bottom: var(--space-md); padding-top: var(--space-xl); border-top: 1px solid var(--ink-100); }
+  .content section:first-child h2 { border-top: none; padding-top: 0; }
+  .content p { color: var(--ink-700); line-height: 1.75; }
+  .content ul { color: var(--ink-700); }
+  .content li { line-height: 1.75; }
+  .contact a { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 </style>

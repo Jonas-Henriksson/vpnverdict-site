@@ -1,8 +1,14 @@
 export const siteConfig = {
-  name: 'VPNVerdict',
+  siteName: 'VPNVerdict',
+  tagline: 'The VPN Testing Lab',
+  domain: process.env.SITE_URL || 'https://vpnverdict.net',
   description: 'Comprehensive VPN reviews, comparisons, and guides. Find the best VPN for your needs with in-depth analysis and expert recommendations.',
   url: 'https://vpnverdict.net',
   logo: 'VPNVerdict',
+  defaultAuthor: {
+    name: 'VPNVerdict Team',
+    bio: 'We test, compare, and review VPN services so you don\'t have to.',
+  },
   author: 'VPNVerdict Team',
   email: 'info@vpnverdict.net',
   social: {
@@ -11,11 +17,9 @@ export const siteConfig = {
     linkedin: 'https://linkedin.com/company/vpnverdict',
   },
   nav: [
-    { label: 'Home', href: '/' },
-    { label: 'Reviews', href: '/reviews' },
-    { label: 'Comparisons', href: '/comparisons' },
-    { label: 'Guides', href: '/guides' },
-    { label: 'About', href: '/about' },
+    { label: 'Reviews', href: '/#latest' },
+    { label: 'Categories', href: '/#categories' },
+    { label: 'Methodology', href: '/disclosure' },
   ],
   affiliatePrograms: {
     nordvpn: { name: 'NordVPN', affiliateUrl: 'https://vpnverdict.net/go/nordvpn', program: 'Impact', commission: '30-50% commission', cookie: 30 },
@@ -28,3 +32,5 @@ export const siteConfig = {
   keywords: 'VPN reviews, VPN comparison, best VPN, VPN service, privacy VPN, fast VPN, VPN for streaming',
   og: { image: 'https://vpnverdict.net/og-image.png', type: 'website' },
 };
+
+export default siteConfig;

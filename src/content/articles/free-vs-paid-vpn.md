@@ -6,6 +6,10 @@ category: privacy
 author: VPNVerdict Team
 keywords: [free VPN, paid VPN, VPN comparison, VPN security, free VPN risks, VPN cost]
 featured: false
+score: 8.8
+badge: tested
+verdict: "Free VPNs are never truly free. Premium services starting at $2.29/month offer exponentially better privacy and security."
+winner: NordVPN
 vpnRatings:
   protonvpn:
     name: ProtonVPN

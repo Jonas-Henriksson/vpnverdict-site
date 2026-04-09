@@ -7,6 +7,10 @@ category: streaming
 author: VPNVerdict Team
 keywords: ["best VPN for IPTV", "IPTV VPN", "VPN streaming", "secure IPTV", "VPN for streaming"]
 featured: false
+score: 8.6
+badge: best-value
+verdict: "NordVPN delivers the fastest IPTV speeds at 295 Mbps average. Surfshark offers the best value with unlimited device connections."
+winner: NordVPN
 affiliateLinks:
   - vpn: NordVPN
     url: https://vpnverdict.net/go/nordvpn

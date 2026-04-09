@@ -3,10 +3,20 @@ import BaseLayout from '../layouts/BaseLayout.astro';
 ---
 
 <BaseLayout title="About VPNVerdict" description="Learn about VPNVerdict's mission, testing methodology, and editorial standards.">
-  <div class="container">
-    <div class="about-page">
-      <h1>About VPNVerdict</h1>
+  <article class="about">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span class="current">About</span>
+    </nav>
 
+    <header class="page-header">
+      <span class="page-label">About</span>
+      <h1>Independent VPN testing<br/><em>you can trust.</em></h1>
+      <div class="header-rule"></div>
+    </header>
+
+    <div class="content">
       <section>
         <h2>Our Mission</h2>
         <p>VPNVerdict exists to help you make informed decisions about VPN services. We provide independent, unbiased reviews and comparisons based on real-world testing and analysis.</p>
@@ -30,54 +40,37 @@ import BaseLayout from '../layouts/BaseLayout.astro';
         <p>Our reviews are based on objective testing, not affiliate relationships. While we earn commissions when you purchase through our links, this never influences our ratings or recommendations. We recommend VPNs we'd use ourselves.</p>
       </section>
 
-      <section>
+      <section class="contact">
         <h2>Contact Us</h2>
         <p>Have questions, feedback, or a VPN you'd like us to review? Reach out at <a href="mailto:info@vpnverdict.net">info@vpnverdict.net</a>.</p>
       </section>
     </div>
-  </div>
+  </article>
 </BaseLayout>
 
 <style>
-  .about-page {
-    max-width: 700px;
-    margin: 0 auto;
-    padding: 3rem 0;
-  }
+  .about { max-width: var(--max-width); margin: 0 auto; }
 
-  .about-page h1 {
-    font-size: 2.5rem;
-    margin-bottom: 2rem;
+  .breadcrumb {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.8rem; color: var(--ink-400); margin-bottom: var(--space-xl);
   }
+  .breadcrumb a { color: var(--ink-500); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--ink-950); }
+  .sep { color: var(--ink-300); }
+  .current { color: var(--ink-400); }
 
-  .about-page section {
-    margin-bottom: 2.5rem;
-  }
+  .page-header { margin-bottom: var(--space-2xl); animation: fadeInUp var(--duration-slow) var(--ease-out) both; }
+  .page-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-400); }
+  .page-header h1 { margin-top: var(--space-sm); margin-bottom: var(--space-md); }
+  .page-header h1 em { font-style: italic; color: var(--ink-500); }
+  .header-rule { height: 2px; width: 48px; background: var(--ink-950); }
 
-  .about-page h2 {
-    font-size: 1.5rem;
-    margin-bottom: 1rem;
-    color: #10b981;
-  }
-
-  .about-page p {
-    color: #d1d8e0;
-    line-height: 1.8;
-    margin-bottom: 1rem;
-  }
-
-  .about-page ul {
-    margin-left: 1.5rem;
-    margin-bottom: 1rem;
-  }
-
-  .about-page li {
-    color: #d1d8e0;
-    line-height: 1.8;
-    margin-bottom: 0.5rem;
-  }
-
-  .about-page strong {
-    color: #ffffff;
-  }
+  .content section { margin-bottom: var(--space-2xl); }
+  .content h2 { margin-top: 0; margin-bottom: var(--space-md); padding-top: var(--space-xl); border-top: 1px solid var(--ink-100); }
+  .content section:first-child h2 { border-top: none; padding-top: 0; }
+  .content p { color: var(--ink-700); line-height: 1.75; }
+  .content ul { color: var(--ink-700); }
+  .content li { line-height: 1.75; }
+  .contact a { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 </style>
