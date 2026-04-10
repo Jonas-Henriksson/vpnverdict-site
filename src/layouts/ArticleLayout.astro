@@ -6,6 +6,7 @@ import RelatedArticles from '../components/RelatedArticles.astro';
 import { siteConfig } from '../site.config';
 import ExitIntentCapture from '../components/ExitIntentCapture.astro';
 import LeadMagnetCTA from '../components/LeadMagnetCTA.astro';
+import ProductBanner from '../components/ProductBanner.astro';
 import EzoicAds from '../components/EzoicAds.astro';
 import AuthorBio from '../components/AuthorBio.astro';
 import { authors, getAuthorByName } from '../authors';
@@ -215,6 +216,7 @@ structuredData.push({
     <div class="article-content">
       <slot />
                 <EzoicAds placement="mid-article" />
+<ProductBanner />
 <LeadMagnetCTA siteId="vpnverdict" siteName="VPNVerdict" niche="vpn" />
     </div>
 
