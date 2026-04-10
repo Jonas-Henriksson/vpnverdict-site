@@ -1,0 +1,427 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+import { siteConfig } from '../site.config';
+
+const methodologySchema = {
+  '@context': 'https://schema.org',
+  '@type': 'WebPage',
+  name: 'How We Test — ' + siteConfig.siteName,
+  description: 'Our independent testing methodology for VPN and privacy reviews.',
+  publisher: {
+    '@type': 'Organization',
+    name: siteConfig.siteName,
+  },
+};
+---
+
+<BaseLayout title="How We Test" description="Our independent testing methodology for VPN and privacy reviews. Transparent criteria, real-world testing, no vendor influence." structuredData={methodologySchema}>
+  <div class="methodology-page">
+    <header class="methodology-hero">
+      <span class="hero-label">Our Methodology</span>
+      <h1>How We Test</h1>
+      <p class="hero-lede">Every VPN we review goes through our standardized 14-day testing protocol. We purchase every subscription independently — no vendor-supplied accounts, no preferential treatment.</p>
+      <div class="hero-rule"></div>
+    </header>
+
+    <section class="scoring-criteria">
+      <h2>Scoring Criteria</h2>
+      <p class="section-intro">Every product receives a score from 0 to 10 based on weighted criteria. Here is exactly how we calculate it.</p>
+      <div class="criteria-grid">
+        
+      <div class="criterion">
+        <div class="criterion-header">
+          <h3>Speed & Performance</h3>
+          <div class="criterion-weight">
+            <span class="weight-value">30%</span>
+            <div class="weight-bar"><div class="weight-fill" style="width: 30%"></div></div>
+          </div>
+        </div>
+        <p>We test download/upload speeds and latency across 8 countries using dedicated 1Gbps servers. Each test runs 3 times at different hours to account for congestion.</p>
+      </div>
+      <div class="criterion">
+        <div class="criterion-header">
+          <h3>Privacy & Security</h3>
+          <div class="criterion-weight">
+            <span class="weight-value">30%</span>
+            <div class="weight-bar"><div class="weight-fill" style="width: 30%"></div></div>
+          </div>
+        </div>
+        <p>We verify no-log claims through traffic analysis, test for DNS/WebRTC/IPv6 leaks, audit encryption protocols, and review jurisdiction and ownership transparency.</p>
+      </div>
+      <div class="criterion">
+        <div class="criterion-header">
+          <h3>Features & Usability</h3>
+          <div class="criterion-weight">
+            <span class="weight-value">20%</span>
+            <div class="weight-bar"><div class="weight-fill" style="width: 20%"></div></div>
+          </div>
+        </div>
+        <p>We evaluate app quality on Windows, macOS, iOS, and Android. Kill switch reliability, split tunneling, server selection UI, and connection stability all factor in.</p>
+      </div>
+      <div class="criterion">
+        <div class="criterion-header">
+          <h3>Value & Pricing</h3>
+          <div class="criterion-weight">
+            <span class="weight-value">20%</span>
+            <div class="weight-bar"><div class="weight-fill" style="width: 20%"></div></div>
+          </div>
+        </div>
+        <p>We compare price-per-month across plan lengths, simultaneous connections, money-back guarantee terms, and feature parity between tiers.</p>
+      </div>
+      </div>
+    </section>
+
+    <section class="tools-section">
+      <h2>Tools &amp; Equipment</h2>
+      <p class="section-intro">The tools we use to produce consistent, reproducible results.</p>
+      <ul class="tools-list">
+        
+          <li>Dedicated 1Gbps test servers in 8 countries (US, UK, DE, JP, AU, BR, SG, ZA)</li>
+          <li>Custom speed testing suite (iperf3 + Speedtest CLI)</li>
+          <li>Wireshark for traffic analysis and leak detection</li>
+          <li>BrowserLeaks.com verification suite</li>
+          <li>Real streaming service accounts (Netflix, Hulu, BBC iPlayer, Disney+)</li>
+      </ul>
+    </section>
+
+    <section class="independence-section">
+      <div class="independence-card">
+        <div class="independence-icon">
+          <svg width="24" height="24" viewBox="0 0 24 24" fill="none">
+            <path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+            <path d="M9 12l2 2 4-4" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+          </svg>
+        </div>
+        <div class="independence-content">
+          <h2>Independence Pledge</h2>
+          <ul>
+            <li><strong>No sponsored rankings.</strong> Our scores are never influenced by advertising or affiliate relationships.</li>
+            <li><strong>We buy everything ourselves.</strong> Products are purchased at retail price with our own funds. No vendor-supplied review units.</li>
+            <li><strong>Affiliate transparency.</strong> We earn commissions from some links. This funds our testing but never affects our scores. <a href="/disclosure">Full disclosure</a>.</li>
+            <li><strong>Corrections policy.</strong> If we get something wrong, we update the article with a visible correction notice and date.</li>
+          </ul>
+        </div>
+      </div>
+    </section>
+
+    <section class="update-section">
+      <h2>Update Cadence</h2>
+      <p>Reviews are updated quarterly or within 48 hours of major version releases, security incidents, or pricing changes.</p>
+      <p>Every article shows its publish date and last update date. If a review is more than 6 months old without an update, we flag it as potentially outdated.</p>
+    </section>
+
+    <section class="team-section">
+      <h2>Our Testing Team</h2>
+      <p class="section-intro">The people behind the scores.</p>
+      <div class="team-grid">
+        
+        <div class="team-member">
+          <div class="member-avatar"><span>MR</span></div>
+          <div class="member-info">
+            <a href="/author/marcus-reid" class="member-name">Marcus Reid</a>
+            <span class="member-title">Editor-in-Chief</span>
+            <span class="member-creds">CISSP, former network security consultant</span>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="member-avatar"><span>EV</span></div>
+          <div class="member-info">
+            <a href="/author/elena-vasquez" class="member-name">Elena Vasquez</a>
+            <span class="member-title">Senior Privacy Analyst</span>
+            <span class="member-creds">J.D. in Digital Rights Law</span>
+          </div>
+        </div>
+        <div class="team-member">
+          <div class="member-avatar"><span>DC</span></div>
+          <div class="member-info">
+            <a href="/author/daniel-cho" class="member-name">Daniel Cho</a>
+            <span class="member-title">Contributing Security Researcher</span>
+            <span class="member-creds">OSCP, Bug bounty hunter (HackerOne Top 500)</span>
+          </div>
+        </div>
+      </div>
+    </section>
+  </div>
+</BaseLayout>
+
+<style>
+  .methodology-page {
+    max-width: var(--max-width, 720px);
+    margin: 0 auto;
+  }
+
+  .methodology-hero {
+    margin-bottom: 3rem;
+    animation: fadeInUp var(--duration-slow, 0.4s) var(--ease-out, ease-out) both;
+  }
+
+  .hero-label {
+    display: inline-block;
+    font-size: 0.7rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--electric, #6366f1);
+    margin-bottom: 0.75rem;
+  }
+
+  .methodology-hero h1 {
+    font-size: clamp(2rem, 5vw, 3rem);
+    line-height: 1.1;
+    margin-bottom: 1rem;
+  }
+
+  .hero-lede {
+    font-family: var(--font-display, serif);
+    font-size: 1.2rem;
+    font-style: italic;
+    line-height: 1.5;
+    color: var(--ink-500, #6b7280);
+    max-width: 600px;
+    margin-bottom: 1.5rem;
+  }
+
+  .hero-rule {
+    height: 2px;
+    background: var(--ink-950, #111);
+    width: 48px;
+  }
+
+  /* ── Sections ── */
+  section {
+    margin-bottom: 3rem;
+  }
+
+  section h2 {
+    font-size: 1.5rem;
+    margin-bottom: 0.5rem;
+  }
+
+  .section-intro {
+    color: var(--ink-500, #6b7280);
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.6;
+  }
+
+  /* ── Criteria ── */
+  .criteria-grid {
+    display: flex;
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .criterion {
+    padding: 1.25rem 1.5rem;
+    border: 1px solid var(--ink-100, #e5e7eb);
+    border-radius: var(--border-radius-lg, 10px);
+    background: var(--surface, #fff);
+  }
+
+  .criterion-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 0.75rem;
+  }
+
+  .criterion h3 {
+    font-size: 1.1rem;
+    margin: 0;
+  }
+
+  .criterion-weight {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    flex-shrink: 0;
+  }
+
+  .weight-value {
+    font-family: var(--font-display, serif);
+    font-size: 1.25rem;
+    font-weight: 700;
+    color: var(--ink-950, #111);
+    min-width: 2.5rem;
+    text-align: right;
+  }
+
+  .weight-bar {
+    width: 60px;
+    height: 6px;
+    background: var(--ink-100, #e5e7eb);
+    border-radius: 3px;
+    overflow: hidden;
+  }
+
+  .weight-fill {
+    height: 100%;
+    background: var(--ink-950, #111);
+    border-radius: 3px;
+    transition: width 0.6s ease-out;
+  }
+
+  .criterion p {
+    font-size: 0.95rem;
+    line-height: 1.7;
+    color: var(--ink-600, #4b5563);
+    margin: 0;
+  }
+
+  /* ── Tools ── */
+  .tools-list {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+
+  .tools-list li {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    padding: 0.75rem 1rem;
+    background: var(--surface-raised, #f8f9fa);
+    border: 1px solid var(--ink-100, #e5e7eb);
+    border-radius: 8px;
+    font-size: 0.9rem;
+    line-height: 1.5;
+    color: var(--ink-700, #374151);
+  }
+
+  .tools-list li::before {
+    content: '';
+    width: 8px;
+    height: 8px;
+    border-radius: 50%;
+    background: var(--ink-950, #111);
+    flex-shrink: 0;
+    margin-top: 0.35rem;
+  }
+
+  /* ── Independence ── */
+  .independence-card {
+    display: flex;
+    gap: 1.25rem;
+    padding: 1.5rem;
+    border: 2px solid var(--ink-950, #111);
+    border-radius: var(--border-radius-lg, 10px);
+    background: var(--surface, #fff);
+  }
+
+  .independence-icon {
+    flex-shrink: 0;
+    color: var(--ink-950, #111);
+    margin-top: 0.25rem;
+  }
+
+  .independence-content h2 {
+    font-size: 1.25rem;
+    margin-bottom: 1rem;
+  }
+
+  .independence-content ul {
+    list-style: none;
+    padding: 0;
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+  }
+
+  .independence-content li {
+    font-size: 0.95rem;
+    line-height: 1.6;
+    color: var(--ink-700, #374151);
+  }
+
+  .independence-content a {
+    color: var(--ink-950, #111);
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  /* ── Update ── */
+  .update-section p {
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--ink-700, #374151);
+    margin-bottom: 0.75rem;
+  }
+
+  /* ── Team ── */
+  .team-grid {
+    display: grid;
+    gap: 1rem;
+  }
+
+  .team-member {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    padding: 1rem 1.25rem;
+    border: 1px solid var(--ink-100, #e5e7eb);
+    border-radius: var(--border-radius-lg, 10px);
+    background: var(--surface, #fff);
+    transition: border-color 0.15s ease-out;
+  }
+
+  .team-member:hover {
+    border-color: var(--ink-300, #d1d5db);
+  }
+
+  .member-avatar {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    background: var(--ink-950, #111);
+    color: white;
+    font-weight: 700;
+    font-size: 0.85rem;
+    letter-spacing: 0.04em;
+    flex-shrink: 0;
+  }
+
+  .member-info {
+    display: flex;
+    flex-direction: column;
+    gap: 0.1rem;
+  }
+
+  .member-name {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink-950, #111);
+    text-decoration: none;
+  }
+
+  .member-name:hover {
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
+  .member-title {
+    font-size: 0.8rem;
+    color: var(--ink-500, #6b7280);
+  }
+
+  .member-creds {
+    font-size: 0.75rem;
+    color: var(--ink-400, #9ca3af);
+    font-style: italic;
+  }
+
+  @media (max-width: 640px) {
+    .independence-card {
+      flex-direction: column;
+    }
+    .criterion-header {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 0.5rem;
+    }
+  }
+</style>
