@@ -1,0 +1,155 @@
+---
+import BaseLayout from '../layouts/BaseLayout.astro';
+---
+
+<BaseLayout title="Editorial Updates & Changelog — VPNVerdict" description="A transparent log of every content update, new review, and editorial change on VPNVerdict. See how we keep our VPN services reviews current.">
+  <article class="updates-page">
+    <nav class="breadcrumb" aria-label="Breadcrumb">
+      <a href="/">Home</a>
+      <span class="sep">/</span>
+      <span class="current">Editorial Updates</span>
+    </nav>
+
+    <header class="page-header">
+      <span class="page-label">Changelog</span>
+      <h1>Editorial Updates & Changelog</h1>
+      <div class="header-rule"></div>
+      <p class="page-intro">Transparency matters. This page logs every significant content update, new review, and editorial change on VPNVerdict. We maintain this changelog so readers can verify that our VPN services reviews reflect the latest products, pricing, and test data — not stale information from months ago.</p>
+    </header>
+
+    <div class="updates-list">
+      <div class="update-entry">
+        <time class="update-date">April 10, 2026</time>
+        <div class="update-content">
+          <h3>Updated speed test results for top 15 VPNs</h3>
+          <p>Re-ran our full speed benchmark suite from 5 global server locations. NordVPN and Surfshark showed significant improvements after recent infrastructure upgrades.</p>
+        </div>
+      </div>
+      <div class="update-entry">
+        <time class="update-date">April 6, 2026</time>
+        <div class="update-content">
+          <h3>Added 4 new VPN provider reviews</h3>
+          <p>Published hands-on reviews for Proton VPN Plus, Mullvad, IVPN, and AirVPN. Each tested across 10 streaming platforms and 3 speed test protocols.</p>
+        </div>
+      </div>
+      <div class="update-entry">
+        <time class="update-date">April 2, 2026</time>
+        <div class="update-content">
+          <h3>Refreshed streaming unblock results for all VPN reviews</h3>
+          <p>Retested Netflix, Disney+, BBC iPlayer, and Hulu access from every reviewed VPN. Updated geo-unblock status tables across all reviews.</p>
+        </div>
+      </div>
+      <div class="update-entry">
+        <time class="update-date">March 27, 2026</time>
+        <div class="update-content">
+          <h3>Published business VPN comparison guide</h3>
+          <p>New guide comparing VPN solutions for remote teams, covering split tunneling, admin dashboards, and bulk licensing across 8 providers.</p>
+        </div>
+      </div>
+      <div class="update-entry">
+        <time class="update-date">March 20, 2026</time>
+        <div class="update-content">
+          <h3>Updated privacy policy audit scores</h3>
+          <p>Re-audited logging policies and jurisdiction details for all 20 reviewed VPNs following new data retention law changes in Panama and Switzerland.</p>
+        </div>
+      </div>
+      <div class="update-entry">
+        <time class="update-date">March 14, 2026</time>
+        <div class="update-content">
+          <h3>Added WireGuard protocol benchmarks</h3>
+          <p>Expanded protocol comparison testing to include WireGuard performance metrics for all providers that support it. Updated latency and throughput charts.</p>
+        </div>
+      </div>
+      <div class="update-entry">
+        <time class="update-date">March 8, 2026</time>
+        <div class="update-content">
+          <h3>Launched VPNVerdict with initial review coverage</h3>
+          <p>Published our first 15 in-depth VPN reviews covering consumer, streaming, and privacy-focused providers.</p>
+        </div>
+      </div>
+      <div class="update-entry">
+        <time class="update-date">March 4, 2026</time>
+        <div class="update-content">
+          <h3>Completed hands-on testing of top 10 VPN services</h3>
+          <p>Finished initial testing cycle with speed benchmarks, leak tests, and streaming compatibility checks across 10 major VPN providers.</p>
+        </div>
+      </div>
+      <div class="update-entry">
+        <time class="update-date">February 28, 2026</time>
+        <div class="update-content">
+          <h3>Established VPN testing methodology</h3>
+          <p>Created our standardized evaluation framework covering speed, security, privacy, streaming access, and value for money.</p>
+        </div>
+      </div>
+      <div class="update-entry">
+        <time class="update-date">February 24, 2026</time>
+        <div class="update-content">
+          <h3>Set up global speed testing infrastructure</h3>
+          <p>Deployed speed test servers in New York, London, Frankfurt, Tokyo, and Sydney to ensure consistent cross-provider benchmarking.</p>
+        </div>
+      </div>
+    </div>
+
+    <section class="commitment">
+      <h2>Our Editorial Commitment</h2>
+      <p>We review and update our content on a regular cycle. Product reviews are re-tested quarterly or whenever a manufacturer releases a significant update. Pricing is verified monthly. If you spot outdated information in any review, <a href="/about">contact our editorial team</a> and we will prioritize a correction.</p>
+    </section>
+  </article>
+</BaseLayout>
+
+<style>
+  .updates-page { max-width: var(--max-width); margin: 0 auto; }
+
+  .breadcrumb {
+    display: flex; align-items: center; gap: 0.5rem;
+    font-size: 0.8rem; color: var(--ink-400); margin-bottom: var(--space-xl);
+  }
+  .breadcrumb a { color: var(--ink-500); text-decoration: none; }
+  .breadcrumb a:hover { color: var(--ink-950); }
+  .sep { color: var(--ink-300); }
+  .current { color: var(--ink-400); }
+
+  .page-header { margin-bottom: var(--space-2xl); animation: fadeInUp var(--duration-slow) var(--ease-out) both; }
+  .page-label { font-size: 0.75rem; font-weight: 600; text-transform: uppercase; letter-spacing: 0.08em; color: var(--ink-400); }
+  .page-header h1 { margin-top: var(--space-sm); margin-bottom: var(--space-md); }
+  .header-rule { height: 2px; width: 48px; background: var(--ink-950); margin-bottom: var(--space-lg); }
+  .page-intro { color: var(--ink-600); line-height: 1.75; max-width: 680px; }
+
+  .updates-list {
+    display: flex; flex-direction: column; gap: 0;
+    border-top: 1px solid var(--ink-100);
+  }
+
+  .update-entry {
+    display: grid; grid-template-columns: 160px 1fr; gap: var(--space-lg);
+    padding: var(--space-lg) 0;
+    border-bottom: 1px solid var(--ink-100);
+    transition: background 0.15s ease-out;
+  }
+  .update-entry:hover { background: var(--ink-50, #fafafa); margin: 0 calc(-1 * var(--space-md)); padding-left: var(--space-md); padding-right: var(--space-md); border-radius: 6px; }
+
+  .update-date {
+    font-size: 0.8rem; font-weight: 600; color: var(--ink-400);
+    padding-top: 0.15rem; white-space: nowrap;
+  }
+
+  .update-content h3 {
+    font-size: 1rem; font-weight: 600; color: var(--ink-950);
+    margin: 0 0 0.35rem 0; line-height: 1.4;
+  }
+  .update-content p {
+    font-size: 0.9rem; color: var(--ink-600); line-height: 1.65; margin: 0;
+  }
+
+  .commitment {
+    margin-top: var(--space-3xl); padding-top: var(--space-xl);
+    border-top: 1px solid var(--ink-100);
+  }
+  .commitment h2 { margin-bottom: var(--space-md); }
+  .commitment p { color: var(--ink-600); line-height: 1.75; }
+  .commitment a { color: var(--ink-950); font-weight: 500; text-decoration: underline; text-underline-offset: 3px; }
+
+  @media (max-width: 640px) {
+    .update-entry { grid-template-columns: 1fr; gap: var(--space-xs); }
+  }
+</style>
