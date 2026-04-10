@@ -11,7 +11,16 @@ export function rehypeAffiliateLinks() {
           href.includes('amzn.to') ||
           href.includes('awin1.com') ||
           href.includes('awin.com/cread') ||
-          href.includes('siteground.com/index.htm?afcode')
+          href.includes('siteground.com/index.htm?afcode') ||
+          href.includes('anrdoezrs.net') ||
+          href.includes('dpbolvw.net') ||
+          href.includes('jdoqocy.com') ||
+          href.includes('tkqlhce.com') ||
+          href.includes('kqzyfj.com') ||
+          href.includes('ftjcfx.com') ||
+          href.includes('lduhtrp.net') ||
+          href.includes('tqlkg.com') ||
+          href.includes('awltovhc.com')
         ) {
           node.properties.rel = 'nofollow sponsored external';
           node.properties.target = '_blank';
