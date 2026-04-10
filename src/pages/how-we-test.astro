@@ -1,6 +1,10 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
 import { siteConfig } from '../site.config';
+import { authors } from '../authors';
+
+const teamSlugs = ['marcus-reid', 'elena-vasquez', 'daniel-cho'];
+const teamMembers = teamSlugs.map(slug => authors[slug]).filter(Boolean);
 
 const methodologySchema = {
   '@context': 'https://schema.org',
@@ -114,31 +118,23 @@ const methodologySchema = {
       <h2>Our Testing Team</h2>
       <p class="section-intro">The people behind the scores.</p>
       <div class="team-grid">
-        
-        <div class="team-member">
-          <div class="member-avatar"><span>MR</span></div>
-          <div class="member-info">
-            <a href="/author/marcus-reid" class="member-name">Marcus Reid</a>
-            <span class="member-title">Editor-in-Chief</span>
-            <span class="member-creds">CISSP, former network security consultant</span>
+        {teamMembers.map(member => (
+          <div class="team-member">
+            <div class="member-avatar">
+              {member.image ? (
+                <img src={member.image} alt={member.name} width="48" height="48" class="avatar-img" loading="lazy" onerror="this.style.display='none';this.nextElementSibling.style.display='flex'" />
+                <span class="avatar-initials" style="display:none">{member.initials}</span>
+              ) : (
+                <span class="avatar-initials">{member.initials}</span>
+              )}
+            </div>
+            <div class="member-info">
+              <a href={`/author/${member.slug}`} class="member-name">{member.name}</a>
+              <span class="member-title">{member.title}</span>
+              <span class="member-creds">{member.credentials}</span>
+            </div>
           </div>
-        </div>
-        <div class="team-member">
-          <div class="member-avatar"><span>EV</span></div>
-          <div class="member-info">
-            <a href="/author/elena-vasquez" class="member-name">Elena Vasquez</a>
-            <span class="member-title">Senior Privacy Analyst</span>
-            <span class="member-creds">J.D. in Digital Rights Law</span>
-          </div>
-        </div>
-        <div class="team-member">
-          <div class="member-avatar"><span>DC</span></div>
-          <div class="member-info">
-            <a href="/author/daniel-cho" class="member-name">Daniel Cho</a>
-            <span class="member-title">Contributing Security Researcher</span>
-            <span class="member-creds">OSCP, Bug bounty hunter (HackerOne Top 500)</span>
-          </div>
-        </div>
+        ))}
       </div>
     </section>
   </div>
@@ -383,6 +379,22 @@ const methodologySchema = {
     font-size: 0.85rem;
     letter-spacing: 0.04em;
     flex-shrink: 0;
+    overflow: hidden;
+  }
+
+  .member-avatar .avatar-img {
+    width: 48px;
+    height: 48px;
+    border-radius: 50%;
+    object-fit: cover;
+  }
+
+  .member-avatar .avatar-initials {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 100%;
+    height: 100%;
   }
 
   .member-info {
