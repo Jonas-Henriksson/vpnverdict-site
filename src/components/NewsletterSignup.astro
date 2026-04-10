@@ -3,7 +3,7 @@ interface Props {
   variant?: 'sidebar' | 'inline';
 }
 const { variant = 'inline' } = Astro.props;
-const API_URL = 'http://37.27.215.124:8485/subscribe';
+const API_URL = '/api/subscribe';
 const SITE_ID = 'vpnverdict';
 ---
 
@@ -18,7 +18,7 @@ const SITE_ID = 'vpnverdict';
       </>
     )}
     <p class="newsletter-desc">
-      Get our weekly VPN deal alert -- exclusive discounts, new threat warnings, and the one privacy tip that matters most this week.
+      Get our weekly VPN deal alert — exclusive discounts, new threat warnings, and the one privacy tip that matters most this week.
     </p>
     <form class="newsletter-form" id="newsletter-form">
       <div class="newsletter-input-row">
@@ -219,5 +219,11 @@ const SITE_ID = 'vpnverdict';
     .newsletter--inline { padding: var(--space-xl) var(--space-lg); }
     .newsletter--inline .newsletter-input-row { flex-direction: column; }
     .newsletter--inline .newsletter-title { font-size: 1.5rem; }
+  }
+  @media (prefers-color-scheme: dark) {
+    .newsletter--inline, .lead-magnet, .exit-overlay .exit-modal {
+      background: #0a0a0b !important;
+      color: white;
+    }
   }
 </style>

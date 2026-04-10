@@ -12,6 +12,7 @@ const articles = defineCollection({
     keywords: z.array(z.string()).optional().default([]),
     featured: z.boolean().default(false),
     draft: z.boolean().optional().default(false),
+    ogImage: z.string().optional(),
     tableOfContents: z.boolean().optional().default(true),
     vpnRatings: z.object({
       nordvpn: z.object({ name: z.string(), rating: z.number(), pros: z.array(z.string()), cons: z.array(z.string()), affiliateLink: z.string() }).optional(),
@@ -20,6 +21,7 @@ const articles = defineCollection({
       cyberghost: z.object({ name: z.string(), rating: z.number(), pros: z.array(z.string()), cons: z.array(z.string()), affiliateLink: z.string() }).optional(),
       protonvpn: z.object({ name: z.string(), rating: z.number(), pros: z.array(z.string()), cons: z.array(z.string()), affiliateLink: z.string() }).optional(),
     }).optional(),
+    amazon: z.array(z.object({ product: z.string(), asin: z.string(), link: z.string() })).optional(),
     affiliateLinks: z.array(z.object({ vpn: z.string(), url: z.string() })).optional(),
     // Arena fields
     score: z.number().min(0).max(10).optional(),

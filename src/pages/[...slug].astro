@@ -46,6 +46,8 @@ if (faqMatch) {
   verdict={article.data.verdict}
   winner={article.data.winner}
   headings={article.data.tableOfContents !== false ? headings : []}
+  currentSlug={article.slug}
+  relatedArticles={article.data.relatedArticles || []}
 >
   <Content />
 </ArticleLayout>

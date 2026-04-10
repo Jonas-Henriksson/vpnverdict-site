@@ -2,7 +2,13 @@
 import BaseLayout from './BaseLayout.astro';
 import NewsletterSignup from '../components/NewsletterSignup.astro';
 import VerdictBanner from '../components/VerdictBanner.astro';
+import RelatedArticles from '../components/RelatedArticles.astro';
 import { siteConfig } from '../site.config';
+import ExitIntentCapture from '../components/ExitIntentCapture.astro';
+import LeadMagnetCTA from '../components/LeadMagnetCTA.astro';
+import EzoicAds from '../components/EzoicAds.astro';
+import AuthorBio from '../components/AuthorBio.astro';
+import { authors, getAuthorByName } from '../authors';
 
 export interface Props {
   title: string;
@@ -19,6 +25,8 @@ export interface Props {
   verdict?: string;
   winner?: string;
   headings?: any[];
+  currentSlug?: string;
+  relatedArticles?: string[];
 }
 
 const {
@@ -36,7 +44,10 @@ const {
   verdict,
   winner,
   headings = [],
+  currentSlug = '',
+  relatedArticles = [],
 } = Astro.props;
+const hasAffiliateProducts = affiliateLinks.length > 0;
 
 const publishedDate = new Date(date);
 const formattedDate = publishedDate.toLocaleDateString('en-US', { year: 'numeric', month: 'long', day: 'numeric' });
@@ -48,6 +59,12 @@ const badgeLabels: Record<string, string> = {
   'tested': 'Tested',
 };
 
+// Author persona lookup
+const authorData = getAuthorByName(author);
+const authorSlug = authorData?.slug || '';
+const authorTitle = authorData?.title || '';
+const authorInitials = authorData?.initials || '';
+const authorYears = authorData?.years || 0;
 const structuredData: Record<string, any>[] = [
   {
     '@context': 'https://schema.org',
@@ -57,7 +74,7 @@ const structuredData: Record<string, any>[] = [
     image: 'https://vpnverdict.net/og-image.png',
     datePublished: publishedDate.toISOString(),
     dateModified: updated?.toISOString() || publishedDate.toISOString(),
-    author: { '@type': 'Organization', name: 'VPNVerdict' },
+    author: authorData ? { '@type': 'Person', name: authorData.name, jobTitle: authorData.title, url: `/author/${authorData.slug}` } : { '@type': 'Organization', name: 'VPNVerdict' },
   },
 ];
 
@@ -72,6 +89,36 @@ if (faqPairs.length > 0) {
     })),
   });
 }
+
+// Product/Review schema for articles with scores
+const starRating = score ? Math.round((score / 10) * 5 * 10) / 10 : null;
+if (score && starRating) {
+  structuredData.push({
+    '@context': 'https://schema.org',
+    '@type': 'Product',
+    name: title.replace(/best\s+/i, '').replace(/\s*\d{4}.*$/, '').trim() || title,
+    description,
+    review: {
+      '@type': 'Review',
+      reviewRating: { '@type': 'Rating', ratingValue: starRating, bestRating: 5, worstRating: 1 },
+      author: authorData ? { '@type': 'Person', name: authorData.name, jobTitle: authorData.title, url: `/author/${authorData.slug}` } : { '@type': 'Organization', name: 'VPNVerdict' },
+      datePublished: publishedDate.toISOString(),
+      reviewBody: verdict || description,
+    },
+  });
+}
+
+// BreadcrumbList schema
+structuredData.push({
+  '@context': 'https://schema.org',
+  '@type': 'BreadcrumbList',
+  itemListElement: [
+    { '@type': 'ListItem', position: 1, name: 'Home', item: siteConfig.url },
+    ...(category ? [{ '@type': 'ListItem', position: 2, name: category.charAt(0).toUpperCase() + category.slice(1), item: siteConfig.url }] : []),
+    { '@type': 'ListItem', position: category ? 3 : 2, name: title },
+  ],
+});
+
 ---
 
 <BaseLayout
@@ -124,15 +171,58 @@ if (faqPairs.length > 0) {
       <div class="header-rule"></div>
     </header>
 
+    <!-- Author Bio -->
+    {authorData && (
+      <AuthorBio
+        name={authorData.name}
+        slug={authorData.slug}
+        title={authorData.title}
+        niche="VPNs"
+        yearsExperience={authorData.years}
+        initials={authorData.initials}
+      />
+    )}
+
     <!-- Verdict Banner -->
     <VerdictBanner score={score} verdict={verdict} winner={winner} badge={badge} />
+
+    <!-- Where to Buy -->
+    {hasAffiliateProducts && (
+      <section class="where-to-buy">
+        <h3 class="wtb-title">Where to Buy</h3>
+        <div class="wtb-cards">
+          {affiliateLinks.map((item) => (
+            <div class="wtb-card">
+              <span class="wtb-product">{item.vpn}</span>
+              <a href={item.url} rel="nofollow sponsored external" target="_blank" class="affiliate-link">
+                Visit {item.vpn}
+                <svg width="12" height="12" viewBox="0 0 12 12" fill="none" aria-hidden="true"><path d="M1 11L11 1M11 1H5M11 1V7" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"/></svg>
+              </a>
+            </div>
+          ))}
+        </div>
+      </section>
+    )}
+
+    <!-- FTC Affiliate Disclosure -->
+    <p class="affiliate-disclosure">
+      This article contains affiliate links. We may earn a commission at no extra cost to you.
+      <a href="/disclosure">Full disclosure</a>
+    </p>
 
     <!-- Content -->
     <div class="article-content">
       <slot />
+                <EzoicAds placement="mid-article" />
+<LeadMagnetCTA siteId="vpnverdict" siteName="VPNVerdict" niche="vpn" />
     </div>
 
+    <!-- Related Articles -->
+        <EzoicAds placement="between-cards" />
+    <RelatedArticles currentSlug={currentSlug} category={category} relatedSlugs={relatedArticles} />
+
     <!-- Newsletter -->
+        <EzoicAds placement="bottom" />
     <NewsletterSignup variant="inline" />
 
     <!-- Disclosure -->
@@ -147,6 +237,7 @@ if (faqPairs.length > 0) {
         <p>{siteConfig.siteName} earns commissions from affiliate links. This supports our independent testing at no cost to you. <a href="/disclosure">Full methodology &rarr;</a></p>
       </div>
     </aside>
+      <ExitIntentCapture siteId="vpnverdict" siteName="VPNVerdict" niche="vpn" />
   </article>
 </BaseLayout>
 
@@ -254,6 +345,20 @@ if (faqPairs.length > 0) {
 
   .header-rule { height: 2px; background: var(--ink-950); width: 48px; }
 
+  /* ── Affiliate Disclosure (top) ───────────────────── */
+  .affiliate-disclosure {
+    font-size: 0.75rem;
+    color: var(--ink-400, #6b7280);
+    margin: 0.5rem 0 1.5rem;
+    padding: 0;
+    line-height: 1.4;
+  }
+  .affiliate-disclosure a {
+    color: inherit;
+    text-decoration: underline;
+    text-underline-offset: 2px;
+  }
+
   /* ── Content ────────────────────────────────────── */
   .article-content {
     font-size: 1.05rem;
@@ -344,10 +449,120 @@ if (faqPairs.length > 0) {
   }
 
   /* ── Responsive ──────────────────────────────────── */
+  /* ── Affiliate Link Buttons (rehype-injected class) ── */
+  .article-content :global(a.affiliate-link),
+  a.affiliate-link {
+    display: inline-flex;
+    align-items: center;
+    gap: 0.5rem;
+    padding: 0.5rem 1rem;
+    font-size: 0.85rem;
+    font-weight: 600;
+    color: var(--ink-950);
+    background: var(--surface, #fff);
+    border: 1.5px solid var(--ink-950);
+    border-radius: var(--border-radius, 6px);
+    text-decoration: none;
+    transition: all 0.15s ease-out;
+    white-space: nowrap;
+  }
+
+  .article-content :global(a.affiliate-link:hover),
+  a.affiliate-link:hover {
+    background: var(--ink-950);
+    color: #fff;
+    transform: translateY(-1px);
+    box-shadow: 0 2px 8px rgba(0,0,0,0.12);
+  }
+
+  .article-content :global(a.affiliate-link svg),
+  a.affiliate-link svg {
+    opacity: 0.6;
+    transition: opacity 0.15s ease-out, transform 0.15s ease-out;
+    flex-shrink: 0;
+  }
+
+  .article-content :global(a.affiliate-link:hover svg),
+  a.affiliate-link:hover svg {
+    opacity: 1;
+    transform: translate(1px, -1px);
+  }
+
+  /* ── Where to Buy Section ─────────────────────────── */
+  .where-to-buy {
+    margin: var(--space-lg, 1.5rem) 0;
+    padding: var(--space-lg, 1.5rem);
+    border: 1px solid var(--ink-100, #e5e7eb);
+    border-radius: var(--border-radius-lg, 12px);
+    background: var(--surface-raised, #fafafa);
+  }
+
+  .wtb-title {
+    font-size: 0.8rem;
+    font-weight: 700;
+    text-transform: uppercase;
+    letter-spacing: 0.08em;
+    color: var(--ink-500, #6b7280);
+    margin: 0 0 var(--space-md, 1rem) 0;
+  }
+
+  .wtb-cards {
+    display: flex;
+    flex-wrap: wrap;
+    gap: var(--space-md, 1rem);
+  }
+
+  .wtb-card {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: var(--space-md, 1rem);
+    flex: 1 1 280px;
+    padding: var(--space-md, 1rem);
+    background: var(--surface, #fff);
+    border: 1px solid var(--ink-100, #e5e7eb);
+    border-radius: var(--border-radius, 6px);
+  }
+
+  .wtb-product {
+    font-weight: 600;
+    font-size: 0.95rem;
+    color: var(--ink-950, #111);
+    min-width: 0;
+    overflow: hidden;
+    text-overflow: ellipsis;
+  }
+
   @media (max-width: 640px) {
     .article-header h1 { font-size: 1.75rem; }
     .article-lede { font-size: 1.05rem; }
     .header-score-value { font-size: 1.75rem; }
     .disclosure-box { flex-direction: column; gap: var(--space-sm); }
+    .wtb-card { flex-direction: column; align-items: flex-start; }
+  }
+
+  /* ── Dark Mode Overrides ──────────────────────────── */
+  @media (prefers-color-scheme: dark) {
+    .article-content :global(thead) { background: #111318; }
+    .article-content :global(table) { border-color: #1c1c21; }
+    .article-content :global(td) { border-bottom-color: #1c1c21; }
+    .article-content :global(tbody tr:hover) { background: #161b26; }
+    .article-content :global(blockquote) { background: #111318; border-left-color: #e8ecf1; }
+    .article-content :global(h2) { border-top-color: #1c1c21; }
+    .disclosure-box { background: #111318; border-color: #1c1c21; }
+    .where-to-buy { background: #111318; border-color: #1c1c21; }
+    .wtb-card { background: #0a0a0b; border-color: #1c1c21; }
+    .header-rule { background: #e8ecf1; }
+    a.affiliate-link,
+    .article-content :global(a.affiliate-link) {
+      background: #0a0a0b;
+      border-color: #333a4a;
+      color: #e8ecf1;
+    }
+    a.affiliate-link:hover,
+    .article-content :global(a.affiliate-link:hover) {
+      background: #e8ecf1;
+      color: #0a0a0b;
+    }
   }
 </style>

@@ -28,6 +28,7 @@ const currentPath = Astro.url.pathname;
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="color-scheme" content="light dark" />
   <meta name="theme-color" content="#0a0a0b" />
   <meta name="description" content={description} />
   <meta name="keywords" content={siteConfig.keywords} />
@@ -68,6 +69,22 @@ const currentPath = Astro.url.pathname;
   <title>{fullTitle}</title>
     <script defer data-domain="vpnverdict.net" src="https://analytics.toolsradar.net/js/script.file-downloads.hash.outbound-links.pageview-props.revenue.tagged-events.js"></script>
     <script>window.plausible = window.plausible || function() { (window.plausible.q = window.plausible.q || []).push(arguments) }</script>
+  
+    <!-- Ezoic Ad Runtime -->
+    <script>
+      var defined_ez = false;
+      if (typeof window.__ezoic_enabled === 'undefined' || window.__ezoic_enabled) {
+        var ez_ad_units = [];
+        var defined_ez = true;
+      }
+    </script>
+    <script async src="//www.ezojs.com/ezoic/sa.min.js"></script>
+    <script>
+      window.ezstandalone = window.ezstandalone || {};
+      ezstandalone.cmd = ezstandalone.cmd || [];
+    </script>
+    <!-- Google AdSense -->
+    <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-8237291568873305" crossorigin="anonymous"></script>
   </head>
 <body>
   <!-- Navigation -->
@@ -120,6 +137,7 @@ const currentPath = Astro.url.pathname;
           </div>
           <div class="footer-col">
             <h4>About</h4>
+            <a href="/how-we-test">How We Test</a>
             <a href="/disclosure">Methodology</a>
             <a href="/disclosure">Affiliate Disclosure</a>
           </div>
@@ -374,5 +392,25 @@ const currentPath = Astro.url.pathname;
 
   @media (max-width: 480px) {
     .footer-links-grid { grid-template-columns: 1fr 1fr; }
+  }
+
+  /* ── Dark Mode Overrides ──────────────────────────── */
+  @media (prefers-color-scheme: dark) {
+    .brand-mark { background: #e8ecf1; color: #0a0a0b; }
+    .site-header {
+      background: rgba(10, 10, 11, 0.92);
+      border-bottom-color: #1c1c21;
+    }
+    .mobile-menu {
+      background: #0a0a0b;
+      border-bottom-color: #1c1c21;
+    }
+    .site-footer {
+      background: #0f1219;
+      border-top-color: #1c1c21;
+    }
+    .footer-top {
+      border-bottom-color: #1f2535;
+    }
   }
 </style>
