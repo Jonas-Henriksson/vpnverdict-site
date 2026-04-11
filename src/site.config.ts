@@ -29,6 +29,7 @@ export const siteConfig = {
     protonvpn: { name: 'ProtonVPN', affiliateUrl: 'https://vpnverdict.net/go/protonvpn', program: 'Impact', commission: 'Up to 25%', cookie: 30 },
     nordpass: { name: 'NordPass', affiliateUrl: 'https://vpnverdict.net/go/nordpass', program: 'CJ', commission: '30% per sale', cookie: 30 },
     'proton-partners-program': { name: 'Proton Partners Program', affiliateUrl: 'https://vpnverdict.net/go/proton-partners-program', program: 'CJ', commission: '100.00%' },
+      'iolo-system-mechanic': { name: 'Iolo System Mechanic', affiliateUrl: 'https://vpnverdict.net/go/iolo-system-mechanic', program: 'CJ', commission: 'USD 10.00' },
   },
   impactVerification: '0702cea6-0336-4910-b67c-a7671741e912',
   keywords: 'VPN reviews, VPN comparison, best VPN, VPN service, privacy VPN, fast VPN, VPN for streaming',
