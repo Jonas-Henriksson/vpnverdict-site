@@ -25,281 +25,208 @@ amazon:
 
 # ExpressVPN Review 2026: Is the Premium Price Justified?
 
-ExpressVPN consistently ranks as one of the most expensive VPN services on the market, charging **12.95/month** for monthly plans when competitors like Surfshark cost just **2.19/month**. After extensive testing across 15 server locations with multiple devices and streaming platforms, we'll determine whether this premium price tag delivers premium performance.
+ExpressVPN remains one of the most expensive mainstream VPNs on the market. At the time of writing, the monthly plan sits at **$12.95** and the best annual deal lands around **$6.67/month**, while Surfshark's two-year plan is closer to **$2.19/month**. After spending roughly two weeks using ExpressVPN daily across Windows, macOS, iOS, Android, and a flashed router, the honest question isn't whether it's *good* — it is — but whether anyone except a specific kind of user should pay nearly three times the price of the alternatives.
 
 **Quick Verdict**
 
-📊 **Best Overall**: ExpressVPN — fastest speeds (94% retention) and unblocks everything but costs 12.95/month
-🥈 **Best Value**: NordVPN — similar performance at 6.67/month with better security features
-💰 **Budget Pick**: Surfshark — solid streaming and speeds at 2.19/month with unlimited connections
+- **Fastest and most reliable for streaming**: ExpressVPN. You pay for it, though.
+- **Best all-round value**: NordVPN. Not quite as fast, but the feature set and price make more sense for most people.
+- **Budget pick**: Surfshark. The cheapest of the three with unlimited connections, but you'll notice the speed drop on distant servers.
 
-## Testing Methodology
+## How I Tested
 
-We tested ExpressVPN across 15 server locations using Speedtest.net, Fast.com, and Ookla speed testing tools from our 500 Mbps fiber connection in Austin, Texas. We verified streaming unblocking capabilities on Netflix US, UK, Canada, BBC iPlayer, Disney+, Hulu, and Amazon Prime Video. DNS leak tests were performed using DNSLeakTest.com and IPLeak.net across Windows, macOS, iOS, and Android devices.
+No fake lab. I ran ExpressVPN as my daily-driver VPN for about two weeks on a 500/500 Mbps residential fiber line in the US, switching between Lightway-UDP, Lightway-TCP, and OpenVPN to compare protocol behavior. I hit a spread of servers — US East and West, UK, Netherlands, Japan, Singapore, Australia — and checked DNS/IPv6/WebRTC leaks on dnsleaktest.com, ipleak.net, and browserleaks.com at each hop. Streaming was tested on Netflix (US, UK, Canada, Japan), BBC iPlayer, Disney+, Hulu, and Amazon Prime Video over several different evenings, because streaming unblocking is a cat-and-mouse game and a single afternoon of testing would be dishonest.
 
-## ExpressVPN Performance Comparison
+Speed numbers in this review are rounded ranges, not lab-precise figures. Anyone quoting "94.0% speed retention" from a home connection is inventing precision the methodology can't support.
 
-| VPN Service | Best For | Monthly Price | Servers | Speed Retention | Streaming Score | Rating |
-|-------------|----------|---------------|---------|-----------------|-----------------|--------|
-| ExpressVPN | Speed & Streaming | 12.95/month | 3000+ in 105 countries | 94% | 9.5/10 | 8.8/10 |
-| NordVPN | Overall Value | 6.67/month | 6000+ in 111 countries | 89% | 9.2/10 | 9.1/10 |
-| Surfshark | Budget Choice | 2.19/month | 3200+ in 100 countries | 82% | 8.8/10 | 8.5/10 |
-| CyberGhost | Streaming Variety | 2.19/month | 9700+ in 100 countries | 78% | 9.0/10 | 8.2/10 |
-| ProtonVPN | Privacy Focus | 9.99/month | 6000+ in 112 countries | 85% | 7.5/10 | 8.7/10 |
+## How ExpressVPN Stacks Up
 
-## ExpressVPN — Best for Speed and Streaming
+| VPN | Best for | Rough annual price | Server footprint | Speed impression | Streaming in my tests |
+|---|---|---|---|---|---|
+| ExpressVPN | Speed, streaming, router use | ~$6.67/mo | 3,000+ servers, 105 countries | Minimal drop nearby, holds up across continents | Unblocked every major platform reliably |
+| NordVPN | Overall value + features | ~$3.99–$4.99/mo | 6,400+ servers, 111 countries | Close to ExpressVPN on WireGuard (NordLynx) | Mostly reliable, occasional Netflix region miss |
+| Surfshark | Cheap, many devices | ~$2.19/mo | 3,200+ servers, 100 countries | Good nearby, noticeable drop on far servers | Works on the big platforms, less consistent elsewhere |
+| CyberGhost | Streaming presets | ~$2.19/mo | 11,500+ servers | Middling, larger drop on long hops | Good on streaming-labeled servers, weaker elsewhere |
+| Proton VPN | Privacy-first users | ~$4.99/mo | 8,500+ servers, 112 countries | Good on WireGuard, Secure Core hurts speeds by design | Inconsistent for streaming; not its focus |
 
-**Best for premium performance with maximum compatibility**
+## ExpressVPN — Premium Performance, Premium Price
 
-ExpressVPN delivers consistently fast speeds and reliable streaming unblocking, but you'll pay a significant premium for these benefits. Our testing revealed **average download speeds of 469 Mbps** on nearby servers (94% retention) and successful Netflix unblocking in 12 different regions.
+**Best for:** people who want fast, boring, it-just-works VPN service and don't flinch at the price.
 
-### Pricing Plans
+On my local US East server, ExpressVPN's throughput was effectively transparent — I couldn't tell the VPN was on without checking. Transcontinental hops (Tokyo, Sydney) were the expected story: latency dominates, throughput stays usable for streaming and browsing but you feel it on large file transfers. Lightway-UDP reconnected noticeably faster than OpenVPN when I toggled Wi-Fi on and off, which matters if you're a mobile user constantly hopping between networks.
 
-- **Monthly Plan**: 12.95/month
-- **6-Month Plan**: 9.99/month (59.95 total)
-- **12-Month Plan**: 6.67/month (99.95 first year, includes 3 free months)
-- **Money-back guarantee**: 30 days
-- **Free trial**: 7 days on mobile apps
+### Pricing
 
-### Performance Data
+- Monthly: $12.95
+- 6 months: ~$9.99/mo
+- 12 months: ~$6.67/mo (with 3 extra months on current promo)
+- 30-day refund window; 7-day mobile free trial
+- No 2-year plan, which is a real pain point: Surfshark, NordVPN, and Proton VPN all amortize their prices far lower over longer terms.
 
-**Speed Test Results (500 Mbps baseline)**:
-- US East servers: 469 Mbps download, 98 Mbps upload, 12ms latency
-- US West servers: 445 Mbps download, 95 Mbps upload, 28ms latency
-- UK servers: 387 Mbps download, 89 Mbps upload, 118ms latency
-- Japan servers: 312 Mbps download, 76 Mbps upload, 156ms latency
-- Australia servers: 298 Mbps download, 71 Mbps upload, 189ms latency
+### Protocols and What They Mean
 
-**Server Network**: 3000+ servers across 105 countries with **Lightway protocol** providing 23% faster connections than OpenVPN. The network includes specialized streaming servers and obfuscated servers for restrictive regions.
+ExpressVPN ships with its proprietary **Lightway** protocol (built on wolfSSL, with a post-quantum option available), plus OpenVPN UDP/TCP and IKEv2. No first-party WireGuard. If you care about auditable open standards, that's a real consideration — WireGuard is small, well-scrutinized, and fast, and several competitors (NordLynx, Proton, Mullvad) ship it directly. Lightway has been independently audited (Cure53) and the core is open source, but it's still a proprietary stack you're trusting. In my testing Lightway was comparable to WireGuard for throughput and connection speed; the tradeoff is ideological, not performance-based.
 
-**Streaming Unblocking Results**:
-- ✅ Netflix US, UK, Canada, Japan, Australia (12 regions tested)
-- ✅ BBC iPlayer, ITV Hub, Channel 4
-- ✅ Disney+, Hulu, HBO Max, Amazon Prime Video
-- ✅ ESPN+, Peacock, Paramount+
-- ❌ Netflix Turkey, Argentina (geo-detection improved)
+For everyday users: OpenVPN is the battle-tested fallback, IKEv2 handles mobile handoffs well, WireGuard/Lightway are your speed picks. ExpressVPN's decision to build its own instead of shipping WireGuard is defensible but not what I'd personally choose.
 
-### Pros
+### Streaming, Honestly
 
-- **Fastest speeds**: 94% speed retention beats all major competitors
-- **Lightway protocol**: Proprietary protocol reduces connection time by 67%
-- **Universal streaming**: Unblocks Netflix in 12 regions plus all major platforms
-- **Router support**: Native apps for ASUS, Linksys, and Netgear routers [Check compatible routers on Amazon](https://www.amazon.com/dp/B08KJB5MLJ?tag=toolsradar05-20)
-- **Split tunneling**: Available on Windows, Mac, Android, and Linux
-- **24/7 live chat**: Average response time under 30 seconds
+Over the test window, Netflix worked on US, UK, Canada, and Japan libraries from ExpressVPN servers in the matching countries. BBC iPlayer, Disney+, Hulu, and Prime Video all loaded without the dreaded proxy error. Two caveats worth stating plainly: (1) I hit one stretch where a specific UK server was flagged and I had to hop to another to get iPlayer working, and (2) Netflix unblocking results change monthly — what works today may get blacklisted next week. Any review that claims a VPN "always unblocks everything" is lying by omission.
 
-### Cons
+### Security and Privacy — Read the Policy
 
-- **Expensive**: 12.95/month monthly rate is 2-6x competitors
-- **Limited connections**: Only 8 simultaneous devices vs unlimited on Surfshark
-- **No ad blocker**: Lacks built-in ad/malware blocking unlike NordVPN
-- **Bitcoin-only crypto**: Accepts Bitcoin but not Monero or other privacy coins
-- **Shorter plans**: No 2-year option for maximum savings
+- **Encryption**: AES-256-GCM with SHA-512 HMAC and 4096-bit RSA for TLS handshakes on OpenVPN. Lightway uses ChaCha20-Poly1305. These are current best-practice ciphers — no "military grade" hand-waving required.
+- **No-logs**: ExpressVPN's no-logs claim has been audited multiple times, most recently by KPMG and PwC in prior years. Read the privacy policy yourself: they do not log traffic, DNS queries, IP addresses, or browsing destinations, but they *do* retain aggregated, non-identifying data such as the date (not time) of connection, choice of server, and total bandwidth used. That's a weaker standard than Mullvad's near-zero retention, and worth knowing if your threat model includes anything above "hide from my ISP." Remember: "no-logs" means different things — no connection logs, no usage logs, no metadata — and ExpressVPN keeps some metadata.
+- **RAM-only servers**: ExpressVPN's TrustedServer runs the stack in volatile memory, so a reboot wipes state. This is a real hedge against server seizure and is something I'd expect from any VPN charging this price.
+- **Jurisdiction**: British Virgin Islands. Genuinely useful — no mandatory data retention, not a Five/Nine/Fourteen Eyes member — but keep two things in mind. First, jurisdiction governs the corporate entity, not where the server you're using actually sits. Connect to a Germany server and your traffic is egressing in Germany. Second, ExpressVPN was acquired by Kape Technologies, which has been a point of friction for privacy-focused users; Kape's history is worth reading before committing. ExpressVPN does not publish a warrant canary, which is philosophically fine (warrant canaries have shaky legal enforceability anyway) but also removes one common signaling mechanism.
+- **Leak tests**: No DNS, IPv6, or WebRTC leaks detected across the servers I tested. Kill switch (Network Lock) held on forced disconnect — I pulled the Wi-Fi adapter mid-download and nothing bled through.
 
-[Get ExpressVPN with 3 free months →](https://vpnverdict.net/go/expressvpn)
+### What's Good
 
-## NordVPN — Best Overall Value Alternative
+- Consistently strong speeds with minimal local-server drop.
+- Streaming unblocking that actually held up across a multi-week window.
+- Router firmware (their own builds for ASUS, Linksys, Netgear, and others) that genuinely works, including split-tunneling on the router itself — unusual in this space.
+- Split tunneling on Windows, macOS, Android, and router firmware. Note it was removed from the Mac app for a stretch around macOS version changes; verify it's present on your current version before buying.
+- Fast, competent live chat support when I intentionally broke things.
 
-**Best for balanced features and competitive pricing**
+### What's Weak
 
-NordVPN delivers **89% speed retention** at half the price of ExpressVPN while adding security features like **Threat Protection** ad blocking and **Meshnet** for secure device connections. Our testing found it matches ExpressVPN for streaming while providing better privacy tools.
+- **Expensive, with no long-term plan**. This is the single biggest honest criticism. Competitors will sell you two or three years up front for a fraction of the cost.
+- **Only 8 simultaneous device connections**. Fine for an individual, tight for a household with phones, laptops, tablets, a TV, and a console.
+- **No built-in ad/tracker blocker** worth the name. Threat Manager blocks known trackers but doesn't touch ads — compare to NordVPN's Threat Protection or Proton's NetShield.
+- **No first-party WireGuard**, which matters if you want to stick to audited open protocols.
+- **Kape ownership** is a reasonable concern for privacy absolutists.
+- **Metadata retention** in the privacy policy is real, even if minimal.
 
-### Pricing Plans
+[Get ExpressVPN →](https://vpnverdict.net/go/expressvpn)
 
-- **Monthly Plan**: 12.99/month
-- **1-Year Plan**: 6.67/month (79.99 total)
-- **2-Year Plan**: 3.99/month (107.73 total)
-- **Money-back guarantee**: 30 days
-- **Free trial**: 7 days on Android
+## NordVPN — The Better Value Pick for Most People
 
-### Performance Data
+**Best for:** users who want strong speeds, a real security feature set, and a price that doesn't sting.
 
-**Speed Test Results**:
-- US servers: 445 Mbps download, 94% retention
-- Streaming: Netflix US/UK, BBC iPlayer, Disney+ confirmed working
-- Security: **Double VPN** and **Tor over VPN** options
-- Connections: **10 simultaneous devices**
+NordVPN's NordLynx (their WireGuard wrapper) is fast — on nearby servers I couldn't distinguish it from ExpressVPN's Lightway in casual use. Where NordVPN pulls ahead is feature density: Threat Protection actually blocks ads and malicious domains at the DNS layer, Double VPN routes you through two servers for a genuine (if slower) extra hop, and Meshnet lets you build private device-to-device networks, which is genuinely useful for remote file access or LAN gaming.
 
-### Pros
+### Pricing
 
-- **Better value**: 6.67/month annual vs ExpressVPN's 12.95/month
-- **Threat Protection**: Blocks ads, trackers, and malware automatically
-- **More connections**: 10 devices vs ExpressVPN's 8
-- **Advanced security**: Double VPN, Tor over VPN, dedicated IP options
-- **Larger network**: 6000+ servers in 111 countries
-- **Meshnet**: Connect up to 60 devices in secure private network
+- Monthly: $12.99
+- 1 year: ~$4.99/mo
+- 2 years: ~$3.99/mo
+- 30-day refund
 
-### Cons
+### What's Good
 
-- **Slower speeds**: 89% retention vs ExpressVPN's 94%
-- **Inconsistent Netflix**: Some regions blocked more frequently
-- **Complex interface**: More features create steeper learning curve
+- NordLynx speeds close to ExpressVPN at roughly half the annual cost.
+- Threat Protection is a real ad/tracker blocker, not a marketing label.
+- 10 simultaneous connections.
+- Independently audited no-logs policy (Deloitte most recently), Panama jurisdiction with no mandatory data retention.
+- RAM-only server infrastructure.
 
-[Get NordVPN with 74% off →](https://www.anrdoezrs.net/click-101724885-16968809)
+### What's Weak
 
-## Surfshark — Best Budget Alternative
+- The Windows app has been feature-bloated for years and the UI is not as clean as ExpressVPN's.
+- Streaming unblocking is *mostly* reliable but I had more Netflix region hiccups on Nord than Express during the test period.
+- Past incidents — notably the 2018 Finland server rental compromise — happened years ago and drove the RAM-only rebuild, but the fact pattern is worth knowing before signing up.
 
-**Best for unlimited connections and basic needs**
+[Get NordVPN →](https://vpnverdict.net/go/nordvpn)
 
-Surfshark provides **unlimited simultaneous connections** and solid **82% speed retention** at just **2.19/month**. While streaming unblocking isn't as reliable as ExpressVPN, it works consistently with Netflix US, UK, and Disney+.
+## Surfshark — Cheap, Cheerful, With Real Compromises
 
-### Pricing Plans
+**Best for:** households with a lot of devices, or anyone on a strict budget who still wants a legitimate VPN rather than a free shadow operation.
 
-- **Monthly Plan**: 15.45/month
-- **1-Year Plan**: 3.99/month (47.88 total)
-- **2-Year Plan**: 2.19/month (59.76 total)
-- **Money-back guarantee**: 30 days
+Surfshark is genuinely inexpensive on the two-year plan, and the unlimited simultaneous connections policy is a legitimate differentiator — if you're covering a whole family plus smart TVs, it's the obvious pick. But pricing this aggressive comes with tradeoffs worth naming out loud.
 
-### Performance Data
+### Pricing
 
-- **Speed retention**: 82% average across 10 server locations
-- **Streaming**: Netflix US/UK, Disney+, Hulu confirmed
-- **Security**: **CleanWeb** ad blocking, **MultiHop** double VPN
-- **Connections**: **Unlimited devices**
+- Monthly: $15.45
+- 1 year: ~$3.99/mo
+- 2 years: ~$2.19/mo
 
-[Get Surfshark for 2.19/month →](https://www.anrdoezrs.net/click-101724885-15438560)
+### What's Good
+
+- Unlimited devices — no competitor at this price matches it.
+- CleanWeb blocks ads and trackers at the DNS level.
+- WireGuard support on all major platforms.
+- Netherlands-based jurisdiction, independently audited (Deloitte) for no-logs compliance.
+
+### What's Weak — And This Is Where I'll Get Pushback
+
+This is the product in this roundup I'd rank meaningfully behind the other two, and it's worth being specific about why rather than pretending everything is a winner:
+
+- **Speeds on distant servers dropped more than on Nord or Express** during my test window — sometimes significantly. For nearby hops it was fine; Tokyo and Sydney were noticeably worse than the competition.
+- **Netflix unblocking was inconsistent**. It worked for US and UK libraries most of the time, but I hit failures on smaller regions that Express handled without breaking a sweat.
+- **Surfshark merged with Nord Security's parent in 2022**. The companies insist the brands operate independently, but if you were choosing Surfshark specifically to diversify away from NordVPN's parent, that math has changed.
+- **Support is slower and less technically sharp** than ExpressVPN's chat in my experience — fine for billing questions, frustrating for real troubleshooting.
+
+If you need the cheapest legitimate VPN and you're mostly doing US/UK browsing and streaming, Surfshark is fine. If you want the best performance per dollar and you'll ever use servers more than one continent away, NordVPN is the smarter spend.
+
+[Get Surfshark →](https://vpnverdict.net/go/surfshark)
 
 ## Use Case Recommendations
 
-### Best for Streaming Netflix and International Content
+### Streaming Netflix and regional libraries
+**ExpressVPN** was the most consistent across the test window — fewer dead servers, faster recovery when a server did get flagged. Streaming unblocking is a cat-and-mouse game by nature and anyone who tells you "100% success rate" is either lucky or lying. See the full streaming comparison: [Best VPN for Streaming 2026](/best-vpn-streaming-netflix-hulu-disney-2026).
 
-**Winner: ExpressVPN** consistently unblocks Netflix in 12 regions including US, UK, Canada, and Japan. Our testing found **100% success rate** with major streaming platforms. For comprehensive streaming guidance, see our [Best VPN for Streaming 2026: Netflix, Hulu, Disney+ Tested](/best-vpn-streaming-netflix-hulu-disney-2026) comparison.
+### Gaming and low latency
+**ExpressVPN** edged out Nord on latency to the servers I tested, but honestly for gaming a VPN is a trade-off against your bare connection — use it when you need to (region access, ISP throttling) rather than as a default. Details in [Best VPN for Gaming 2026](/best-vpn-gaming-2026-lowest-latency).
 
-### Best for Gaming and Low Latency
+### Privacy with a strict threat model
+**Neither ExpressVPN nor NordVPN is the right call here** — go read about [Mullvad and Proton VPN](/best-vpn-privacy-2026) instead. Proton's Secure Core routes through hardened datacenters in privacy-favorable jurisdictions before exiting, at a real speed cost. That's multi-hop done thoughtfully, and it's a different product category from the mass-market services in this review.
 
-**Winner: ExpressVPN** delivered the lowest latency in our tests with **12ms ping to US East servers**. The Lightway protocol reduces connection overhead for smoother gaming. Check our [Best VPN for Gaming 2026: 5 Lowest Latency Services Tested](/best-vpn-gaming-2026-lowest-latency) for detailed gaming performance analysis.
+### Torrenting and P2P
+**ExpressVPN** allows P2P on all servers, the kill switch held up under forced disconnects, and I saw no leaks. NordVPN routes P2P to specific optimized servers, which is slightly more annoying but works. Full breakdown: [Best VPN for Torrenting 2026](/best-vpn-torrenting-2026).
 
-### Best for Privacy and Security
+### Households with lots of devices
+**Surfshark** wins on math alone — unlimited connections is unlimited connections.
 
-**Winner: NordVPN** offers superior privacy features including **independently audited no-logs policy**, **Tor over VPN**, and **RAM-only servers**. ExpressVPN's British Virgin Islands jurisdiction provides legal privacy protection but lacks advanced security tools. See our [Best VPN for Privacy 2026: No-Logs Policies Actually Verified](/best-vpn-privacy-2026) guide.
+### Small business teams
+**NordVPN** with dedicated IPs, central billing, and Meshnet for device-to-device links is the more serious pick. See [Best VPN for Small Business Teams 2026](/best-vpn-small-business-teams-2026).
 
-### Best for Torrenting and P2P
+## Mobile App Experience
 
-**Winner: ExpressVPN** allows P2P on all servers with **kill switch protection** and **DNS leak prevention**. Download speeds averaged **387 Mbps** on torrent-optimized servers. For complete P2P guidance, read our [Best VPN for Torrenting 2026: Speed, Safety, and P2P Support Tested](/best-vpn-torrenting-2026) analysis.
+ExpressVPN's mobile apps are the least complicated I've used. Smart Location picks a fast nearby server on launch, per-app split tunneling on Android works well, and iOS Network Lock held on cellular-to-Wi-Fi handoffs. The iOS app can't do per-app VPN routing because of Apple's platform limitations — that's not ExpressVPN's fault, but it's worth knowing if split tunneling is why you're shopping. On Android, split tunneling is present and granular. Battery impact on both was unremarkable compared to OpenVPN-based apps. Details in [Best VPN for Android and iOS 2026](/best-vpn-android-ios-2026-mobile-apps).
 
-### Best Budget Option
+## Verdict: Pay the Premium Only If You Know Why
 
-**Winner: Surfshark** at **2.19/month** provides 83% of ExpressVPN's performance at 17% of the cost. Unlimited connections make it ideal for families and small businesses.
+ExpressVPN earns its reputation. The speeds are real, the streaming reliability is real, and the router support is better than anyone else's in the mass market. But the price premium over NordVPN is hard to justify on raw capability — NordVPN gets you ~90% of the experience with a more useful feature set for half the cost, and that gap widens on the two-year plan Express doesn't offer.
 
-### Best for Business Teams
+**Pay for ExpressVPN if**: you want the cleanest apps, the most reliable streaming month after month, router-level VPN with first-party firmware, or you specifically trust their Lightway/audit track record over the alternatives. Flashable routers like the ones many readers run — [ASUS AX6000](https://www.amazon.com/dp/B08KJB5MLJ?tag=toolsradar05-20) or the older but still serviceable [Linksys WRT3200ACM](https://www.amazon.com/dp/B07GBXP52Y?tag=toolsradar05-20) — pair well with it.
 
-**Winner: NordVPN** with **dedicated IP addresses** and **central billing** beats ExpressVPN for enterprise use. The **Meshnet** feature creates secure connections between team devices. For business VPN comparison, see [Best VPN for Small Business Teams 2026: Security & Remote Access Tested](/best-vpn-small-business-teams-2026).
+**Pick NordVPN instead if**: you want the best bang-for-buck, you care about built-in ad blocking, or you want WireGuard without a proprietary wrapper.
 
-## Detailed Pricing Comparison
+**Pick Surfshark if**: budget is the deciding factor and you need to cover a lot of devices.
 
-| Plan Length | ExpressVPN | NordVPN | Surfshark | CyberGhost | ProtonVPN |
-|-------------|------------|---------|-----------|------------|-----------|
-| Monthly | 12.95 | 12.99 | 15.45 | 12.99 | 9.99 |
-| 1 Year | 6.67 (8.32 avg) | 6.67 | 3.99 | 4.29 | 5.99 |
-| 2 Year | Not Available | 3.99 | 2.19 | 2.19 | 4.99 |
-| Free Trial | 7 days mobile | 7 days Android | 7 days mobile | 1 day | 7 days |
-| Refund Period | 30 days | 30 days | 30 days | 45 days | 30 days |
+**Look elsewhere entirely** — at Mullvad or Proton — **if**: your threat model is serious enough that Kape ownership, metadata retention, or the lack of a warrant canary actually matter to you.
 
-**Value Analysis**: ExpressVPN's annual plan at **6.67/month** costs 3x more than Surfshark's **2.19/month** for similar core functionality. The premium price buys you **5% better speeds** and **more reliable streaming** but questionable value for budget-conscious users.
+For the wider 2026 comparison, see [Best VPN Services in 2026](/best-vpn-2026) and the broader [Is a VPN Worth It in 2026?](/is-vpn-worth-it-2026-pros-cons-explained) piece.
 
-## Mobile App Performance
+[Get ExpressVPN →](https://vpnverdict.net/go/expressvpn)
 
-ExpressVPN's mobile apps received high marks in our testing across iOS and Android devices. The **Smart Location** feature automatically connects to the fastest available server, typically completing connections in **3-4 seconds**.
+## FAQ
 
-**iOS App Features**:
-- Network Lock (kill switch) works on cellular and Wi-Fi
-- Split tunneling for app-specific routing
-- Shortcut widget for home screen access
-- **Battery optimization**: 12% lower battery drain vs OpenVPN
+### Is ExpressVPN worth the price in 2026?
 
-**Android App Features**:
-- Per-app VPN controls for granular traffic routing
-- Always-on VPN with kill switch
-- **Connection speeds**: Lightway protocol connects 67% faster
-- IPv6 leak protection enabled by default
+Only if you specifically value what it's best at: consistently fast speeds, streaming that holds up over time, and router-level VPN. For most users, NordVPN delivers a comparable experience for substantially less, which is why it's the default recommendation I'd give a friend.
 
-For comprehensive mobile VPN testing, see our [Best VPN for Android and iOS 2026: Mobile Apps Speed & Security Tested](/best-vpn-android-ios-2026-mobile-apps) guide.
+### Does ExpressVPN still work with Netflix?
 
-## Security and Privacy Analysis
+In my tests over several weeks, yes — across US, UK, Canada, and Japan libraries, plus BBC iPlayer, Disney+, Hulu, and Prime Video. But streaming blocks are a moving target and results change. Use the 30-day refund if it stops working for your specific library.
 
-**Encryption**: ExpressVPN uses **AES-256 encryption** with **4096-bit RSA keys** and **HMAC authentication**. The proprietary **Lightway protocol** maintains security while reducing connection overhead by 23%.
+### How fast is ExpressVPN really?
 
-**No-Logs Policy**: ExpressVPN's policy was **independently audited by PwC** in 2022, confirming they don't store connection logs, traffic data, or DNS queries. However, they do log the date (not time) of connections for server optimization.
+On nearby servers, effectively transparent on a 500 Mbps line — you can't feel the VPN. Transcontinental hops show the expected latency hit but stay usable for streaming and web browsing. I'm deliberately not quoting lab-precise percentages because home-connection testing can't support that level of precision honestly.
 
-**RAM-Only Servers**: **TrustedServer technology** ensures all servers run on volatile memory, automatically wiping data on reboot. This prevents forensic data recovery if servers are compromised.
+### How many devices can I use at once?
 
-**Jurisdiction**: British Virgin Islands location provides **strong legal protection** with no mandatory data retention laws and no intelligence-sharing agreements with Five Eyes nations.
+Eight. That's tight for a busy household. Surfshark's unlimited connections or NordVPN's ten-device cap are more flexible. Installing ExpressVPN on the router covers everything behind it as one slot, which is the usual workaround.
 
-**DNS Protection**: ExpressVPN runs **private DNS servers** on all endpoints, preventing DNS leaks and ISP tracking. Our leak tests found **zero DNS or IPv6 leaks** across 15 server locations.
+### Does ExpressVPN actually keep no logs?
 
-**Kill Switch**: **Network Lock** feature blocks all traffic if the VPN connection drops. Testing confirmed it activates within **200ms** of connection loss, preventing IP exposure.
+Their no-logs claim has been independently audited. Read the policy yourself, though: they retain some aggregated metadata (connection date, server choice, bandwidth totals). That's not the same as zero retention. For most threat models it's fine. If you need the absolute minimum, look at Mullvad.
 
-## ExpressVPN vs Competition Analysis
+### ExpressVPN vs NordVPN — which should I buy?
 
-Compared to NordVPN in our head-to-head testing, ExpressVPN delivered **5% faster speeds** but costs **94% more** on annual plans. See our detailed [NordVPN vs ExpressVPN 2026: Complete Speed & Feature Comparison](/nordvpn-vs-expressvpn-2026-comparison) for specific metrics.
+NordVPN for most people: better value, better feature set, WireGuard-based protocol, comparable speeds. ExpressVPN if you specifically want the cleanest apps, the best router firmware, and the most reliable streaming over time, and you're okay paying for that. Full breakdown: [NordVPN vs ExpressVPN 2026](/nordvpn-vs-expressvpn-2026-comparison).
 
-**ExpressVPN Advantages**:
-- Fastest consistent speeds (94% retention)
-- Most reliable Netflix unblocking (12 regions)
-- Lightway protocol innovation
-- Router firmware support
-- Better customer support response times
+### Is there a free version?
 
-**Where Competitors Excel**:
-- **NordVPN**: Better security features, lower price, more connections
-- **Surfshark**: Unlimited connections, 70% cheaper
-- **CyberGhost**: More servers, longer money-back guarantee
-- **ProtonVPN**: Open-source apps, Secure Core architecture
-
-For comprehensive VPN comparison across all categories, check our [Best VPN Services in 2026 - Complete Comparison Guide](/best-vpn-2026).
-
-## Customer Support Experience
-
-ExpressVPN's **24/7 live chat support** consistently answered technical questions within **30 seconds** during our testing. Support agents demonstrated solid technical knowledge and provided specific server recommendations for streaming issues.
-
-**Support Channels**:
-- Live chat: Average 28-second response time
-- Email tickets: 4-6 hour response time
-- Setup tutorials: 150+ guides with screenshots
-- Remote assistance: Available for router configuration
-
-**Support Quality**: Agents successfully helped us resolve Netflix geo-blocking issues and provided specific server recommendations for **BBC iPlayer** access. However, they couldn't assist with advanced networking questions like **custom DNS configuration**.
-
-## Verdict: Premium Performance at Premium Price
-
-ExpressVPN delivers **exceptional speed and streaming performance** but struggles to justify its **3-6x price premium** over equally capable competitors. While the **94% speed retention** and **12-region Netflix unblocking** lead our benchmarks, NordVPN provides 95% of the functionality at half the price.
-
-**Choose ExpressVPN if**: You prioritize maximum speed, need reliable streaming across multiple Netflix regions, or require router-level VPN protection with [compatible firmware-flashable routers](https://www.amazon.com/dp/B07GBXP52Y?tag=toolsradar05-20).
-
-**Choose alternatives if**: You want better value (NordVPN), unlimited connections (Surfshark), or advanced privacy features without the premium price tag.
-
-**Final Recommendation**: ExpressVPN earns **8.8/10** for performance but loses points for pricing. NordVPN provides better overall value for most users.
-
-For readers evaluating whether VPN services provide sufficient value in 2026, see our analysis: [Is a VPN Worth It in 2026? Pros and Cons Explained with Real Testing Data](/is-vpn-worth-it-2026-pros-cons-explained).
-
-[Get ExpressVPN (3 months free) →](https://vpnverdict.net/go/expressvpn)
-
-## Frequently Asked Questions
-
-### Is ExpressVPN worth the high price in 2026?
-
-ExpressVPN's **12.95/month** premium is justified if you need the fastest speeds (94% retention) and most reliable streaming unblocking. However, NordVPN delivers 89% speed retention with better security features at **6.67/month**, making it better value for most users.
-
-### Does ExpressVPN work with Netflix in 2026?
-
-Yes, ExpressVPN successfully unblocks **Netflix in 12 regions** including US, UK, Canada, and Japan. Our testing found 100% success rates with major streaming platforms including Disney+, Hulu, BBC iPlayer, and Amazon Prime Video.
-
-### How fast is ExpressVPN compared to other VPNs?
-
-ExpressVPN achieved **94% speed retention** in our testing, delivering 469 Mbps on our 500 Mbps connection. This beats NordVPN (89%), Surfshark (82%), and CyberGhost (78%). The proprietary Lightway protocol reduces connection overhead by 23%.
-
-### Can I use ExpressVPN on multiple devices simultaneously?
-
-ExpressVPN allows **8 simultaneous connections** per subscription. This covers most households but falls short of Surfshark's unlimited connections or NordVPN's 10-device limit. Router installation can protect unlimited devices through a single connection slot.
-
-### Does ExpressVPN keep logs of my activity?
-
-ExpressVPN maintains a **verified no-logs policy** audited by PwC in 2022. They don't store connection logs, traffic data, or DNS queries. However, they do log connection dates (not times) for server load balancing, which some privacy advocates consider suboptimal.
-
-### Which is better: ExpressVPN or NordVPN in 2026?
-
-NordVPN provides better overall value with **89% speed retention**, advanced security features like Threat Protection, and **10 simultaneous connections** at 6.67/month. ExpressVPN wins on raw speed (94% retention) and streaming reliability but costs twice as much. See our detailed [NordVPN Review 2026: Complete Speed, Security & Streaming Tests](/nordvpn-review-2026-complete-test).
-
-### Can I get ExpressVPN for free?
-
-ExpressVPN offers a **7-day free trial** on mobile apps and a **30-day money-back guarantee** on all plans. There's no permanent free tier. For readers considering free alternatives, read [Free vs Paid VPN - Why Free VPNs Are Never Really Free](/free-vs-paid-vpn) to understand the limitations and risks.
+No. 7-day mobile trial, 30-day refund. If you're considering a genuinely free VPN, read [Free vs Paid VPN](/free-vs-paid-vpn) first — the business models for free VPNs are almost always paid for by something you wouldn't like.
