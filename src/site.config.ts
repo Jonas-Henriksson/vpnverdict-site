@@ -20,6 +20,8 @@ export const siteConfig = {
     { label: 'Reviews', href: '/#latest' },
     { label: 'Categories', href: '/#categories' },
     { label: 'Methodology', href: '/disclosure' },
+    { label: 'About', href: '/about' },
+    { label: 'Contact', href: '/contact' },
   ],
   affiliatePrograms: {
     nordvpn: { name: 'NordVPN', affiliateUrl: 'https://vpnverdict.net/go/nordvpn', program: 'CJ', commission: '40% per sale', cookie: 30 },
