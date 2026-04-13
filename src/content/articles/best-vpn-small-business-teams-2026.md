@@ -17,7 +17,7 @@ affiliateLinks:
 amazon:
   - product: "ASUS AX6000 WiFi 6 Gaming Router"
     asin: "B07YMFZ28Q"
-    link: "https://www.amazon.com/dp/B07YMFZ28Q?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B07YMFZ28Q?tag=vpnverdict-20"
 ---
 
 # Best VPN for Small Business Teams 2026: Security & Remote Access Tested
@@ -170,7 +170,7 @@ Pilot with a small group first — five users for two weeks is enough to find th
 
 Write down a simple access policy before you turn it on. "When is the VPN required?" is a more useful question than it sounds, and the answer is rarely "always" — forcing VPN-on for every connection will slow down workflows and train people to disable it. A policy like "required on untrusted networks; required for access to internal systems" is more sustainable.
 
-For hardware, any decent consumer router with WireGuard support can extend a business VPN to an entire office or home setup — there's no need for a dedicated "VPN-capable" appliance unless you're routing substantial traffic. If you're shopping, something like the [ASUS AX6000](https://www.amazon.com/dp/B07YMFZ28Q?tag=toolsradar05-20) handles router-level VPN clients without the throughput falling off a cliff, though you should check specific model reviews — router VPN performance is extremely CPU-bound.
+For hardware, any decent consumer router with WireGuard support can extend a business VPN to an entire office or home setup — there's no need for a dedicated "VPN-capable" appliance unless you're routing substantial traffic. If you're shopping, something like the [ASUS AX6000](https://www.amazon.com/dp/B07YMFZ28Q?tag=vpnverdict-20) handles router-level VPN clients without the throughput falling off a cliff, though you should check specific model reviews — router VPN performance is extremely CPU-bound.
 
 ## Final Take
 

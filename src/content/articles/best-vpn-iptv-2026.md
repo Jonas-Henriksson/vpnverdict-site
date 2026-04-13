@@ -14,13 +14,13 @@ winner: NordVPN
 amazon:
   - product: "GL.iNet GL-MT6000 VPN Router"
     asin: "B0CF54JCVL"
-    link: "https://www.amazon.com/dp/B0CF54JCVL?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B0CF54JCVL?tag=vpnverdict-20"
   - product: "Netgear Nighthawk R7000 Router"
     asin: "B00F0DD0I6"
-    link: "https://www.amazon.com/dp/B00F0DD0I6?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B00F0DD0I6?tag=vpnverdict-20"
   - product: "TP-Link AX5400 WiFi 6 Router"
     asin: "B09G5W9R6T"
-    link: "https://www.amazon.com/dp/B09G5W9R6T?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B09G5W9R6T?tag=vpnverdict-20"
 affiliateLinks:
   - vpn: NordVPN
     url: https://www.awin1.com/cread.php?awinmid=15132&awinaffid=2845746&clickref=best-vpn-iptv-2026
@@ -198,9 +198,9 @@ The caveat: your router CPU is now doing the encryption. A consumer router with 
 
 Hardware I tested on:
 
-- **[GL.iNet GL-MT6000](https://www.amazon.com/dp/B0CF54JCVL?tag=toolsradar05-20)** — Purpose-built for VPN workloads, ships with WireGuard and OpenVPN support out of the box, OpenWrt underneath if you want to tinker. This was my main test rig and it handled everything I threw at it.
-- **[Netgear Nighthawk R7000](https://www.amazon.com/dp/B00F0DD0I6?tag=toolsradar05-20)** — An older but well-supported model with strong DD-WRT/OpenWrt community builds. VPN throughput is limited by the 1 GHz dual-core Broadcom — expect to max out around 50–80 Mbps on OpenVPN. Fine for 1080p, tight for 4K.
-- **[TP-Link AX5400](https://www.amazon.com/dp/B09G5W9R6T?tag=toolsradar05-20)** — WiFi 6, OpenWrt compatible on supported hardware revisions (check before buying — TP-Link sometimes swaps chipsets mid-model). Reasonable middle-ground option.
+- **[GL.iNet GL-MT6000](https://www.amazon.com/dp/B0CF54JCVL?tag=vpnverdict-20)** — Purpose-built for VPN workloads, ships with WireGuard and OpenVPN support out of the box, OpenWrt underneath if you want to tinker. This was my main test rig and it handled everything I threw at it.
+- **[Netgear Nighthawk R7000](https://www.amazon.com/dp/B00F0DD0I6?tag=vpnverdict-20)** — An older but well-supported model with strong DD-WRT/OpenWrt community builds. VPN throughput is limited by the 1 GHz dual-core Broadcom — expect to max out around 50–80 Mbps on OpenVPN. Fine for 1080p, tight for 4K.
+- **[TP-Link AX5400](https://www.amazon.com/dp/B09G5W9R6T?tag=vpnverdict-20)** — WiFi 6, OpenWrt compatible on supported hardware revisions (check before buying — TP-Link sometimes swaps chipsets mid-model). Reasonable middle-ground option.
 
 ### Per-device setup
 
@@ -273,7 +273,7 @@ It adds 10–25% overhead and a few milliseconds of latency. On a modern connect
 
 ### How do I set up a VPN on a device that doesn't support VPN apps?
 
-Three options, in rough order of what I'd actually recommend: install the VPN on your router (best), use a SmartDNS service from your VPN provider for geo-unblocking only (privacy is not covered), or use a VPN-capable streaming device like a Fire TV Stick. The [GL.iNet GL-MT6000](https://www.amazon.com/dp/B0CF54JCVL?tag=toolsradar05-20) is the router I'd point people at first — it's purpose-built for this use case and doesn't bottleneck on encryption.
+Three options, in rough order of what I'd actually recommend: install the VPN on your router (best), use a SmartDNS service from your VPN provider for geo-unblocking only (privacy is not covered), or use a VPN-capable streaming device like a Fire TV Stick. The [GL.iNet GL-MT6000](https://www.amazon.com/dp/B0CF54JCVL?tag=vpnverdict-20) is the router I'd point people at first — it's purpose-built for this use case and doesn't bottleneck on encryption.
 
 ---
 

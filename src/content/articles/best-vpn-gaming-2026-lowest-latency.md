@@ -13,13 +13,13 @@ winner: ExpressVPN
 amazon:
   - product: "GL.iNet GL-MT6000 VPN Router"
     asin: "B0CF54JCVL"
-    link: "https://www.amazon.com/dp/B0CF54JCVL?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B0CF54JCVL?tag=vpnverdict-20"
   - product: "TP-Link AX5400 WiFi 6 Router"
     asin: "B09G5W9R6T"
-    link: "https://www.amazon.com/dp/B09G5W9R6T?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B09G5W9R6T?tag=vpnverdict-20"
   - product: "Netgear Nighthawk R7000 Router"
     asin: "B00F0DD0I6"
-    link: "https://www.amazon.com/dp/B00F0DD0I6?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B00F0DD0I6?tag=vpnverdict-20"
 affiliateLinks:
   - vpn: NordVPN
     url: https://www.awin1.com/cread.php?awinmid=15132&awinaffid=2845746&clickref=best-vpn-gaming-2026-lowest-latency
@@ -378,7 +378,7 @@ CyberGhost offers the longest money-back period in the industry. If you want to 
 
 PlayStation and Xbox don't support VPN apps natively. Your options:
 
-- **Router VPN:** Install the VPN on a compatible router (Asus, Netgear, TP-Link with OpenWrt). This covers all devices on your network. **ExpressVPN sells pre-configured routers** and offers custom firmware for several models. For a dedicated VPN router, the [GL.iNet GL-MT6000](https://www.amazon.com/dp/B0CF54JCVL?tag=toolsradar05-20) has native WireGuard support and handles VPN encryption at full speed — ideal for console gaming. The [TP-Link AX5400](https://www.amazon.com/dp/B09G5W9R6T?tag=toolsradar05-20) is a solid budget alternative with WiFi 6 and OpenWrt support.
+- **Router VPN:** Install the VPN on a compatible router (Asus, Netgear, TP-Link with OpenWrt). This covers all devices on your network. **ExpressVPN sells pre-configured routers** and offers custom firmware for several models. For a dedicated VPN router, the [GL.iNet GL-MT6000](https://www.amazon.com/dp/B0CF54JCVL?tag=vpnverdict-20) has native WireGuard support and handles VPN encryption at full speed — ideal for console gaming. The [TP-Link AX5400](https://www.amazon.com/dp/B09G5W9R6T?tag=vpnverdict-20) is a solid budget alternative with WiFi 6 and OpenWrt support.
 - **PC hotspot:** Connect your PC to the VPN, share its internet via mobile hotspot, and connect your console to that hotspot. Adds 3-5ms of latency from the extra hop.
 - **Smart DNS:** NordVPN and ExpressVPN offer DNS-based unblocking that works on consoles without encrypting traffic. Useful for accessing geo-restricted game stores but doesn't provide DDoS protection.
 

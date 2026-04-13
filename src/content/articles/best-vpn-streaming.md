@@ -32,13 +32,13 @@ vpnRatings:
 amazon:
   - product: "GL.iNet GL-MT6000 VPN Router"
     asin: "B0CF54JCVL"
-    link: "https://www.amazon.com/dp/B0CF54JCVL?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B0CF54JCVL?tag=vpnverdict-20"
   - product: "Netgear Nighthawk R7000 Router"
     asin: "B00F0DD0I6"
-    link: "https://www.amazon.com/dp/B00F0DD0I6?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B00F0DD0I6?tag=vpnverdict-20"
   - product: "TP-Link AX5400 WiFi 6 Router"
     asin: "B09G5W9R6T"
-    link: "https://www.amazon.com/dp/B09G5W9R6T?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B09G5W9R6T?tag=vpnverdict-20"
 affiliateLinks:
   - vpn: CyberGhost
     url: https://vpnverdict.net/go/cyberghost
@@ -362,7 +362,7 @@ Streaming services block VPN IP addresses but do not ban individual user account
 
 ### How do I set up a VPN on my smart TV?
 
-If your smart TV runs Android TV, install the VPN app directly from the Google Play Store. For other smart TVs (Samsung Tizen, LG webOS), use ExpressVPN's MediaStreamer DNS or install a VPN on your router. Router setup protects all devices on your network automatically. For a dedicated VPN streaming router, we recommend the [GL.iNet GL-MT6000](https://www.amazon.com/dp/B0CF54JCVL?tag=toolsradar05-20) — it has built-in WireGuard support and handles 4K streaming over VPN without breaking a sweat.
+If your smart TV runs Android TV, install the VPN app directly from the Google Play Store. For other smart TVs (Samsung Tizen, LG webOS), use ExpressVPN's MediaStreamer DNS or install a VPN on your router. Router setup protects all devices on your network automatically. For a dedicated VPN streaming router, we recommend the [GL.iNet GL-MT6000](https://www.amazon.com/dp/B0CF54JCVL?tag=vpnverdict-20) — it has built-in WireGuard support and handles 4K streaming over VPN without breaking a sweat.
 
 ### Is it legal to use a VPN to access geo-restricted streaming content?
 

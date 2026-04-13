@@ -17,10 +17,10 @@ affiliateLinks:
 amazon:
   - product: "ASUS AX6000 Router"
     asin: "B07MRD1LDZ"
-    link: "https://www.amazon.com/dp/B07MRD1LDZ?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B07MRD1LDZ?tag=vpnverdict-20"
   - product: "YubiKey 5 NFC"
     asin: "B07HBD71HL"
-    link: "https://www.amazon.com/dp/B07HBD71HL?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B07HBD71HL?tag=vpnverdict-20"
 ---
 
 # Is a VPN Worth It in 2026? An Honest Look at What You're Actually Paying For
@@ -203,11 +203,11 @@ These are introductory prices. Renewal rates are higher — often meaningfully s
 
 If you want VPN protection on devices that can't run a VPN client (smart TVs, game consoles, IoT gear), installing the VPN on a capable router is the clean solution. The **ASUS AX6000** handles OpenVPN and WireGuard client mode natively, which saves you from flashing third-party firmware.
 
-[ASUS AX6000 on Amazon](https://www.amazon.com/dp/B07MRD1LDZ?tag=toolsradar05-20)
+[ASUS AX6000 on Amazon](https://www.amazon.com/dp/B07MRD1LDZ?tag=vpnverdict-20)
 
 Separately, if you're thinking carefully about privacy, a hardware security key does more for your actual threat model than any VPN. A **YubiKey 5 NFC** on your email account is the single biggest upgrade most people can make.
 
-[YubiKey 5 NFC on Amazon](https://www.amazon.com/dp/B07HBD71HL?tag=toolsradar05-20)
+[YubiKey 5 NFC on Amazon](https://www.amazon.com/dp/B07HBD71HL?tag=vpnverdict-20)
 
 ## Final Answer
 

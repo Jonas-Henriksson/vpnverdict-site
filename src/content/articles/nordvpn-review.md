@@ -20,10 +20,10 @@ vpnRatings:
 amazon:
   - product: "GL.iNet GL-MT6000 VPN Router"
     asin: "B0CF54JCVL"
-    link: "https://www.amazon.com/dp/B0CF54JCVL?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B0CF54JCVL?tag=vpnverdict-20"
   - product: "TP-Link AX5400 WiFi 6 Router"
     asin: "B09G5W9R6T"
-    link: "https://www.amazon.com/dp/B09G5W9R6T?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B09G5W9R6T?tag=vpnverdict-20"
 affiliateLinks:
   - vpn: NordVPN
     url: https://www.awin1.com/cread.php?awinmid=15132&awinaffid=2845746&clickref=nordvpn-review
@@ -363,7 +363,7 @@ Yes. We recorded 98.9% Netflix US access and 98.5% Netflix UK access over a 30-d
 
 ### How many devices can I use with NordVPN?
 
-NordVPN allows up to 10 simultaneous connections on a single subscription. You can also install it on your router to cover all devices in your household without counting toward the device limit. For dedicated VPN router hardware, the [GL.iNet GL-MT6000](https://www.amazon.com/dp/B0CF54JCVL?tag=toolsradar05-20) has native WireGuard/OpenVPN support and runs NordVPN at full gigabit speeds.
+NordVPN allows up to 10 simultaneous connections on a single subscription. You can also install it on your router to cover all devices in your household without counting toward the device limit. For dedicated VPN router hardware, the [GL.iNet GL-MT6000](https://www.amazon.com/dp/B0CF54JCVL?tag=vpnverdict-20) has native WireGuard/OpenVPN support and runs NordVPN at full gigabit speeds.
 
 ### Is NordVPN good for gaming?
 

@@ -13,7 +13,7 @@ verdict: "15 common VPN myths debunked with real testing data. Modern premium VP
 amazon:
   - product: "GL.iNet GL-MT6000 VPN Router"
     asin: "B0CF54JCVL"
-    link: "https://www.amazon.com/dp/B0CF54JCVL?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B0CF54JCVL?tag=vpnverdict-20"
 affiliateLinks:
   - vpn: NordVPN
     url: https://www.awin1.com/cread.php?awinmid=15132&awinaffid=2845746&clickref=vpn-myths-debunked-2026
@@ -213,7 +213,7 @@ Your VPN experience varies enormously across operating systems, and the reasons 
 
 **iOS** — The most limited platform. Apple restricts VPN apps to Apple's own VPN framework, which means no true kill switch, limited split tunneling, and the OS can drop the tunnel under memory pressure without telling you. iOS users concerned about leaks should look into always-on VPN profiles via configuration profiles, but even those have quirks.
 
-**Routers** — Whole-network protection, single subscription covers every device, but the hardware matters enormously. A cheap router will cap your VPN throughput at 30-50 Mbps regardless of your line speed, because its CPU can't handle encryption faster. Purpose-built VPN routers like the [GL.iNet GL-MT6000](https://www.amazon.com/dp/B0CF54JCVL?tag=toolsradar05-20) have hardware crypto acceleration and native WireGuard support, which is why they can push gigabit-class VPN throughput where a consumer ASUS router chokes at 80 Mbps.
+**Routers** — Whole-network protection, single subscription covers every device, but the hardware matters enormously. A cheap router will cap your VPN throughput at 30-50 Mbps regardless of your line speed, because its CPU can't handle encryption faster. Purpose-built VPN routers like the [GL.iNet GL-MT6000](https://www.amazon.com/dp/B0CF54JCVL?tag=vpnverdict-20) have hardware crypto acceleration and native WireGuard support, which is why they can push gigabit-class VPN throughput where a consumer ASUS router chokes at 80 Mbps.
 
 **Smart TVs, consoles** — Usually no native VPN app. You're either routing them through a VPN router or using Smart DNS, which is not encryption and provides no privacy benefit.
 

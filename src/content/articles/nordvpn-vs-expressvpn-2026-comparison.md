@@ -17,7 +17,7 @@ affiliateLinks:
 amazon:
   - product: "ASUS AX6000 WiFi 6 Gaming Router"
     asin: "B07MRD1LDZ"
-    link: "https://www.amazon.com/dp/B07MRD1LDZ?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B07MRD1LDZ?tag=vpnverdict-20"
 ---
 
 # NordVPN vs ExpressVPN 2026: What Actually Matters When You Pick
@@ -136,7 +136,7 @@ If streaming is the main reason you're buying a VPN, buy it month-to-month from 
 
 Split tunneling — routing some apps through the VPN and others directly — is well-supported on Windows for both Express and Nord. On macOS, it's been historically spottier on both due to Apple deprecating Network Kernel Extensions in favor of the more restrictive Network Extension framework. Check current platform support pages before buying if this is critical. On iOS, nobody offers true split tunneling because Apple doesn't allow it — the "split tunneling" some providers advertise on iOS is URL-based inclusion, which is different.
 
-For routers, both providers support flashing popular models, but encryption overhead on a budget router will kneecap your speeds. A capable router like the **ASUS AX6000** ([Amazon](https://www.amazon.com/dp/B07MRD1LDZ?tag=toolsradar05-20)) has enough CPU to handle line-rate WireGuard on a gigabit line; cheaper routers will bottleneck at 100–200 Mbps regardless of which VPN you choose.
+For routers, both providers support flashing popular models, but encryption overhead on a budget router will kneecap your speeds. A capable router like the **ASUS AX6000** ([Amazon](https://www.amazon.com/dp/B07MRD1LDZ?tag=vpnverdict-20)) has enough CPU to handle line-rate WireGuard on a gigabit line; cheaper routers will bottleneck at 100–200 Mbps regardless of which VPN you choose.
 
 ## FAQ
 

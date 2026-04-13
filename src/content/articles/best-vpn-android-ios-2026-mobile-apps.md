@@ -17,13 +17,13 @@ affiliateLinks:
 amazon:
   - product: "GL.iNet GL-AXT1800 Travel Router"
     asin: "B08QTXNQ5X"
-    link: "https://www.amazon.com/dp/B08QTXNQ5X?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B08QTXNQ5X?tag=vpnverdict-20"
   - product: "YubiKey 5C NFC Security Key"
     asin: "B09Z6YW5VJ"
-    link: "https://www.amazon.com/dp/B09Z6YW5VJ?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B09Z6YW5VJ?tag=vpnverdict-20"
   - product: "YubiKey 5 NFC Hardware Security Key"
     asin: "B0928CKBLT"
-    link: "https://www.amazon.com/dp/B0928CKBLT?tag=toolsradar05-20"
+    link: "https://www.amazon.com/dp/B0928CKBLT?tag=vpnverdict-20"
 ---
 
 # Best VPN for Android and iOS 2026: Mobile Apps Speed & Security Tested
