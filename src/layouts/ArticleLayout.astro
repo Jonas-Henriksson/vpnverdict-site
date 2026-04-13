@@ -18,6 +18,7 @@ export interface Props {
   category?: string;
   author?: string;
   updated?: Date;
+  image?: string;
   vpnRatings?: Record<string, any>;
   affiliateLinks?: Array<{ vpn: string; url: string }>;
   faqPairs?: Array<{ question: string; answer: string }>;
@@ -37,6 +38,7 @@ const {
   category,
   author = 'VPNVerdict Team',
   updated,
+  image,
   vpnRatings = {},
   affiliateLinks = [],
   faqPairs = [],
