@@ -70,7 +70,7 @@ What I did **not** do: invent a lab methodology with fabricated iteration counts
 
 ### What the speed tests actually showed
 
-On the 1 Gbps fiber line, NordLynx consistently delivered in the 280–320 Mbps range to nearby European servers, dropping to roughly 180–220 Mbps on transatlantic hops. Latency to the closest server sat in the high teens to low 20s (ms). These numbers line up with what independent testers like PCMag and Comparitech have reported in their 2025/early-2026 rounds, so I'm comfortable with them — but note that a 1 Gbps line is an unrealistic baseline for most readers. On a 300 Mbps cable line I saw essentially no meaningful overhead from the VPN, which is the more relevant real-world result.
+On the 1 Gbps fiber line, NordLynx consistently delivered in the 280–320 Mbps range to nearby European servers, dropping to roughly 180–220 Mbps on transatlantic hops. Latency to the closest server sat in the high teens to low 20s (ms). These numbers line up with what independent testers like PCMag and Comparitech have reported in their $2025/early-2026 rounds, so I'm comfortable with them — but note that a 1 Gbps line is an unrealistic baseline for most readers. On a 300 Mbps cable line I saw essentially no meaningful overhead from the VPN, which is the more relevant real-world result.
 
 4K IPTV streams (roughly 25 Mbps sustained) played without visible rebuffering across multiple sessions. On OpenVPN, throughput dropped by roughly a third — worth knowing if you're forced off WireGuard for any reason.
 
@@ -91,7 +91,7 @@ Also: split tunneling on macOS still isn't supported. For a flagship product in 
 
 ### Pricing
 
-Nord publishes plans roughly in the range of $3–4/month on the 2-year commitment, $5–6/month on the 1-year, and a headline monthly rate around $13. Check the site for the current offer — these change constantly and I'm not going to pretend a specific number will still be accurate by the time you read this.
+Nord publishes plans roughly in the range of $3–$4/month on the 2-year commitment, $5–$6/month on the 1-year, and a headline monthly rate around $13. Check the site for the current offer — these change constantly and I'm not going to pretend a specific number will still be accurate by the time you read this.
 
 [Get NordVPN for IPTV](https://www.awin1.com/cread.php?awinmid=15132&awinaffid=2845746&clickref=best-vpn-iptv-2026)
 
@@ -113,7 +113,7 @@ Lightway (Express's in-house protocol, now based on wolfSSL rather than their ol
 
 Ownership. ExpressVPN was acquired by Kape Technologies in 2021 for $936 million. Kape also owns CyberGhost, Private Internet Access, and ZenMate, and its earlier corporate identity (Crossrider) had a documented history in the adware space. Express has operated independently and there's no public evidence of data mishandling post-acquisition, but if your threat model includes "I don't want my VPN provider's parent company to have any history I find distasteful," this is a factor. I still rank Express highly because the technical execution is genuinely strong, but you should know who you're paying.
 
-Also: it's expensive. Depending on the promotion, you're looking at roughly $8–9/month on a 12-month plan versus Nord's $3–4. That premium is real and it's not fully justified by performance alone.
+Also: it's expensive. Depending on the promotion, you're looking at roughly $8–$9/month on a 12-month plan versus Nord's $3–4. That premium is real and it's not fully justified by performance alone.
 
 [Get ExpressVPN for IPTV](https://vpnverdict.net/go/expressvpn)
 

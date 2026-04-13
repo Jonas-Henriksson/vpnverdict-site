@@ -23,7 +23,7 @@ amazon:
 ---
 Two VPNs. One parent company. Completely different value propositions. That's the NordVPN vs Surfshark situation in 2026, and I want to be upfront about something most comparison articles quietly skip: both brands are owned by Nord Security, which completed its merger with Surfshark in 2022. They run on separate infrastructure — different servers, different apps, different engineering teams — but they share the same corporate ceiling. That fact shapes how I think about recommending one over the other, and I'll come back to it when it actually matters.
 
-What prompted this comparison is the pricing gap. Surfshark's Starter plan starts at 1.99/mo on a 2-year deal. NordVPN's Basic starts at 3.09/mo. That sounds like a minor difference until you factor in speed retention, server count, streaming reliability, and — critically — what happens to your bill when the introductory period expires. I've spent the past several weeks running both through my standard battery: packet captures from my Arch Linux workstation (AMD Ryzen 9 7950X, 64GB) during reconnects, kill switch verification via forced network drops, and streaming checks across Netflix, BBC iPlayer, Disney+, and Hulu. Here's what I actually found.
+What prompted this comparison is the pricing gap. Surfshark's Starter plan starts at $1.99/mo on a 2-year deal. NordVPN's Basic starts at $3.09/mo. That sounds like a minor difference until you factor in speed retention, server count, streaming reliability, and — critically — what happens to your bill when the introductory period expires. I've spent the past several weeks running both through my standard battery: packet captures from my Arch Linux workstation (AMD Ryzen 9 7950X, 64GB) during reconnects, kill switch verification via forced network drops, and streaming checks across Netflix, BBC iPlayer, Disney+, and Hulu. Here's what I actually found.
 
 *Affiliate disclosure: I earn a commission on purchases made through links in this article. This does not affect my testing conclusions.*
 
@@ -38,7 +38,7 @@ What prompted this comparison is the pricing gap. Surfshark's Starter plan start
 | Raw speed on fast connections | **NordVPN** | 868–903 Mbps vs Surfshark's 653 Mbps on US servers |
 | Covering many devices | **Surfshark** | Unlimited connections vs NordVPN's hard 10-device cap |
 | Streaming reliability | **NordVPN** | More consistent BBC iPlayer and Max; less server-switching needed |
-| Budget-first users | **Surfshark** | 1.99/mo intro is the lowest among credible audited providers |
+| Budget-first users | **Surfshark** | $1.99/mo intro is the lowest among credible audited providers |
 | Audit depth and privacy | **NordVPN** | Six independent audits vs Surfshark's two; both are legitimate but NordVPN has more history |
 
 ---
@@ -57,16 +57,16 @@ The intro pricing gap looks dramatic. What matters more is what you pay after th
 
 | Plan | NordVPN | Surfshark |
 |------|---------|-----------|
-| 2-year intro | 3.09/mo (Basic), billed 83.43 | 1.99/mo (Starter) + 3 free months |
-| 1-year intro | 4.99/mo (Basic), billed 59.88 | 3.19/mo (Starter) + 3 free months |
-| Monthly (no commitment) | ~12.99/mo | ~15.45/mo |
-| Estimated renewal | ~11.51/mo equiv. (documented 287% increase) | Expected similar increase; less publicly documented |
+| 2-year intro | $3.09/mo (Basic), billed 83.43 | $1.99/mo (Starter) + 3 free months |
+| 1-year intro | $4.99/mo (Basic), billed 59.88 | $3.19/mo (Starter) + 3 free months |
+| Monthly (no commitment) | ~$12.99/mo | ~$15.45/mo |
+| Estimated renewal | ~$11.51/mo equiv. (documented 287% increase) | Expected similar increase; less publicly documented |
 | Simultaneous devices | 10 | Unlimited |
 | Money-back guarantee | 30 days | 30 days |
 
 Tom's Guide's investigation found NordVPN's auto-renewal represents a **287.63% increase** over the 2-year Basic intro rate — "if you allow NordVPN to charge you its automatic renewal rate you'll pay well over three times as much per month compared to when you signed up." Surfshark follows the same industry playbook, though the exact renewal multiplier is less systematically documented. Both providers default auto-renewal to on, with renewal pricing buried in terms and conditions rather than surfaced at checkout.
 
-One detail that consistently gets buried: Surfshark's monthly rate of 15.45/mo is actually *higher* than NordVPN's 12.99/mo if you go without a long-term commitment. The promotional rates invert the perceived pricing tier. If you buy either on a 2-year plan, set a calendar reminder 30 days before expiry.
+One detail that consistently gets buried: Surfshark's monthly rate of $15.45/mo is actually *higher* than NordVPN's $12.99/mo if you go without a long-term commitment. The promotional rates invert the perceived pricing tier. If you buy either on a 2-year plan, set a calendar reminder 30 days before expiry.
 
 ---
 
@@ -98,7 +98,7 @@ One detail that consistently gets buried: Surfshark's monthly rate of 15.45/mo i
 
 ### Speed Performance
 
-NordLynx is the reason to pay the extra 1.10/mo over Surfshark. In my testing, a Los Angeles server delivered **868 Mbps down** and a Seattle server hit **903 Mbps down** — roughly 81% speed retention from a 1Gbps baseline. Running iperf3 between my workstation and the Frankfurt VPS with NordLynx active, I consistently saw 780–840 Mbps throughput. Cross-Atlantic performance is inherently route-dependent — these numbers reflect my specific ISP peering path through DE-CIX Frankfurt, and your results will vary based on local infrastructure.
+NordLynx is the reason to pay the extra $1.10/mo over Surfshark. In my testing, a Los Angeles server delivered **868 Mbps down** and a Seattle server hit **903 Mbps down** — roughly 81% speed retention from a 1Gbps baseline. Running iperf3 between my workstation and the Frankfurt VPS with NordLynx active, I consistently saw 780–840 Mbps throughput. Cross-Atlantic performance is inherently route-dependent — these numbers reflect my specific ISP peering path through DE-CIX Frankfurt, and your results will vary based on local infrastructure.
 
 OpenVPN UDP drops significantly — I measured 280 Mbps on the LA server and 340 Mbps on Seattle, roughly a 60–70% throughput reduction compared to NordLynx on the same endpoints. NordWhisper, the obfuscated protocol added in 2025, trades throughput for firewall traversal capability. It's the right call on corporate or university networks that block standard VPN ports, not a daily-driver protocol. Connection establishment via NordLynx averages under 3 seconds on nearby servers.
 
@@ -159,7 +159,7 @@ Kill switch verification: I forced `ip link set eth0 down` during an active Nord
 
 **Rating: 8.7/10**
 
-[Get NordVPN — from 3.09/mo](https://www.anrdoezrs.net/click-101724885-16968809)
+[Get NordVPN — from $3.09/mo](https://www.anrdoezrs.net/click-101724885-16968809)
 
 For the full deep-dive including long-term reliability observations, see [NordVPN Review 2026: Complete Speed, Security & Streaming Tests](/nordvpn-review-2026-complete-test).
 
@@ -210,7 +210,7 @@ Kill switch on Android (Pixel 8a): functional, but I observed a brief network ex
 
 ### Surfshark Pros
 
-- **1.99/mo intro rate** is the lowest among credible independently-audited VPN providers
+- **$1.99/mo intro rate** is the lowest among credible independently-audited VPN providers
 - **Unlimited simultaneous connections** — no cap on how many devices run simultaneously under one subscription
 - **CleanWeb ad/tracker blocker** included on all plan tiers, including the base Starter
 - **MultiHop (double VPN)** included at no additional cost for elevated security needs
@@ -227,7 +227,7 @@ Kill switch on Android (Pixel 8a): functional, but I observed a brief network ex
 
 **Rating: 7.4/10**
 
-[Get Surfshark — from 1.99/mo](https://www.anrdoezrs.net/click-101724885-15438560)
+[Get Surfshark — from $1.99/mo](https://www.anrdoezrs.net/click-101724885-15438560)
 
 ---
 
@@ -274,7 +274,7 @@ Both work for the major platforms. NordVPN wins on BBC iPlayer reliability and M
 
 **Best for gaming**: NordVPN, specifically on nearby server pairs where NordLynx latency overhead is minimal. On Frankfurt-to-nearest-German-server paths, NordLynx added under 5ms — acceptable for competitive play. Surfshark's WireGuard added 7–9ms on the same route in my testing, noticeable in twitch-reaction games but acceptable for most online play. Dedicated latency testing in [Best VPN for Gaming 2026: 5 Lowest Latency Services Tested](/best-vpn-gaming-2026-lowest-latency).
 
-**Best budget option**: Surfshark, with the caveat that 1.99/mo is an introductory rate that will increase substantially at renewal. ProtonVPN's free tier remains the only credible no-cost option from an audited provider — see [Free vs Paid VPN - Why Free VPNs Are Never Really Free](/free-vs-paid-vpn) for context.
+**Best budget option**: Surfshark, with the caveat that $1.99/mo is an introductory rate that will increase substantially at renewal. ProtonVPN's free tier remains the only credible no-cost option from an audited provider — see [Free vs Paid VPN - Why Free VPNs Are Never Really Free](/free-vs-paid-vpn) for context.
 
 **Best for households with many devices**: Surfshark. Unlimited simultaneous connections is a genuine advantage for families covering phones, laptops, tablets, smart TVs, and gaming consoles simultaneously. Alternatively, if you're open to router-level VPN deployment — which counts as one connection and covers every device behind it — a travel router like the [GL.iNet GL-MT3000 Beryl AX](https://www.amazon.com/dp/B0BTJQS1ZZ?tag=vpnverdict-20) supports OpenWRT with native NordVPN and Surfshark configurations, effectively bypassing NordVPN's 10-device cap for a one-time hardware cost.
 
@@ -286,13 +286,13 @@ Both work for the major platforms. NordVPN wins on BBC iPlayer reliability and M
 
 | Plan Tier | NordVPN | Surfshark |
 |-----------|---------|-----------|
-| Entry 2-year | 3.09/mo (Basic), billed 83.43 | 1.99/mo (Starter) + 3 free months |
-| Mid 2-year | 3.59/mo (Plus) | ~2.49/mo (One) |
-| Premium 2-year | 4.99/mo (Complete), billed 132.03 | 4.19/mo (One+) |
-| Entry 1-year | 4.99/mo (Basic), billed 59.88 | 3.19/mo (Starter) + 3 free months |
-| Mid 1-year | 6.49/mo (Complete) | 3.39/mo (One) |
-| Premium 1-year | — | 6.29/mo (One+) |
-| Monthly (no commitment) | ~12.99/mo | ~15.45/mo |
+| Entry 2-year | $3.09/mo (Basic), billed 83.43 | $1.99/mo (Starter) + 3 free months |
+| Mid 2-year | $3.59/mo (Plus) | ~$2.49/mo (One) |
+| Premium 2-year | $4.99/mo (Complete), billed 132.03 | $4.19/mo (One+) |
+| Entry 1-year | $4.99/mo (Basic), billed 59.88 | $3.19/mo (Starter) + 3 free months |
+| Mid 1-year | $6.49/mo (Complete) | $3.39/mo (One) |
+| Premium 1-year | — | $6.29/mo (One+) |
+| Monthly (no commitment) | ~$12.99/mo | ~$15.45/mo |
 | Renewal increase | ~287% from 2-yr intro (documented) | Similar increase; less publicly quantified |
 | Devices | 10 (all tiers) | Unlimited (all tiers) |
 | Money-back | 30 days | 30 days |
@@ -308,13 +308,13 @@ A cross-sell worth noting: if you're buying a VPN primarily for privacy, pairing
 
 ## Final Verdict
 
-**NordVPN is the better VPN.** The 1.10/mo premium over Surfshark buys you 250 Mbps more throughput on US servers, a substantially larger server network, more consistent streaming unblocking across BBC iPlayer and Max, and a six-audit track record. For anyone running a VPN as a daily driver — all traffic, all day — NordVPN is the lower-frustration choice.
+**NordVPN is the better VPN.** The $1.10/mo premium over Surfshark buys you 250 Mbps more throughput on US servers, a substantially larger server network, more consistent streaming unblocking across BBC iPlayer and Max, and a six-audit track record. For anyone running a VPN as a daily driver — all traffic, all day — NordVPN is the lower-frustration choice.
 
-**Surfshark is the right call for unlimited-device households.** The 1.99/mo intro rate combined with no device cap makes Surfshark genuinely compelling for families or users deploying VPN coverage across a full device stack simultaneously. If your primary needs are Netflix unblocking and basic public Wi-Fi privacy on many devices, Surfshark delivers adequate performance at a price NordVPN cannot match.
+**Surfshark is the right call for unlimited-device households.** The $1.99/mo intro rate combined with no device cap makes Surfshark genuinely compelling for families or users deploying VPN coverage across a full device stack simultaneously. If your primary needs are Netflix unblocking and basic public Wi-Fi privacy on many devices, Surfshark delivers adequate performance at a price NordVPN cannot match.
 
 **Neither is the right answer if privacy is your primary concern.** Both brands share a corporate parent in Nord Security, and neither has had its no-logs claims court-tested in an adversarial proceeding. For users whose threat model requires proven, warrant-tested no-logs architecture, Mullvad and ProtonVPN are the right conversation — not this comparison.
 
-[Get NordVPN — from 3.09/mo](https://www.anrdoezrs.net/click-101724885-16968809) | [Get Surfshark — from 1.99/mo](https://www.anrdoezrs.net/click-101724885-15438560)
+[Get NordVPN — from $3.09/mo](https://www.anrdoezrs.net/click-101724885-16968809) | [Get Surfshark — from $1.99/mo](https://www.anrdoezrs.net/click-101724885-15438560)
 
 ---
 
@@ -334,7 +334,7 @@ Yes. Surfshark allows genuine unlimited simultaneous connections with no documen
 
 ### What happens to the price when the introductory deal expires?
 
-Both providers follow the VPN industry's standard renewal pricing pattern. NordVPN's 2-year Basic intro rate of 3.09/mo rolls over to approximately 11.51/mo equivalent — a 287.63% increase quantified by Tom's Guide. Surfshark's renewal trajectory is less precisely documented publicly but follows the same upward pattern. Auto-renewal defaults to on for both. Set a calendar reminder to evaluate renewal pricing 30 days before your subscription term ends.
+Both providers follow the VPN industry's standard renewal pricing pattern. NordVPN's 2-year Basic intro rate of $3.09/mo rolls over to approximately $11.51/mo equivalent — a 287.63% increase quantified by Tom's Guide. Surfshark's renewal trajectory is less precisely documented publicly but follows the same upward pattern. Auto-renewal defaults to on for both. Set a calendar reminder to evaluate renewal pricing 30 days before your subscription term ends.
 
 ### Which VPN is more reliable for BBC iPlayer in 2026?
 
@@ -344,6 +344,6 @@ NordVPN is more reliable. In April 2026 testing, NordVPN required 1–2 server a
 
 Yes, both have credible independent audits. NordVPN's sixth Deloitte audit (November–December 2025) confirmed zero user traffic or metadata retained. Surfshark completed a Deloitte no-logs audit (May–June 2025) plus a Cure53 infrastructure audit (January 2026). Neither no-logs claim has been adversarially tested in court — unlike Mullvad, whose servers were seized in a 2023 warrant execution with no customer data retrieved. There's a meaningful gap between "audit-verified" and "court-tested."
 
-### Is Surfshark's 1.99/month price what you actually pay?
+### Is Surfshark's $1.99/month price what you actually pay?
 
-Yes, for the introductory 2-year term — that rate is the actual billed amount during the promotional period, with 3 bonus months included. The problem is what follows: the renewal rate increases substantially. Surfshark does not prominently disclose its post-intro pricing, and the exact renewal amount varies by region and signup date — check your account dashboard under Subscription for the specific renewal price before your term ends. Surfshark's monthly rate without a long-term commitment is 15.45/mo — higher than NordVPN's 12.99/mo — which shows how heavily these intro deals distort the perceived pricing tier. The 1.99/mo headline is real; the lifetime value calculation is not.
+Yes, for the introductory 2-year term — that rate is the actual billed amount during the promotional period, with 3 bonus months included. The problem is what follows: the renewal rate increases substantially. Surfshark does not prominently disclose its post-intro pricing, and the exact renewal amount varies by region and signup date — check your account dashboard under Subscription for the specific renewal price before your term ends. Surfshark's monthly rate without a long-term commitment is $15.45/mo — higher than NordVPN's $12.99/mo — which shows how heavily these intro deals distort the perceived pricing tier. The $1.99/mo headline is real; the lifetime value calculation is not.

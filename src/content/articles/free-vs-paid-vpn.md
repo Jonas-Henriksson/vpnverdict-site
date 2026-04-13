@@ -27,7 +27,7 @@ ogImage: "/og/free-vs-paid-vpn.jpg"
 
 **Free VPNs cost you more than paid ones.** They monetize through advertising, data selling, and bandwidth exploitation — practices that directly undermine the privacy you're trying to protect. The only free VPN we recommend is ProtonVPN's free tier, which applies the same no-logs policy as its paid plans and does not sell user data.
 
-**Paid VPNs start at $2.19/month** (CyberGhost on the 2-year plan). For less than the cost of a single coffee, you get unlimited bandwidth, thousands of servers, verified no-logs policies, and speeds fast enough for 4K streaming. The math is simple: pay $2-4/month or risk your data being sold to advertisers and data brokers.
+**Paid VPNs start at $2.19/month** (CyberGhost on the 2-year plan). For less than the cost of a single coffee, you get unlimited bandwidth, thousands of servers, verified no-logs policies, and speeds fast enough for 4K streaming. The math is simple: pay $2-$4/month or risk your data being sold to advertisers and data brokers.
 
 | Category | Free VPNs | Paid VPNs |
 |----------|----------|-----------|
@@ -192,7 +192,7 @@ If a free VPN sells your data or exposes you to malware:
 - **Identity theft remediation:** Average cost is $1,343 and 200+ hours per incident (FTC data)
 - **Malware removal:** $50-200 for professional cleanup, 3-5 hours of personal time
 - **Fraudulent charges:** Average unauthorized charge is $500+ before detection
-- **Credit monitoring:** $10-30/month for ongoing protection after a breach
+- **Credit monitoring:** $10-$30/month for ongoing protection after a breach
 
 ### Opportunity Costs
 
@@ -312,7 +312,7 @@ If you're currently using a free VPN, follow these steps:
 
 **If you truly cannot pay for a VPN**, use ProtonVPN's free tier. It's the only free VPN that doesn't monetize your data. But understand its limitations: slower speeds, 3 server countries, and no streaming support.
 
-**If you can spend $2-4/month**, get NordVPN or Surfshark. You'll gain unlimited bandwidth, thousands of servers, verified no-logs privacy, and 24/7 support. It's the single best value subscription you can buy for your online security.
+**If you can spend $2-$4/month**, get NordVPN or Surfshark. You'll gain unlimited bandwidth, thousands of servers, verified no-logs privacy, and 24/7 support. It's the single best value subscription you can buy for your online security.
 
 - [Visit NordVPN](https://www.awin1.com/cread.php?awinmid=15132&awinaffid=2845746&clickref=free-vs-paid-vpn) — $3.99/month, 30-day money-back guarantee
 - [Visit Surfshark](https://vpnverdict.net/go/surfshark) — $2.29/month, 30-day money-back guarantee

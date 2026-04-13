@@ -136,7 +136,7 @@ If your security team is evaluating SASE, ExpressVPN isn't on that shortlist. If
 
 NordVPN Teams was Nord's previous business product and has largely been superseded by NordLayer. If you land on a Teams page during shopping, the right next click is usually NordLayer. The feature sets overlap, and NordLayer is where the active development is.
 
-**What's still useful about the Teams-tier pricing** (~$4–6/user/month): dedicated IP addresses, centralized billing, and the Meshnet peer-to-peer feature, which is genuinely useful for small distributed teams who want to reach each other's machines without a traditional VPN concentrator. Meshnet uses WireGuard and is fine.
+**What's still useful about the Teams-tier pricing** (~$4–$6/user/month): dedicated IP addresses, centralized billing, and the Meshnet peer-to-peer feature, which is genuinely useful for small distributed teams who want to reach each other's machines without a traditional VPN concentrator. Meshnet uses WireGuard and is fine.
 
 **Where it's weak.** This is a consumer VPN with business-account plumbing. No real policy engine, no device posture checks, no integrated web filtering beyond basic DNS-based CyberSec. "Advanced threat protection" in their marketing means URL blocklists — useful but not a replacement for a proper SWG.
 

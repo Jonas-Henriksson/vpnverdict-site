@@ -104,7 +104,7 @@ On the underlying tech, Surfshark runs WireGuard on all clients, uses RAM-only s
 
 **CleanWeb** blocks ads and tracker domains at the DNS level. It's fine — not a replacement for uBlock Origin, but a decent default.
 
-**The real weakness:** The "1.99/month" headline only applies to 2-year plans paid upfront, and the renewal price jumps substantially at the end of the term. You'll want to note your calendar and be ready to cancel or negotiate before auto-renewal hits. This is not unique to Surfshark — most VPN pricing plays this game — but Surfshark's renewal jump is steeper than most.
+**The real weakness:** The "$1.99/month" headline only applies to 2-year plans paid upfront, and the renewal price jumps substantially at the end of the term. You'll want to note your calendar and be ready to cancel or negotiate before auto-renewal hits. This is not unique to Surfshark — most VPN pricing plays this game — but Surfshark's renewal jump is steeper than most.
 
 **Jurisdiction:** Netherlands, which is a Nine Eyes participant. For streaming-only use cases this barely matters; for heavier privacy threat models, it's a mark against them.
 

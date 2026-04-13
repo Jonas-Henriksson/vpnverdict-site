@@ -131,7 +131,7 @@ More concretely, CyberGhost's no-logs policy has been reviewed for the client ap
 
 **Split tunneling.** Useful if you want only specific apps or destinations to go through the VPN and leave the rest on the local connection — for example, tunneling only traffic to your internal wiki while leaving YouTube direct. Well-supported on Windows and Android across providers. macOS and iOS support is patchy because Apple's networking APIs make it genuinely hard; if split tunneling matters to you on Macs, test before committing.
 
-**Jurisdiction vs. where servers actually sit.** A VPN's company jurisdiction (where it can be legally compelled) and where its servers physically run are different questions. Nord is Panama-registered, Surfshark is in the Netherlands, ExpressVPN is in the BVI, Perimeter 81/Check Point is in Israel. None of these countries are automatically "safe" or "unsafe" — the better question is whether the company is structured such that it has no logs to hand over even under a valid legal request. RAM-only infrastructure plus an audited no-logs posture matters more than a postcode.
+**Jurisdiction vs. where servers actually sit.** A VPN's company jurisdiction (where it can be legally compelled) and where its servers physically run are different questions. Nord is Panama-registered, Surfshark is in the Netherlands, ExpressVPN is in the BVI, Perimeter $81/Check Point is in Israel. None of these countries are automatically "safe" or "unsafe" — the better question is whether the company is structured such that it has no logs to hand over even under a valid legal request. RAM-only infrastructure plus an audited no-logs posture matters more than a postcode.
 
 **Warrant canaries.** Some providers publish statements that they have not received specific government orders, on the theory that removing the statement signals receipt of a gag order. Canaries are clever but legally untested — it's not clear they'd actually be effective under a US National Security Letter or UK Technical Capability Notice. Treat them as nice-to-have, not as a core trust signal.
 
@@ -139,7 +139,7 @@ More concretely, CyberGhost's no-logs policy has been reviewed for the client ap
 
 Listed per-user prices are always the annual, committed-upfront rate. Monthly billing is 25–40% more, and the "starting price" you see on the homepage usually buys you the gutted tier. Budget for the middle tier at minimum — this is where features like dedicated IPs, SSO, and threat prevention actually live. Perimeter 81's minimum commitment (10 users, annual) is the hardest contract; NordLayer and Surfshark are friendlier about month-to-month if you want to pilot.
 
-Hidden costs to watch for: dedicated IP add-ons ($2–5/user/month on most providers), setup fees on the enterprise tiers, and compliance documentation (some providers charge for BAAs or SOC 2 attestation letters).
+Hidden costs to watch for: dedicated IP add-ons ($2–$5/user/month on most providers), setup fees on the enterprise tiers, and compliance documentation (some providers charge for BAAs or SOC 2 attestation letters).
 
 ## Encryption and What the Marketing Leaves Out
 
