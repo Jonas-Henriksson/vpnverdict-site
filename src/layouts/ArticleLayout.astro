@@ -595,4 +595,12 @@ structuredData.push({
     object-fit: cover;
   }
 
+
+  /* Generators emit the article title as a leading `# H1` in the body,
+     duplicating the layout's <h1>. Hide the body H1 — the layout already
+     renders the title from frontmatter. */
+  .article-content :global(> h1:first-child) {
+    display: none;
+  }
+
 </style>
