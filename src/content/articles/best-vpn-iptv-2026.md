@@ -124,6 +124,12 @@ Also: it's expensive. Depending on the promotion, you're looking at roughly $8�
 
 ## 3. Surfshark — Best Value, Real Tradeoffs
 
+![3. Surfshark](/images/articles/best-vpn-iptv-2026/products/3.png)
+
+<div class="product-actions">
+  <a href="/go/3" class="product-action-btn product-action-btn--primary" rel="nofollow sponsored" target="_blank">Buy at 3.</a>
+</div>
+
 ### Speeds
 
 Surfshark runs WireGuard and on the fiber line I typically saw somewhere in the 220–260 Mbps range to nearby servers — a visible step down from Nord and Express but still more than enough for 4K. Transatlantic performance was more variable; one evening I hit under 90 Mbps to a US East server that the app had auto-recommended, and switching manually to a different city fixed it. The auto-connect logic is not great.

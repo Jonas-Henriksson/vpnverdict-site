@@ -186,6 +186,12 @@ All plans include unlimited bandwidth, split tunneling, and a **30-day money-bac
 
 ## Surfshark — Best Budget Alternative
 
+![Surfshark](/images/articles/nordvpn-review-2026-complete-test/products/surfshark.png)
+
+<div class="product-actions">
+  <a href="/go/surfshark" class="product-action-btn product-action-btn--primary" rel="nofollow sponsored" target="_blank">Buy at Surfshark</a>
+</div>
+
 **Best for unlimited devices on a tight budget**
 
 Surfshark delivers surprisingly strong performance at just **$2.30/month**, making it our top budget pick. You get **unlimited simultaneous connections** and solid speeds across most servers.

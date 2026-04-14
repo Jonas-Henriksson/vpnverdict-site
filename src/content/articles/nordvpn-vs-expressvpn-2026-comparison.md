@@ -83,6 +83,12 @@ Kill switch on Linux is still via a CLI flag rather than a GUI toggle, which is 
 
 ## Surfshark — the budget pick with caveats
 
+![Surfshark](/images/articles/nordvpn-vs-expressvpn-2026-comparison/products/surfshark.png)
+
+<div class="product-actions">
+  <a href="/go/surfshark" class="product-action-btn product-action-btn--primary" rel="nofollow sponsored" target="_blank">Buy at Surfshark</a>
+</div>
+
 Surfshark has unlimited simultaneous connections, which genuinely is the differentiator. If you have a family of five plus smart TVs plus a router, this matters. The CleanWeb ad blocker works. WireGuard speeds are decent on nearby servers.
 
 The things I'd flag: Surfshark merged with Nord Security in 2022, so "two independent companies" is fiction — they share a parent. That doesn't make Surfshark bad, but if you were buying it specifically to diversify away from Nord, you weren't. Netherlands jurisdiction is 9 Eyes, which in practice has never mattered for a normal user but matters on paper if you care about such things. I've found Netflix unblocking to be noticeably more hit-or-miss than Express or Nord — maybe one server in three on US Netflix worked cleanly on April 5, 2026.

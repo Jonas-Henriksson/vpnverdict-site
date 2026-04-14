@@ -86,6 +86,12 @@ The app itself is the best-designed of the bunch. One-tap connect, smart locatio
 
 ## Surfshark — Best for Households and Multi-Device Use
 
+![Surfshark](/images/articles/best-vpn-android-ios-2026-mobile-apps/products/surfshark.png)
+
+<div class="product-actions">
+  <a href="/go/surfshark" class="product-action-btn product-action-btn--primary" rel="nofollow sponsored" target="_blank">Buy at Surfshark</a>
+</div>
+
 Surfshark's killer feature is unlimited simultaneous connections. If you have a partner, kids, a tablet, a work laptop, a travel router, and a smart TV you never quite got around to securing, one account covers all of them. Nothing else on this list does that except PIA.
 
 The mobile apps use WireGuard by default and are straightforward — cleaner than PIA, less polished than Express. Speeds in my testing were solid on short hops and merely okay transatlantic. MultiHop (their multi-hop routing) is available on mobile and works as advertised, with the expected latency tax. Split tunneling ("Bypasser") is available on Android but, as with every iOS VPN, Apple's platform restrictions make it impractical on iOS — if you need split tunneling on iPhone, no provider can give you what Android users get.

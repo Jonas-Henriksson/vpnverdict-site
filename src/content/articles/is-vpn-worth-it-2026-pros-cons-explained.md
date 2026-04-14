@@ -97,6 +97,12 @@ Pricing is around $12.95/month, $9.99 on the six-month plan, and ~$6.67 on the a
 
 ## Surfshark — Cheap, Cheerful, and Owned by Nord
 
+![Surfshark](/images/articles/is-vpn-worth-it-2026-pros-cons-explained/products/surfshark.png)
+
+<div class="product-actions">
+  <a href="/go/surfshark" class="product-action-btn product-action-btn--primary" rel="nofollow sponsored" target="_blank">Buy at Surfshark</a>
+</div>
+
 Surfshark is fine. That's meant as praise at this price. It's the one I recommend when someone has a family of five, three smart TVs, a Switch, and no interest in learning about split tunneling. Unlimited simultaneous connections is a genuinely differentiated feature — most providers cap you at eight or ten, which adds up fast in a typical household.
 
 Pricing is roughly $15.45 monthly, $2.99 on the annual plan, and ~$2.19 on the two-year plan.
