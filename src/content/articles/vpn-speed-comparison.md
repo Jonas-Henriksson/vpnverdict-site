@@ -1,6 +1,7 @@
 ---
 title: VPN Speed Test Results 2026 - Which VPN Is Fastest?
 description: Comprehensive VPN speed comparison. Test results for NordVPN, ExpressVPN, Surfshark, CyberGhost, and ProtonVPN with real-world performance data and analysis.
+image: "/images/articles/vpn-speed-comparison/hero.png"
 date: 2026-03-22
 category: speed
 author: "Marcus Reid"
@@ -41,6 +42,8 @@ ogImage: "/og/vpn-speed-comparison.jpg"
 
 ## How We Tested
 
+![How We Tested](/images/articles/vpn-speed-comparison/section-1.png)
+
 Speed tests are the easiest part of a VPN review to fake. Anyone can plug numbers into a table and call it "comprehensive." So before the numbers, here's what we actually did — and what we couldn't.
 
 We ran every VPN on the same machine, wired to a gigabit fiber connection, over two weeks in March 2026. We used the official apps on Windows 11 and macOS 15, tested at peak (roughly 20:00–22:00 local) and off-peak (03:00–05:00), and ran each server multiple times rather than cherry-picking a single spike. Latency came from ICMP pings to the far endpoint, not the VPN gateway. Throughput came from a mix of Speedtest.net (multiple servers, not just the default) and bulk file transfers from a known-fast CDN, because relying on a single Ookla result is how you end up with headline numbers that don't survive contact with reality.
@@ -54,6 +57,8 @@ Each VPN was tested on its default modern protocol (WireGuard or WireGuard-deriv
 A note worth internalizing: WireGuard is generally faster than OpenVPN because of its smaller cryptographic footprint and kernel-level implementation on Linux, not because of any marketing magic. IKEv2 is competitive on mobile and handles reconnections well but is a poor choice if you're worried about passive fingerprinting. OpenVPN over TCP is the slowest option you can pick and should be reserved for restrictive networks that block UDP.
 
 ## Aggregate Results
+
+![Aggregate Results](/images/articles/vpn-speed-comparison/section-2.png)
 
 Speeds below are percentages of our 1 Gbps baseline, averaged across all test runs on a given provider's network. Treat these as a rough ranking, not a leaderboard. The gap between the top three is smaller than any single day's variance on most servers.
 
