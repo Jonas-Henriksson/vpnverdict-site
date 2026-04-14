@@ -1,6 +1,7 @@
 ---
 title: "VPN Myths Debunked: 15 Common Misconceptions Exposed in 2026"
 description: "Debunk 15 persistent VPN myths with real testing data and expert analysis. Learn the truth about VPN speed, security, legality, and more."
+image: "/images/articles/vpn-myths-debunked-2026/hero.png"
 date: 2026-04-08
 updated: 2026-04-08
 category: privacy
@@ -29,6 +30,8 @@ I've spent the last few years running packet captures, reading privacy policies 
 
 ## Quick Verdict: The Reality Check
 
+![Quick Verdict: The Reality Check](/images/articles/vpn-myths-debunked-2026/section-1.png)
+
 **The myths that won't die:**
 - VPNs always slow down your internet (partly false — WireGuard changed this, but not by as much as review sites claim)
 - Free VPNs are just as good as paid ones ([dangerous nonsense](/free-vs-paid-vpn))
@@ -38,6 +41,8 @@ I've spent the last few years running packet captures, reading privacy policies 
 **Bottom line:** A VPN is a useful tool inside a specific threat model. It is not a magic privacy cloak, and the marketing industry has spent a decade pretending otherwise.
 
 ## Myth #1: "VPNs Always Slow Down Your Internet Connection"
+
+![Myth #1: "VPNs Always Slow Down Your Internet Connection"](/images/articles/vpn-myths-debunked-2026/section-2.png)
 
 ### The Reality
 
