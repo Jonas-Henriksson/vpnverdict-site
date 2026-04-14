@@ -13,6 +13,13 @@ export async function getStaticPaths() {
 const article = Astro.props;
 const { Content, headings } = await article.render();
 
+// vpnverdict stores affiliateLinks as Array<{vpn, url}> — normalize to the
+// standard {custom: [{name, url, network}]} shape that InlineOurPick expects.
+const rawVpnLinks = article.data.affiliateLinks ?? [];
+const normalizedAffiliateLinks = rawVpnLinks.length > 0
+  ? { custom: rawVpnLinks.map((l: { vpn: string; url: string }) => ({ name: l.vpn, url: l.url, network: 'direct' })) }
+  : undefined;
+
 // Extract FAQ pairs from raw markdown for schema
 const faqPairs: Array<{ question: string; answer: string }> = [];
 const rawBody = article.body || '';
@@ -37,17 +44,14 @@ if (faqMatch) {
   date={article.data.date}
   category={article.data.category}
   author={article.data.author}
-  updated={article.data.updated}
-  vpnRatings={article.data.vpnRatings || {}}
-  affiliateLinks={article.data.affiliateLinks || []}
   faqPairs={faqPairs}
   score={article.data.score}
   badge={article.data.badge}
   verdict={article.data.verdict}
   winner={article.data.winner}
+  affiliateLinks={normalizedAffiliateLinks}
   headings={article.data.tableOfContents !== false ? headings : []}
   currentSlug={article.slug}
-  relatedArticles={article.data.relatedArticles || []}
 >
   <Content />
 </ArticleLayout>
