@@ -1,6 +1,7 @@
 ---
 title: Free vs Paid VPN - Why Free VPNs Are Never Really Free
 description: Comprehensive analysis of free vs paid VPNs. Understand the true costs, security risks, and limitations of free VPN services compared to premium options.
+image: "/images/articles/free-vs-paid-vpn/hero.png"
 date: 2026-03-20
 category: privacy
 author: "Daniel Cho"
@@ -25,6 +26,8 @@ ogImage: "/og/free-vs-paid-vpn.jpg"
 
 ## Quick Verdict
 
+![Quick Verdict](/images/articles/free-vs-paid-vpn/section-1.png)
+
 **Free VPNs cost you more than paid ones.** They monetize through advertising, data selling, and bandwidth exploitation — practices that directly undermine the privacy you're trying to protect. The only free VPN we recommend is ProtonVPN's free tier, which applies the same no-logs policy as its paid plans and does not sell user data.
 
 **Paid VPNs start at $2.19/month** (CyberGhost on the 2-year plan). For less than the cost of a single coffee, you get unlimited bandwidth, thousands of servers, verified no-logs policies, and speeds fast enough for 4K streaming. The math is simple: pay $2-$4/month or risk your data being sold to advertisers and data brokers.
@@ -41,6 +44,8 @@ ogImage: "/og/free-vs-paid-vpn.jpg"
 | Customer support | None or email only | 24/7 live chat |
 
 ## Testing Methodology
+
+![Testing Methodology](/images/articles/free-vs-paid-vpn/section-2.png)
 
 We tested 12 free VPN services and 7 paid VPN services over a 60-day period. Here is exactly what we measured.
 
