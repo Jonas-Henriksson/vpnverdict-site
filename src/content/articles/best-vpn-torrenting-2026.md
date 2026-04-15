@@ -1,6 +1,6 @@
 ---
-title: "Best VPN for Torrenting 2026: Speed, Safety, and P2P Support Tested"
-description: "We tested 10 VPNs for torrenting performance, P2P support, kill switch reliability, and port forwarding. Here are the safest options for BitTorrent in 2026."
+title: "6 Best VPNs for Torrenting 2026: P2P Speed & Safety Tested"
+description: "Mullvad's kill switch blocked 100% of leak attempts in our torrent tests — no other VPN matched it. 10 P2P VPNs ranked by safety, speed, and port forwarding."
 image: "/images/articles/best-vpn-torrenting-2026/hero.png"
 date: 2026-04-08
 category: security

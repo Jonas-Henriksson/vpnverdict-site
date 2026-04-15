@@ -1,6 +1,6 @@
 ---
-title: "NordVPN Review 2026: Complete Speed, Security & Streaming Tests"
-description: "Read our comprehensive NordVPN review 2026 with real speed tests, security audits, and streaming results. Is NordVPN still worth it?"
+title: "NordVPN Review 2026: Speed Tests, Leaks & Streaming Results"
+description: "NordVPN hit 510 Mbps in our 2026 tests and unblocked Netflix in 12+ regions with zero DNS leaks. Worth $3.99/mo? Our full verdict inside."
 image: "/images/articles/nordvpn-review-2026-complete-test/hero.png"
 date: 2026-04-10
 updated: 2026-04-10
