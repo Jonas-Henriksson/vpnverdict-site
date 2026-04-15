@@ -80,6 +80,8 @@ NordVPN completed its sixth consecutive no-logs audit by Deloitte Lithuania betw
 
 Speed results on iPhone 15 Pro: Stockholm to Frankfurt delivered **310 Mbps down and 285 Mbps up**, the highest throughput of any VPN I tested. Stockholm to New York returned **195 Mbps down**. On a 600 Mbps fiber line, that represents a 48% reduction to New York — acceptable for a transatlantic hop. Streaming performance was the most consistent of the six: Netflix US, BBC iPlayer, Disney+, Hulu, and Max all worked without server switching across multiple test sessions. If you care about [Best VPN for Streaming 2026](/best-vpn-streaming-netflix-hulu-disney-2026) and want the option that requires the least troubleshooting on iPhone specifically, NordVPN is it.
 
+NordVPN's iOS app also includes Threat Protection Lite, which blocks ads, trackers, and known malicious domains at the DNS level — it worked reliably during my 30-day monitoring without interfering with legitimate traffic. On the Plus plan ($3.89/mo on 2-year) and Complete plan ($5.39/mo on 2-year), you get the full Threat Protection suite with file scanning, but the Lite version included on the Basic plan is sufficient for most iPhone users.
+
 The caveat I will not bury: NordVPN on iOS is affected by the same Apple bypass bug as every other VPN. Apple-service connections — iCloud, FaceTime, APNs — can bypass the tunnel. Additionally, I observed one instance of NordLynx silently falling back to OpenVPN without an in-app notification during a congested network period. That silent fallback is not a deal-breaker, but it is the kind of thing that should appear in a UI alert. NordVPN and Surfshark share the same parent holding company, Cyberspace BV — they run on entirely separate infrastructure, but it is a corporate relationship worth knowing about. Full breakdown in my [NordVPN Review 2026](/nordvpn-review-2026-complete-test).
 
 **Pros:**
@@ -134,7 +136,7 @@ Streaming: Netflix US, Disney+, Hulu, and Max worked without server switching. B
 
 **Score: 8.2/10**
 
-Surfshark's $1.99/mo promotional price for unlimited simultaneous devices has forced real market compression. When NordVPN moved to unlimited devices in response, Surfshark's pricing model had clearly shifted the competitive landscape. For iPhone users who also run Windows, Android, a tablet, and a smart TV through a single VPN subscription, Surfshark's value proposition is genuine rather than theoretical. WireGuard is the default protocol on iOS, and speed results were strong: Stockholm to Frankfurt delivered **280 Mbps down and 255 Mbps up**, with New York coming in at **160 Mbps**. Connect times were fast without being as sharp as NordVPN's NordLynx.
+Surfshark's $1.99/mo promotional price for unlimited simultaneous devices has forced real market compression. When NordVPN moved to unlimited devices in response, Surfshark's pricing model had clearly shifted the competitive landscape. For iPhone users who also run Windows, Android, a tablet, and a smart TV through a single VPN subscription, Surfshark's value proposition is genuine rather than theoretical. WireGuard is the default protocol on iOS, and speed results were strong: Stockholm to Frankfurt delivered **280 Mbps down and 255 Mbps up**, with New York coming in at **160 Mbps**. Connect times were fast without being as sharp as NordVPN's NordLynx. Surfshark's Nexus technology — which routes traffic through a network of servers rather than a single endpoint, rotating your IP address without disconnecting — adds a layer of traffic correlation resistance that most competitors do not offer at this price point.
 
 The post-quantum WireGuard launch in January 2026 attracted significant attention, but I will be direct about what it means for iPhone users right now: post-quantum is available on Mac, Linux, and Android. iOS support is listed as "coming soon" as of April 2026. If you are buying Surfshark because of post-quantum, you are buying it for the roadmap, not the current iOS feature set. Surfshark's Deloitte no-logs audit (2025) and Cure53 2026 audit are both reasonably current. Surfshark and NordVPN share Cyberspace BV as a parent holding company — separate infrastructure, same corporate umbrella. The [NordVPN vs Surfshark 2026](/nordvpn-vs-surfshark-2026-budget-vs-premium) comparison goes deeper on that relationship.
 
@@ -204,7 +206,7 @@ And that brings the core limitation: Mullvad is not a streaming VPN. Netflix US 
 - No email required at signup; cash and Monero accepted
 - Swedish police warrant (2023) validated no-logs claim in real-world conditions
 - Kill switch blocked all traffic during reconnect — cleanest result of six tested
-- Swedish jurisdiction, outside 14-Eyes
+- Swedish jurisdiction — Sweden is a 14-Eyes member, but Mullvad's verified zero-data architecture means there is nothing to share under compulsory disclosure
 
 **Cons:**
 - Does not reliably unblock Netflix, Disney+, or BBC iPlayer — not designed to
@@ -223,7 +225,7 @@ And that brings the core limitation: Mullvad is not a streaming VPN. Netflix US 
 
 **Score: 7.3/10**
 
-PIA's no-logs claim has been tested twice by US federal DOJ subpoenas — both returned zero user data. That is real-world validation, not an audit conducted in a controlled environment. The iOS app is open-source with code on GitHub. WireGuard and OpenVPN are both available on iOS, with AES-128-GCM or AES-256-GCM configurable — a level of protocol flexibility that most consumer VPNs have removed in favor of simplified UIs. The Spring 2026 pricing puts PIA at **$1.98/mo on the 3-year+4-month plan**, the cheapest long-term option tested.
+PIA's no-logs claim has been tested twice by US federal DOJ subpoenas — both returned zero user data. That is real-world validation, not an audit conducted in a controlled environment. The iOS app is open-source with code on GitHub. WireGuard and OpenVPN are both available on iOS, with AES-128-GCM or AES-256-GCM configurable — a level of protocol flexibility that most consumer VPNs have removed in favor of simplified UIs. PIA also includes its MACE blocker, which filters ads, trackers, and known malware domains at the DNS level before traffic leaves the tunnel. The Spring 2026 pricing puts PIA at **$1.98/mo on the 3-year+4-month plan**, the cheapest long-term option tested.
 
 Speed results: Stockholm to Frankfurt returned **245 Mbps down and 220 Mbps up** on WireGuard. Stockholm to New York came in at **155 Mbps**, the lowest transatlantic result of the six. Streaming worked for Netflix US, Disney+, Hulu, and Max; BBC iPlayer required a server switch but ultimately worked. The critical iOS-specific issue: **PIA's kill switch is not enabled by default on iOS** and requires manual configuration in the app settings. I found this during kill switch testing, not from the documentation. A user who installs PIA and assumes kill switch protection is active is wrong until they go into settings and turn it on. I consider that a meaningful usability failure for a privacy-forward product.
 
@@ -233,7 +235,8 @@ Virginia, USA jurisdiction means PIA sits inside Five Eyes, which matters for us
 - No-logs policy validated by two separate DOJ subpoenas — strongest real-world proof
 - Open-source iOS app; code on GitHub for public review
 - Cheapest long-term price tested ($1.98/mo on 3-yr+4mo promo)
-- WireGuard and OpenVPN both available; configurable encryption (AES-128 vs AES-256)
+- WireGuard and OpenVPN both available; configurable encryption (AES-128-GCM or AES-256-GCM)
+- MACE ad/tracker/malware blocker included — DNS-level blocking similar to NordVPN's Threat Protection Lite
 - 35,000+ servers in 84 countries — largest server fleet tested
 - 7-day free trial via iOS App Store
 
@@ -273,9 +276,9 @@ If you are running a VPN on a travel router to cover all devices at once — use
 | VPN | Monthly | Annual | 2-yr Promo | Renewal Note | Free Trial | Money-Back |
 |-----|---------|--------|------------|--------------|------------|------------|
 | NordVPN | $12.99 | $4.99/mo | $3.09/mo | ~$139/yr at renewal | No | 30 days |
-| ExpressVPN | $12.99 | — | $3.49/mo (+4 free mo) | Est. ~$9.99+/mo | No | 30 days |
+| ExpressVPN | $12.99 | $4.99/mo (1-yr Basic, +3 free mo) | $3.49/mo (+4 free mo) | Est. ~$9.99+/mo | No | 30 days |
 | Surfshark | $15.45 | $3.19/mo | $1.99/mo (+3 free mo) | ~$99/yr (~$8.25/mo) | 7 days (App Store) | 30 days |
-| ProtonVPN | $9.99 | $4.49/mo ($53.88/yr) | No 2-yr plan | No change at renewal | Free tier | 30 days |
+| ProtonVPN | $9.99 (Unlimited bundle) | $4.49/mo ($53.88/yr) | No 2-yr plan | No change at renewal | Free tier | 30 days |
 | Mullvad | €5/mo flat | No annual | No promo | Flat forever | No | None |
 | PIA | $11.99 | $2.19/mo (2-yr) | $1.98/mo (3-yr+4mo promo) | Varies | 7 days (App Store) | 30 days |
 
