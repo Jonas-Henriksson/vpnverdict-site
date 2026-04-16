@@ -1,7 +1,7 @@
 ---
 title: "Is a VPN Worth It in 2026? Real Test Data Says Yes (With Caveats)"
 description: "VPNs cost as little as $2.99/mo and cut ISP throttling by up to 40% in our tests — but they won't make you anonymous. Here's what you actually get for the price."
-image: "/images/articles/is-vpn-worth-it-2026-pros-cons-explained/hero.png"
+image: "https://images.vpnverdict.net/is-vpn-worth-it-2026-pros-cons-explained/hero.png"
 date: 2026-04-10
 updated: 2026-04-10
 category: privacy

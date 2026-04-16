@@ -1,7 +1,7 @@
 ---
 title: "NordVPN Review 2026: Speed Tests, Leaks & Streaming Results"
 description: "NordVPN hit 510 Mbps in our 2026 tests and unblocked Netflix in 12+ regions with zero DNS leaks. Worth $3.99/mo? Our full verdict inside."
-image: "/images/articles/nordvpn-review-2026-complete-test/hero.png"
+image: "https://images.vpnverdict.net/nordvpn-review-2026-complete-test/hero.png"
 date: 2026-04-10
 updated: 2026-04-10
 category: privacy

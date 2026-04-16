@@ -1,7 +1,7 @@
 ---
 title: "Free VPN vs Paid VPN 2026: The Hidden Costs Exposed"
 description: 7 of 10 free VPNs we tested sold browsing data or showed ads. A paid VPN starts at $2.99/mo — less than a coffee. See what free really costs your privacy.
-image: "/images/articles/free-vs-paid-vpn/hero.png"
+image: "https://images.vpnverdict.net/free-vs-paid-vpn/hero.png"
 date: 2026-03-20
 category: privacy
 author: "Daniel Cho"
