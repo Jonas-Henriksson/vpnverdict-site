@@ -42,7 +42,7 @@ A few things worth setting straight before we get into specifics. "Works with Ne
 
 ![Quick Verdict](/images/articles/best-vpn-streaming-netflix-hulu-disney-2026/section-1.png)
 
-**Top pick: ExpressVPN** — the most consistent across Netflix regions and the only one we tested that handled Amazon Prime Video on the first try more often than not. It's also the most expensive, and you're paying for reliability, not features.
+**Top pick: ExpressVPN** — the most consistent across Netflix regions and the only one we tested that handled Amazon Prime Video on the first try more often than not. It's also the most expensive, and you're paying for reliability, not features. Read our [ExpressVPN review 2026](/expressvpn-review-2026-premium-price-justified/) for a full honest assessment.
 
 **Runner-up: NordVPN** — cheaper, faster on WireGuard in our testing, and fine for Netflix. Hits more friction with BBC iPlayer and Prime Video than ExpressVPN does.
 
@@ -86,7 +86,7 @@ The apps use Lightway, Express's in-house WireGuard-inspired protocol. It's open
 
 ## NordVPN — Best Price-to-Performance for Netflix
 
-NordVPN is the service we'd recommend to most people who aren't sold on paying the ExpressVPN premium. On WireGuard (they call their build NordLynx), speeds were the best of the five we tested on a typical home gigabit connection — fast enough that the VPN was rarely the bottleneck on 4K streams. Their SmartPlay feature auto-routes streaming traffic without making you pick a specific server, which is convenient if you don't want to think about which "New York #4312" is currently unblocked.
+NordVPN is the service we'd recommend to most people who aren't sold on paying the ExpressVPN premium. On WireGuard (they call their build NordLynx), speeds were the best of the five we tested on a typical home gigabit connection — fast enough that the VPN was rarely the bottleneck on 4K streams. For detailed speed benchmarks, see our [VPN speed comparison 2026](/vpn-speed-comparison/). Their SmartPlay feature auto-routes streaming traffic without making you pick a specific server, which is convenient if you don't want to think about which "New York #4312" is currently unblocked.
 
 The server count — over 6,400 across 118 countries — is legitimately the largest of the mainstream options, and Nord moved to diskless, RAM-only servers after their 2018 breach (which they later disclosed in 2019, badly). That breach is worth remembering: an attacker reached one of their servers via a rogue data center configuration. No user data was exposed because of how their stack was set up, but the incident response was not a great look. They've since invested heavily in audits and infrastructure changes, and the current setup is materially better.
 
@@ -148,7 +148,7 @@ They also publish a transparency report and a warrant canary — the canary's pr
 
 The free tier does not include streaming-optimized servers — don't expect Netflix to work on Proton's free plan.
 
-**The real weakness:** Proton is the weakest pure streaming unblocker in this lineup. If streaming is your only reason for using a VPN, you shouldn't pick this one. If you're picking a VPN primarily for privacy and want streaming as a bonus, Proton is the right call despite its streaming friction.
+**The real weakness:** Proton is the weakest pure streaming unblocker in this lineup. If streaming is your only reason for using a VPN, you shouldn't pick this one. If you're picking a VPN primarily for privacy and want streaming as a bonus, Proton is the right call despite its streaming friction. For a full privacy-focused ranking, see our [most private VPNs 2026](/best-vpn-privacy-2026/) guide.
 
 [Get Proton VPN](https://vpnverdict.net/go/protonvpn)
 

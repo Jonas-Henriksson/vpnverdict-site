@@ -32,7 +32,7 @@ Short version: **a VPN is probably worth it if you stream foreign content, work 
 
 ![Quick Verdict](/images/articles/is-vpn-worth-it-2026-pros-cons-explained/section-1.png)
 
-**Best overall**: **NordVPN** — consistently fast on WireGuard (they call it NordLynx), RAM-only server fleet, and its no-logs policy has been audited multiple times by Deloitte and PwC. Not perfect, but the least bad of the big three.
+**Best overall**: **NordVPN** — consistently fast on WireGuard (they call it NordLynx), RAM-only server fleet, and its no-logs policy has been audited multiple times by Deloitte and PwC. Not perfect, but the least bad of the big three. For full test results, see our [NordVPN review 2026](/nordvpn-review-2026-complete-test/).
 
 **Runner-up**: **ExpressVPN** — expensive, but the Lightway protocol and TrustedServer architecture are genuinely well-engineered. Worth it only if you specifically need reliability in hostile networks.
 
@@ -194,7 +194,7 @@ Warrant canaries, incidentally, are mostly theater. Their legal enforceability i
 
 **"Jurisdiction" isn't where the servers are.** A BVI-headquartered company can still run servers in Germany that are subject to German law. What matters is where the *company* is, because that's who receives subpoenas. Claims about jurisdiction are only meaningful if you understand the distinction.
 
-**Free VPNs are, as a category, unsafe.** The majority make money by logging and reselling what you do. Proton VPN is the one exception I trust, and even then, the free tier exists because paid subscribers fund it.
+**Free VPNs are, as a category, unsafe.** The majority make money by logging and reselling what you do. Proton VPN is the one exception I trust, and even then, the free tier exists because paid subscribers fund it. Our [free vs paid VPN analysis](/free-vs-paid-vpn/) documents exactly how each model monetizes you.
 
 ## Pricing, Honestly
 

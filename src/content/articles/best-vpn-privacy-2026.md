@@ -40,7 +40,7 @@ affiliateLinks:
 
 **Mullvad VPN is the most private VPN you can buy in 2026.** It accepts cash payments, requires no email address, assigns random account numbers, and had its no-logs claim validated when Swedish police seized their servers in 2023 and found zero user data. At 5 EUR/month flat with no discounts or upsells, it is refreshingly honest in an industry built on marketing tricks.
 
-**Choose Mullvad if** absolute privacy matters more than streaming or server count. **Choose Proton VPN if** you want strong privacy with better streaming support and a free tier. **Choose NordVPN if** you need the full package of privacy plus speed plus streaming.
+**Choose Mullvad if** absolute privacy matters more than streaming or server count. **Choose Proton VPN if** you want strong privacy with better streaming support and a free tier. **Choose NordVPN if** you need the full package of privacy plus speed plus streaming — see our [full NordVPN review 2026](/nordvpn-review-2026-complete-test/) for a deep dive into its no-logs architecture.
 
 | VPN | Privacy Score | Audit Status | Jurisdiction | No-Logs Proof | Price |
 |-----|-------------|-------------|-------------|--------------|-------|
@@ -110,7 +110,7 @@ Mullvad is the VPN that privacy advocates actually use. No marketing fluff, no i
 
 **What we didn't like:** Only 800+ servers across 40 countries, which is modest compared to NordVPN's 6,500+. Streaming support is inconsistent — Netflix US worked about 70% of the time, and Disney+ was blocked entirely. There's no iOS split tunneling. The 5 EUR/month flat rate with no multi-year discount makes it more expensive than NordVPN or Surfshark long-term.
 
-**Who it's best for:** Journalists, activists, whistleblowers, and anyone who needs genuine anonymity rather than just geo-unblocking. If streaming is your main use case, look elsewhere.
+**Who it's best for:** Journalists, activists, whistleblowers, and anyone who needs genuine anonymity rather than just geo-unblocking. If streaming is your main use case, see our [best VPN for streaming](/best-vpn-streaming/) guide instead.
 
 **Pros:**
 - Zero personal information required to sign up
@@ -152,7 +152,7 @@ Proton VPN comes from the team behind ProtonMail, which gives it instant credibi
 
 ### NordVPN — Best Privacy for Most People (9.1/10)
 
-NordVPN balances privacy with usability better than any other mainstream VPN. Three consecutive Deloitte audits, RAM-only servers, and Panama jurisdiction provide a strong privacy foundation without sacrificing speed or streaming.
+NordVPN balances privacy with usability better than any other mainstream VPN. Three consecutive Deloitte audits, RAM-only servers, and Panama jurisdiction provide a strong privacy foundation without sacrificing speed or streaming. For a full feature breakdown, read our [NordVPN review](/nordvpn-review/).
 
 **What we liked:** The NordLynx protocol delivers 85-90% speed retention while maintaining strong encryption. Double VPN adds a second encryption layer when needed. The Threat Protection feature blocks malware, trackers, and ads even when the VPN tunnel isn't active. CyberSec integration is seamless.
 
@@ -206,7 +206,7 @@ Privacy is not a marketing claim — it's a verifiable technical property. Mullv
 ## FAQ
 
 **Is a free VPN ever private?**
-Only Proton VPN's free tier meets our privacy standards. Free VPNs from unknown providers almost always monetize your data.
+Only Proton VPN's free tier meets our privacy standards. Free VPNs from unknown providers almost always monetize your data — our [free vs paid VPN analysis](/free-vs-paid-vpn/) documents the specific monetization methods used.
 
 **Do I need a VPN if I use Tor?**
 They serve different purposes. A VPN hides your traffic from your ISP. Tor provides anonymity. Using both (VPN then Tor) can add protection but also adds complexity.

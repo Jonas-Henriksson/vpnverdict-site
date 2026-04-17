@@ -51,7 +51,7 @@ Server counts are pulled from each provider's own dashboard at the time of writi
 
 ## NordVPN
 
-NordVPN was the most reliable library-switcher across every region we tried. What you're buying isn't magic; it's NordLynx, which is WireGuard with a double-NAT wrapper that lets Nord avoid storing user IP assignments on individual servers. WireGuard is the right protocol for streaming — lower handshake overhead than OpenVPN, better reconnection behavior on mobile than IKEv2 in most cases. On the home connection we generally held north of 300 Mbps on nearby EU endpoints and something in the 200–260 Mbps range on US East, which is more than anyone needs for Spotify's 320 kbps top tier. On the tethered 5G connection speeds hovered between 80–140 Mbps depending on server load, and Spotify streamed cleanly the entire time.
+NordVPN was the most reliable library-switcher across every region we tried. What you're buying isn't magic; it's NordLynx, which is WireGuard with a double-NAT wrapper that lets Nord avoid storing user IP assignments on individual servers. For NordVPN's full feature breakdown, read our [NordVPN review 2026](/nordvpn-review-2026-complete-test/). WireGuard is the right protocol for streaming — lower handshake overhead than OpenVPN, better reconnection behavior on mobile than IKEv2 in most cases. On the home connection we generally held north of 300 Mbps on nearby EU endpoints and something in the 200–260 Mbps range on US East, which is more than anyone needs for Spotify's 320 kbps top tier. On the tethered 5G connection speeds hovered between 80–140 Mbps depending on server load, and Spotify streamed cleanly the entire time.
 
 Region unblocking just worked. Flipping to a US server pulled the US catalog within a reload. Japan took a full app restart once, which is normal — Spotify caches your market based on last-known IP, and desktop is stubbier about refreshing than mobile.
 
@@ -125,7 +125,7 @@ The free tier is worth mentioning because, unlike almost every other "free VPN,"
 
 **Your household has many devices and you're price-sensitive:** Surfshark. Just be aware of the shared ownership with Nord and set your expectations on support accordingly.
 
-**Privacy is your primary motivator and Spotify is a side benefit:** Proton VPN. Open-source clients, Swiss jurisdiction, and Secure Core are genuinely meaningful — but don't pick this one if region unblocking reliability is what you care about most.
+**Privacy is your primary motivator and Spotify is a side benefit:** Proton VPN. Open-source clients, Swiss jurisdiction, and Secure Core are genuinely meaningful — but don't pick this one if region unblocking reliability is what you care about most. See our [most private VPNs 2026](/best-vpn-privacy-2026/) ranking for the full privacy-focused comparison.
 
 **You want a long trial window to test your specific use case:** CyberGhost, but read the parent-company section above first.
 
@@ -188,7 +188,7 @@ We haven't seen a case of a personal account banned purely for VPN use. Payment 
 
 ### Can I use a free VPN?
 
-The Proton VPN free tier is the only free option I'd recommend, and it's limited to three countries. Most other free VPNs monetize by selling user data, injecting ads, or rate-limiting you below what Spotify needs — and many are straightforwardly malicious. "Free VPN" and "trustworthy no-logs provider" are almost never the same thing.
+The Proton VPN free tier is the only free option I'd recommend, and it's limited to three countries. Most other free VPNs monetize by selling user data, injecting ads, or rate-limiting you below what Spotify needs — and many are straightforwardly malicious. "Free VPN" and "trustworthy no-logs provider" are almost never the same thing. Our [free vs paid VPN guide](/free-vs-paid-vpn/) breaks down the exact monetization models used.
 
 ### Will a VPN affect audio quality?
 

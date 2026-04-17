@@ -29,7 +29,7 @@ Both NordVPN and ExpressVPN have been at the top of VPN lists for years, and bot
 
 **If you want the fastest, most boring-in-a-good-way VPN:** ExpressVPN. Lightway is mature, the apps don't get in your way, and it survives the Netflix cat-and-mouse game slightly better than most.
 
-**If you want more features per dollar:** NordVPN. NordLynx is fast, the feature list is deeper (Meshnet, Double VPN, Threat Protection), and the two-year plan is genuinely cheap.
+**If you want more features per dollar:** NordVPN. NordLynx is fast, the feature list is deeper (Meshnet, Double VPN, Threat Protection), and the two-year plan is genuinely cheap. Read our [NordVPN review 2026](/nordvpn-review-2026-complete-test/) for the full test results.
 
 **The honest answer:** For 90% of users, the choice between them doesn't matter much. The threat model you actually have — ISP snooping, public Wi-Fi, geo-unblocking — is handled by both. Pick whichever is cheaper during the month you buy.
 
@@ -139,7 +139,7 @@ Checked April 4–5, 2026. This list will be different in six weeks. That's the 
 - **Disney+**: all four worked from at least one server.
 - **Hulu**: Express and Nord worked. Others inconsistent.
 
-If streaming is the main reason you're buying a VPN, buy it month-to-month from a service with a refund window and test the specific platforms you care about before committing.
+If streaming is the main reason you're buying a VPN, buy it month-to-month from a service with a refund window and test the specific platforms you care about before committing. Our [best VPN for streaming](/best-vpn-streaming/) guide tracks current unblocking results monthly.
 
 ## Split tunneling and other platform gotchas
 
@@ -167,7 +167,7 @@ Sometimes, if configured before you arrive, and results change on a weekly basis
 
 ### Are free VPNs ever okay?
 
-Proton VPN's free tier is the only one I'd recommend without caveats. Most free VPNs pay for themselves by either injecting ads, selling your browsing data, or running out of a jurisdiction that should concern you. "If you aren't paying, you're the product" applies doubly here.
+Proton VPN's free tier is the only one I'd recommend without caveats. Most free VPNs pay for themselves by either injecting ads, selling your browsing data, or running out of a jurisdiction that should concern you. "If you aren't paying, you're the product" applies doubly here. See our [free vs paid VPN breakdown](/free-vs-paid-vpn/) for the documented evidence.
 
 ### Do I actually need a VPN?
 

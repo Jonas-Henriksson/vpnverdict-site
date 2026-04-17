@@ -202,7 +202,7 @@ If a free VPN sells your data or exposes you to malware:
 
 ### Opportunity Costs
 
-- Free VPNs can't stream: you miss content you're paying for on Netflix, Disney+, etc.
+- Free VPNs can't stream: you miss content you're paying for on Netflix, Disney+, etc. — our [best VPN for streaming 2026](/best-vpn-streaming/) shows what paid VPNs actually unlock
 - Free VPNs can't handle video calls: dropped frames and poor audio quality affect remote work
 - Free VPNs can't game: 50-100ms latency makes competitive play impossible
 
@@ -256,7 +256,7 @@ ProtonVPN is the only free VPN that passes our security and privacy standards. H
 
 ### Best Overall: NordVPN ($3.99/month)
 
-NordVPN offers the best balance of speed (87% retention), server count (6,500+ in 111 countries), security (Deloitte-audited no-logs), and features (Meshnet, Double VPN, Threat Protection). It handles streaming, gaming, remote work, and daily browsing equally well.
+NordVPN offers the best balance of speed (87% retention), server count (6,500+ in 111 countries), security (Deloitte-audited no-logs), and features (Meshnet, Double VPN, Threat Protection). It handles streaming, gaming, remote work, and daily browsing equally well. Read our full [NordVPN review 2026](/nordvpn-review-2026-complete-test/) before signing up.
 
 **Why it's worth $3.99/month:** You get unlimited bandwidth, 10 simultaneous connections, 24/7 live chat support, and a 30-day money-back guarantee. That's $47.88/year for enterprise-grade encryption and privacy.
 
@@ -318,7 +318,7 @@ If you're currently using a free VPN, follow these steps:
 
 **If you truly cannot pay for a VPN**, use ProtonVPN's free tier. It's the only free VPN that doesn't monetize your data. But understand its limitations: slower speeds, 3 server countries, and no streaming support.
 
-**If you can spend $2-$4/month**, get NordVPN or Surfshark. You'll gain unlimited bandwidth, thousands of servers, verified no-logs privacy, and 24/7 support. It's the single best value subscription you can buy for your online security.
+**If you can spend $2-$4/month**, get NordVPN or Surfshark. You'll gain unlimited bandwidth, thousands of servers, verified no-logs privacy, and 24/7 support. It's the single best value subscription you can buy for your online security. For the full picture, see our [best VPNs of 2026](/best-vpn-2026/) comparison.
 
 - [Visit NordVPN](https://www.awin1.com/cread.php?awinmid=15132&awinaffid=2845746&clickref=free-vs-paid-vpn) — $3.99/month, 30-day money-back guarantee
 - [Visit Surfshark](https://vpnverdict.net/go/surfshark) — $2.29/month, 30-day money-back guarantee

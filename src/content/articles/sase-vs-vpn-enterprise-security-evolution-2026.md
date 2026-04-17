@@ -46,7 +46,7 @@ I've spent the past several months working with SASE and VPN deployments across 
 
 **Best for cloud-first enterprises**: **NordLayer** — the closest thing to a true SASE experience you can roll out in a weekend for a mid-size team. Not the deepest policy engine, but the fastest path from legacy VPN to something resembling zero trust.
 
-**Best traditional business VPN**: **ExpressVPN for Business** — solid if your use case is "remote workers need access to internal apps and occasional geo-unblocking for marketing research." Nothing more. It is explicitly not SASE, and you should not pretend it is.
+**Best traditional business VPN**: **ExpressVPN for Business** — solid if your use case is "remote workers need access to internal apps and occasional geo-unblocking for marketing research." Nothing more. It is explicitly not SASE, and you should not pretend it is. See our [ExpressVPN review 2026](/expressvpn-review-2026-premium-price-justified/) for the consumer product breakdown.
 
 **Best budget option**: **Surfshark One for Business** — cheap, decent, and honest about what it isn't. Real weakness: it's a consumer VPN with a business-account wrapper.
 
@@ -166,7 +166,7 @@ If you're a ten-person agency and you need something better than "everyone insta
 
 ## ProtonVPN Business — The Privacy-Maximalist Option
 
-Proton is the vendor I recommend most often for privacy-sensitive work: journalism, legal, health research, anyone whose threat model includes state-level adversaries or corporate espionage. Swiss jurisdiction is meaningful, the company is structured as a non-profit foundation, their clients are open source, and their no-logs audit is credible.
+Proton is the vendor I recommend most often for privacy-sensitive work: journalism, legal, health research, anyone whose threat model includes state-level adversaries or corporate espionage. Swiss jurisdiction is meaningful, the company is structured as a non-profit foundation, their clients are open source, and their no-logs audit is credible. For the full privacy-focused ranking, see our [most private VPNs 2026](/best-vpn-privacy-2026/) guide.
 
 **Pricing** is around $9 per user per month on annual billing.
 

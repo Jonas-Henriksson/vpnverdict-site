@@ -77,6 +77,8 @@ If you want the short version:
 - **Best for streaming:** CyberGhost — 11,500+ servers with dedicated streaming profiles
 - **Best for privacy:** ProtonVPN — open-source apps, Swiss jurisdiction, Secure Core routing
 
+For detailed head-to-head comparisons, see our [NordVPN vs ExpressVPN 2026](/nordvpn-vs-expressvpn-2026-comparison/) breakdown and [NordVPN vs Surfshark 2026](/nordvpn-vs-surfshark-2026-budget-vs-premium/) guide.
+
 ## Testing Methodology
 
 ![Testing Methodology](/images/articles/best-vpn-2026/section-2.png)
@@ -247,11 +249,11 @@ The downside is speed. ProtonVPN retained only 60-75% of baseline in our tests, 
 
 ### Best for Streaming
 
-**Pick CyberGhost** if streaming is your primary use case. Its dedicated server profiles for Netflix, Disney+, Amazon Prime Video, and BBC iPlayer deliver the highest platform access rates. **Pick ExpressVPN** if you need 4K quality without buffering — its speed advantage ensures smooth playback even on distant servers.
+**Pick CyberGhost** if streaming is your primary use case. Its dedicated server profiles for Netflix, Disney+, Amazon Prime Video, and BBC iPlayer deliver the highest platform access rates — our [best VPN for streaming](/best-vpn-streaming/) guide covers all platforms in depth. **Pick ExpressVPN** if you need 4K quality without buffering — its speed advantage ensures smooth playback even on distant servers.
 
 ### Best for Privacy
 
-**Pick ProtonVPN** if privacy is non-negotiable. Open-source apps, Swiss jurisdiction, and Secure Core routing give you layers of protection no other provider matches. **Pick NordVPN** if you want strong privacy without sacrificing speed — its Deloitte-audited no-logs policy and Panama jurisdiction are excellent.
+**Pick ProtonVPN** if privacy is non-negotiable. Open-source apps, Swiss jurisdiction, and Secure Core routing give you layers of protection no other provider matches — see our [most private VPNs 2026](/best-vpn-privacy-2026/) roundup for a full audit-based ranking. **Pick NordVPN** if you want strong privacy without sacrificing speed — its Deloitte-audited no-logs policy and Panama jurisdiction are excellent.
 
 ### Best Budget Option
 
@@ -350,7 +352,7 @@ It depends on the provider. Surfshark allows unlimited simultaneous connections.
 
 ### Should I use a free VPN instead?
 
-We do not recommend free VPNs except for ProtonVPN's free tier, which uses the same no-logs policy as its paid plans. Most free VPNs monetize through ads, data selling, or bandwidth exploitation. At $2.19-$3.99/month, paid VPNs are affordable enough that the security trade-offs of free services are not worth it.
+We do not recommend free VPNs except for ProtonVPN's free tier, which uses the same no-logs policy as its paid plans. Most free VPNs monetize through ads, data selling, or bandwidth exploitation — our [free vs paid VPN](/free-vs-paid-vpn/) analysis exposes exactly how. At $2.19-$3.99/month, paid VPNs are affordable enough that the security trade-offs of free services are not worth it.
 
 ### What VPN protocol should I use?
 

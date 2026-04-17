@@ -107,9 +107,9 @@ Tables with 50-row throughput numbers are only useful if you translate them into
 
 **Web browsing**: All five are fine. Even ProtonVPN's slowest measured server was faster than any web page needs. If a provider is making browsing feel slow, the culprit is usually DNS resolution latency, not encryption overhead — worth checking with `dig` before blaming the VPN.
 
-**1080p and 4K streaming**: Anything above ~25 Mbps handles 4K, and all five clear that bar on nearby servers. It gets dicier at long distance. We saw buffering on CyberGhost and occasional re-buffering on ProtonVPN when connecting from the US to servers in Australia, though neither was unusable. Netflix geo-unblocking is a separate question from speed and worth noting: results change month to month as streaming services iterate their detection, and any review claiming a VPN "unblocks everything" is one algorithm update away from being wrong.
+**1080p and 4K streaming**: Anything above ~25 Mbps handles 4K, and all five clear that bar on nearby servers. It gets dicier at long distance. We saw buffering on CyberGhost and occasional re-buffering on ProtonVPN when connecting from the US to servers in Australia, though neither was unusable. Netflix geo-unblocking is a separate question from speed and worth noting: results change month to month as streaming services iterate their detection, and any review claiming a VPN "unblocks everything" is one algorithm update away from being wrong. Our [best VPN for streaming Netflix, Hulu, and Disney+](/best-vpn-streaming-netflix-hulu-disney-2026/) tracks unblocking results monthly.
 
-**Gaming**: Latency matters more than throughput. On regional servers ExpressVPN and NordVPN felt best, but honestly, if you're serious about competitive gaming, you shouldn't be running a VPN at all. The latency cost is never zero.
+**Gaming**: Latency matters more than throughput. On regional servers ExpressVPN and NordVPN felt best, but honestly, if you're serious about competitive gaming, you shouldn't be running a VPN at all. The latency cost is never zero. For a full gaming-specific test, see our [best VPN for gaming 2026](/best-vpn-gaming-2026-lowest-latency/) guide.
 
 **Large downloads**: This is where the top three genuinely pull away from the bottom two, but unless you're moving tens of gigabytes regularly, the difference is a minute or two and not worth optimizing around.
 
@@ -135,7 +135,7 @@ Speed rankings are the part of a VPN review you can measure. They're also the pa
 
 If speed is the only thing you care about, ExpressVPN and NordVPN are interchangeable within the margin of error, and both are fast enough that you will never notice the encryption on anything short of long-haul transcontinental routes. Pick based on price and which app ecosystem you prefer.
 
-If you care about the privacy story behind the speed numbers, ProtonVPN is the honest recommendation and always has been — even if it lost the throughput race in this review.
+If you care about the privacy story behind the speed numbers, ProtonVPN is the honest recommendation and always has been — even if it lost the throughput race in this review. For audited no-logs rankings, see our [most private VPNs 2026](/best-vpn-privacy-2026/) guide.
 
 If you want a solid WireGuard implementation at a lower price, Surfshark is fine. CyberGhost is the one you can skip.
 

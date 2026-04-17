@@ -38,7 +38,7 @@ ogImage: "/og/nordvpn-review.jpg"
 
 **NordVPN earns a 9.3/10 and remains our top-rated VPN for 2026.** It delivers 85-90% speed retention on a 1 Gbps connection, operates 6,500+ servers in 111 countries, and has its no-logs policy verified by Deloitte. At $3.99/month on the two-year plan, it undercuts ExpressVPN by nearly 40% while matching or exceeding it in every category except raw speed.
 
-**You should buy NordVPN if** you want the most reliable all-around VPN for streaming, privacy, security, and everyday browsing. **You should consider alternatives if** budget is your top priority (Surfshark is cheaper) or if you need absolute maximum speed (ExpressVPN is 5-10% faster).
+**You should buy NordVPN if** you want the most reliable all-around VPN for streaming, privacy, security, and everyday browsing. **You should consider alternatives if** budget is your top priority ([Surfshark is cheaper](/nordvpn-vs-surfshark-2026-budget-vs-premium/)) or if you need absolute maximum speed ([ExpressVPN is 5-10% faster](/nordvpn-vs-expressvpn-2026-comparison/)).
 
 | Category | Score | Notes |
 |----------|-------|-------|
@@ -208,7 +208,7 @@ NordVPN's SmartPlay technology automatically optimizes connections for streaming
 | BBC iPlayer | 97.8% | Excellent | N/A | 0 |
 | YouTube Premium | 100% | Excellent | Excellent | 0 |
 
-**NordVPN is one of the most reliable streaming VPNs available.** The few access failures occurred on distant servers (US to Japan) and resolved after reconnecting. 4K streaming was buffer-free on US and European servers.
+**NordVPN is one of the most reliable streaming VPNs available.** The few access failures occurred on distant servers (US to Japan) and resolved after reconnecting. 4K streaming was buffer-free on US and European servers. For a platform-by-platform breakdown, see our [best VPN for streaming](/best-vpn-streaming/) guide.
 
 ## Platform Support and Ease of Use
 
@@ -326,7 +326,7 @@ Surfshark costs 43% less and offers unlimited connections. NordVPN is faster, ha
 
 ### NordVPN vs. ProtonVPN
 
-ProtonVPN offers open-source transparency and Swiss jurisdiction. NordVPN is significantly faster, has a larger server network, and provides 24/7 live chat support. **Pick NordVPN for the best overall experience. Pick ProtonVPN for maximum transparency.**
+ProtonVPN offers open-source transparency and Swiss jurisdiction. NordVPN is significantly faster, has a larger server network, and provides 24/7 live chat support. **Pick NordVPN for the best overall experience. Pick ProtonVPN for maximum transparency.** See our [most private VPNs 2026](/best-vpn-privacy-2026/) roundup for the full comparison.
 
 ### NordVPN vs. Mullvad
 
@@ -373,7 +373,7 @@ NordVPN allows up to 10 simultaneous connections on a single subscription. You c
 
 ### Is NordVPN good for gaming?
 
-NordVPN added an average of 15ms latency in our gaming tests, which is acceptable for most online games. The Meshnet feature enables secure LAN-style gaming with friends across different locations. For the absolute lowest gaming latency, ExpressVPN (12ms average increase) edges it out.
+NordVPN added an average of 15ms latency in our gaming tests, which is acceptable for most online games. The Meshnet feature enables secure LAN-style gaming with friends across different locations. For the absolute lowest gaming latency, ExpressVPN (12ms average increase) edges it out — our [best VPN for gaming 2026](/best-vpn-gaming-2026-lowest-latency/) covers every provider's latency results.
 
 ### Can NordVPN be used in China?
 
