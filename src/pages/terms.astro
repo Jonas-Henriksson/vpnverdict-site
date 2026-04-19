@@ -1,8 +1,9 @@
 ---
 import BaseLayout from '../layouts/BaseLayout.astro';
+const lastUpdated = 'April 19, 2026';
 ---
 
-<BaseLayout title="Terms of Service" description="VPNVerdict terms of service. Rules and guidelines for using our website.">
+<BaseLayout title="Terms of Service — VPNVerdict" description="The terms that govern your use of vpnverdict.net, including content usage, disclaimers, and liability.">
   <article class="legal">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
@@ -13,39 +14,93 @@ import BaseLayout from '../layouts/BaseLayout.astro';
     <header class="page-header">
       <span class="page-label">Legal</span>
       <h1>Terms of Service</h1>
-      <p class="updated">Last updated: April 2026</p>
+      <p class="updated">Last updated: {lastUpdated}</p>
       <div class="header-rule"></div>
     </header>
 
     <div class="content">
       <section>
         <h2>Acceptance of Terms</h2>
-        <p>By accessing VPNVerdict (vpnverdict.net), you agree to these terms. If you do not agree, please do not use the site.</p>
+        <p>By accessing or using <a href="https://vpnverdict.net">vpnverdict.net</a> (the &ldquo;Site&rdquo;), you agree to be bound by these Terms of Service (the &ldquo;Terms&rdquo;) and our <a href="/privacy">Privacy Policy</a>. If you do not agree, please do not use the Site.</p>
       </section>
 
       <section>
-        <h2>Content and Accuracy</h2>
-        <p>We strive to provide accurate, up-to-date VPN reviews and comparisons. However, VPN features, pricing, and policies change frequently. We recommend verifying current details directly with the VPN provider before purchasing. Our content is for informational purposes only and does not constitute professional advice.</p>
+        <h2>Editorial Content</h2>
+        <p>VPNVerdict publishes reviews, comparisons, and guides about VPN providers and related privacy tools. Our goal is to help readers make informed decisions. Content is provided on an &ldquo;as is&rdquo; and &ldquo;as available&rdquo; basis and is for general informational purposes only. We do not make guarantees about the accuracy, completeness, or fitness for a particular purpose of any information on the Site.</p>
+        <p>VPN prices, features, server counts, and jurisdictions change often. Always verify pricing and terms on the vendor&rsquo;s website before purchasing.</p>
       </section>
 
       <section>
-        <h2>Affiliate Relationships</h2>
-        <p>VPNVerdict participates in affiliate programs. We may earn commissions when you purchase VPN services through our links. This does not affect our editorial independence or the price you pay. See our <a href="/disclosure">Affiliate Disclosure</a> for details.</p>
+        <h2>Not Professional Advice</h2>
+        <p>Articles on this Site are editorial opinion and general education. Nothing on the Site constitutes legal, financial, tax, or other professional advice, and nothing on the Site should be construed as legal advice regarding privacy, surveillance, or lawful use of VPN services in your jurisdiction. Before making important decisions based on information from the Site, consult a qualified professional.</p>
+      </section>
+
+      <section>
+        <h2>Affiliate Links and Commercial Relationships</h2>
+        <p>We earn affiliate commissions when readers click some links on the Site and purchase services from third parties. This is explained in full on our <a href="/disclosure">Affiliate Disclosure</a> page. Commercial relationships do not influence our editorial rankings.</p>
       </section>
 
       <section>
         <h2>Intellectual Property</h2>
-        <p>All content on VPNVerdict, including text, graphics, and logos, is owned by VPNVerdict and protected by copyright. You may not reproduce or distribute our content without written permission.</p>
+        <p>All original content on the Site &mdash; including articles, images, logos, design, code, and branding &mdash; is owned by VPNVerdict or its contributors and is protected by copyright, trademark, and other intellectual property laws.</p>
+        <p>You may:</p>
+        <ul>
+          <li>View and share links to Site content for personal, non-commercial use.</li>
+          <li>Quote short excerpts for journalism, commentary, or criticism with clear attribution and a link back to the original article.</li>
+        </ul>
+        <p>You may not, without our prior written permission:</p>
+        <ul>
+          <li>Republish or redistribute substantial portions of Site content.</li>
+          <li>Use Site content to train machine learning models, scrape for commercial databases, or generate derivative commercial products.</li>
+          <li>Use our name, logo, or design in a way that suggests endorsement or affiliation.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Acceptable Use</h2>
+        <p>You agree not to:</p>
+        <ul>
+          <li>Use the Site to violate any applicable law or regulation.</li>
+          <li>Interfere with or disrupt the Site, its servers, or networks connected to it.</li>
+          <li>Attempt to gain unauthorized access to any portion of the Site or related systems.</li>
+          <li>Submit false, misleading, or spammy content via forms, comments, or other inputs.</li>
+          <li>Use automated systems (bots, scrapers, harvesters) to access the Site in ways that exceed reasonable personal use or violate our robots.txt.</li>
+        </ul>
+      </section>
+
+      <section>
+        <h2>Third-Party Sites and Products</h2>
+        <p>The Site links to products and websites operated by third parties. We do not control and are not responsible for the content, privacy practices, security, or terms of those third parties. Accessing or purchasing from third parties is at your own risk.</p>
+      </section>
+
+      <section>
+        <h2>Disclaimer of Warranties</h2>
+        <p>THE SITE AND ITS CONTENT ARE PROVIDED &ldquo;AS IS&rdquo; AND &ldquo;AS AVAILABLE&rdquo; WITHOUT WARRANTIES OF ANY KIND, EITHER EXPRESS OR IMPLIED, INCLUDING BUT NOT LIMITED TO IMPLIED WARRANTIES OF MERCHANTABILITY, FITNESS FOR A PARTICULAR PURPOSE, NON-INFRINGEMENT, OR ACCURACY. WE DO NOT WARRANT THAT THE SITE WILL BE UNINTERRUPTED, SECURE, OR ERROR-FREE.</p>
       </section>
 
       <section>
         <h2>Limitation of Liability</h2>
-        <p>VPNVerdict is not liable for any damages arising from your use of the site or reliance on our content. We are not responsible for the services, products, or practices of the VPN providers we review.</p>
+        <p>TO THE FULLEST EXTENT PERMITTED BY LAW, VPNVERDICT AND ITS CONTRIBUTORS WILL NOT BE LIABLE FOR ANY INDIRECT, INCIDENTAL, SPECIAL, CONSEQUENTIAL, OR PUNITIVE DAMAGES, OR ANY LOSS OF PROFITS OR REVENUES, WHETHER INCURRED DIRECTLY OR INDIRECTLY, OR ANY LOSS OF DATA, USE, GOODWILL, OR OTHER INTANGIBLE LOSSES, ARISING FROM YOUR USE OF THE SITE OR ANY CONTENT OBTAINED FROM IT.</p>
+      </section>
+
+      <section>
+        <h2>Indemnification</h2>
+        <p>You agree to defend, indemnify, and hold harmless VPNVerdict and its contributors from any claim, liability, damage, loss, or expense (including reasonable attorneys&rsquo; fees) arising out of your use of the Site or your violation of these Terms.</p>
+      </section>
+
+      <section>
+        <h2>Changes to the Site and Terms</h2>
+        <p>We may modify or discontinue any part of the Site at any time. We may also update these Terms from time to time; the &ldquo;Last updated&rdquo; date at the top of this page will reflect the most recent version. Your continued use of the Site after changes become effective constitutes acceptance of the revised Terms.</p>
+      </section>
+
+      <section>
+        <h2>Governing Law</h2>
+        <p>These Terms are governed by the laws of the jurisdiction in which the Site operator is based, without regard to conflict-of-law principles. Any dispute arising out of or relating to the Site or these Terms will be resolved in the courts of that jurisdiction, unless otherwise required by applicable consumer protection law.</p>
       </section>
 
       <section class="contact">
         <h2>Contact</h2>
-        <p>Questions? Email us at <a href="mailto:info@vpnverdict.net">info@vpnverdict.net</a>.</p>
+        <p>Questions about these Terms? Email <a href="mailto:info@vpnverdict.net">info@vpnverdict.net</a>.</p>
       </section>
     </div>
   </article>
@@ -73,5 +128,9 @@ import BaseLayout from '../layouts/BaseLayout.astro';
   .content h2 { margin-top: 0; margin-bottom: var(--space-md); padding-top: var(--space-xl); border-top: 1px solid var(--ink-100); }
   .content section:first-child h2 { border-top: none; padding-top: 0; }
   .content p { color: var(--ink-700); line-height: 1.75; }
+  .content ul { color: var(--ink-700); line-height: 1.75; }
+  .content li { line-height: 1.75; }
+  .content a { color: var(--ink-700); text-decoration: underline; text-underline-offset: 2px; }
+  .content a:hover { color: var(--ink-950); }
   .contact a { font-weight: 600; text-decoration: underline; text-underline-offset: 3px; }
 </style>
