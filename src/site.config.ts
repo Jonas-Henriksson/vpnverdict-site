@@ -32,6 +32,7 @@ export const siteConfig = {
     nordpass: { name: 'NordPass', affiliateUrl: 'https://vpnverdict.net/go/nordpass', program: 'CJ', commission: '30% per sale', cookie: 30 },
     'proton-partners-program': { name: 'Proton Partners Program', affiliateUrl: 'https://vpnverdict.net/go/proton-partners-program', program: 'CJ', commission: '100.00%' },
       'iolo-system-mechanic': { name: 'Iolo System Mechanic', affiliateUrl: 'https://vpnverdict.net/go/iolo-system-mechanic', program: 'CJ', commission: 'USD 10.00' },
+      'kaspersky-lab-denmark-aps-nordics': { name: 'Kaspersky Lab Denmark ApS (Nordics)', affiliateUrl: 'https://vpnverdict.net/go/kaspersky-lab-denmark-aps-nordics', program: 'CJ', commission: '30.00%' },
   },
   impactVerification: '0702cea6-0336-4910-b67c-a7671741e912',
   keywords: 'VPN reviews, VPN comparison, best VPN, VPN service, privacy VPN, fast VPN, VPN for streaming',
