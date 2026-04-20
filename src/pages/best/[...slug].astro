@@ -70,9 +70,9 @@ const itemListSchema = {
 <BaseLayout
   title={pageTitle}
   description={pageDesc}
-  schema={itemListSchema}
+  structuredData={itemListSchema}
+  noindex={isThinContent}
 >
-  {isThinContent && <meta name="robots" content="noindex, follow" slot="head" />}
   <div class="best-for-page">
     <nav class="breadcrumb" aria-label="Breadcrumb">
       <a href="/">Home</a>
