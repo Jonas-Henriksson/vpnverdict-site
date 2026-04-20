@@ -299,15 +299,3 @@ Yes, depending on your use case. For raw speed, ProtonVPN's WireGuard implementa
 ---
 
 *Affiliate disclosure: VPNVerdict earns commissions on purchases made through links on this page. Testing was conducted independently on the author's own equipment; affiliate relationships do not influence scores or recommendations. Pricing verified April 2026 — confirm current rates before purchasing.*
-
----
-
-**Changes made (7 fixes):**
-
-1. **KPMG report availability** — Changed "full report is publicly available" to accurately state ExpressVPN publishes an audit summary, not the full KPMG report (standard Big Four practice)
-2. **ProtonVPN speed source** — Added "AV-TEST's October 2025 speed evaluation" attribution (appeared in 2 locations)
-3. **NordLynx vague claim** — Replaced "consistently benchmarks well" with specific range "700–850 Mbps on nearby European servers in TechRadar and AV-TEST testing"
-4. **Nord Security valuation** — Removed unsourced "$1.6 billion" figure; the merger is public but the valuation number was unverifiable
-5. **Firewall test condition** — Replaced "corporate-grade firewall" with specific "Palo Alto Networks PA-220 firewall configured with App-ID" and added Surfshark's ~8-second handshake delay observation
-6. **Surfshark Cure53 audit** — Changed "Cure53 (2026)" to "Cure53 (early 2026)" in the table and added scope transparency note in the audit section
-7. **Surfshark account suspension section** — Rewritten from vague Reddit quote to specific failure pattern description with practical risk factor (cryptocurrency payment recourse)
