@@ -1,6 +1,6 @@
 ---
-title: "ExpressVPN Review 2026: $12.95/mo — Worth It or Overpriced?"
-description: "ExpressVPN hit 540 Mbps and unblocked Netflix in 14 regions — impressive. But NordVPN does both for $5 less. Our full test decides if the premium holds up."
+title: "ExpressVPN Review 2026: New Tiered Pricing — Worth It or Overpriced?"
+description: "ExpressVPN hit 540 Mbps and unblocked Netflix in 14 regions — impressive. New tiered plans start from $4.99/mo. But NordVPN does both for less. Our full test decides if the premium holds up."
 image: "https://images.vpnverdict.net/expressvpn-review-2026-premium-price-justified/hero.png"
 date: 2026-04-10
 updated: 2026-04-10
@@ -24,7 +24,7 @@ amazon:
     link: "https://www.amazon.com/dp/B07GBXP52Y?tag=vpnverdict-20"
 ---
 
-ExpressVPN remains one of the most expensive mainstream VPNs on the market. At the time of writing, the monthly plan sits at **$12.95** and the best annual deal lands around **$6.67/month**, while Surfshark's two-year plan is closer to **$2.19/month**. After spending roughly two weeks using ExpressVPN daily across Windows, macOS, iOS, Android, and a flashed router, the honest question isn't whether it's *good* — it is — but whether anyone except a specific kind of user should pay nearly three times the price of the alternatives.
+ExpressVPN remains one of the most expensive mainstream VPNs on the market. In 2026, they launched tiered pricing: the Basic plan starts at **$4.99/month** on a 1-year plan (or **$12.99/month** monthly), while the top-tier Pro plan runs **$8.99/month** annually. Surfshark's two-year plan is still closer to **$2.19/month**. After spending roughly two weeks using ExpressVPN daily across Windows, macOS, iOS, Android, and a flashed router, the honest question isn't whether it's *good* — it is — but whether anyone except a specific kind of user should pay nearly three times the price of the alternatives.
 
 **Quick Verdict**
 
@@ -46,7 +46,7 @@ Speed numbers in this review are rounded ranges, not lab-precise figures. Anyone
 
 | VPN | Best for | Rough annual price | Server footprint | Speed impression | Streaming in my tests |
 |---|---|---|---|---|---|
-| ExpressVPN | Speed, streaming, router use | ~$6.67/mo | 3,000+ servers, 105 countries | Minimal drop nearby, holds up across continents | Unblocked every major platform reliably |
+| ExpressVPN | Speed, streaming, router use | from $4.99/mo (1-yr, Basic) | 3,000+ servers, 105 countries | Minimal drop nearby, holds up across continents | Unblocked every major platform reliably |
 | NordVPN | Overall value + features | ~$3.99–$4.99/mo | 6,400+ servers, 111 countries | Close to ExpressVPN on WireGuard (NordLynx) | Mostly reliable, occasional Netflix region miss |
 | Surfshark | Cheap, many devices | ~$2.19/mo | 3,200+ servers, 100 countries | Good nearby, noticeable drop on far servers | Works on the big platforms, less consistent elsewhere |
 | CyberGhost | Streaming presets | ~$2.19/mo | 11,500+ servers | Middling, larger drop on long hops | Good on streaming-labeled servers, weaker elsewhere |
@@ -60,11 +60,15 @@ On my local US East server, ExpressVPN's throughput was effectively transparent 
 
 ### Pricing
 
-- Monthly: $12.95
-- 6 months: ~$9.99/mo
-- 12 months: ~$6.67/mo (with 3 extra months on current promo)
-- 30-day refund window; 7-day mobile free trial
-- No 2-year plan, which is a real pain point: Surfshark, NordVPN, and Proton VPN all amortize their prices far lower over longer terms.
+ExpressVPN now offers three tiers, all with a 30-day money-back guarantee and a 7-day mobile free trial:
+
+| Plan | Monthly | 1-Year | 2-Year | Devices |
+|---|---|---|---|---|
+| **Basic** | $12.99/mo | $4.99/mo | $3.49/mo | 10 |
+| **Advanced** | $13.99/mo | $5.99/mo | $4.49/mo | 12 |
+| **Pro** | $19.99/mo | $8.99/mo | $7.49/mo | 14 |
+
+The new tiered structure is a significant change from the old single-plan model — and the addition of a 2-year plan at last gives ExpressVPN something Surfshark and NordVPN have long used to amortize prices lower. Basic covers 10 devices, which resolves the previous 8-device criticism for most households.
 
 ### Protocols and What They Mean
 
@@ -94,8 +98,8 @@ Over the test window, Netflix worked on US, UK, Canada, and Japan libraries from
 
 ### What's Weak
 
-- **Expensive, with no long-term plan**. This is the single biggest honest criticism. Competitors will sell you two or three years up front for a fraction of the cost.
-- **Only 8 simultaneous device connections**. Fine for an individual, tight for a household with phones, laptops, tablets, a TV, and a console.
+- **Expensive relative to the competition**, especially at the Pro tier. Basic starts at $4.99/mo (1-yr), which is more competitive than before, but NordVPN and Surfshark still undercut it meaningfully.
+- **Device limits vary by tier**: 10 (Basic), 12 (Advanced), 14 (Pro). Fine for most households, but Surfshark still offers unlimited on every plan.
 - **No built-in ad/tracker blocker** worth the name. Threat Manager blocks known trackers but doesn't touch ads — compare to NordVPN's Threat Protection or Proton's NetShield.
 - **No first-party WireGuard**, which matters if you want to stick to audited open protocols.
 - **Kape ownership** is a reasonable concern for privacy absolutists.
@@ -226,7 +230,7 @@ On nearby servers, effectively transparent on a 500 Mbps line — you can't feel
 
 ### How many devices can I use at once?
 
-Eight. That's tight for a busy household. Surfshark's unlimited connections or NordVPN's ten-device cap are more flexible. Installing ExpressVPN on the router covers everything behind it as one slot, which is the usual workaround.
+It depends on the plan: Basic covers 10 devices, Advanced covers 12, and Pro covers 14. That's a meaningful improvement over the old 8-device limit. Surfshark's unlimited connections are still more flexible for large households. Installing ExpressVPN on the router covers everything behind it as one slot, which remains a useful workaround.
 
 ### Does ExpressVPN actually keep no logs?
 

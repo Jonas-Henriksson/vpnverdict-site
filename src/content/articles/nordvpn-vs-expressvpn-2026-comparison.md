@@ -45,7 +45,7 @@ I did not run speed tests 500 times. Anyone claiming "scored 92% speed retention
 
 | VPN | Protocol | Server count (advertised) | Jurisdiction | Independent audit | 2-year price |
 |---|---|---|---|---|---|
-| ExpressVPN | Lightway (WireGuard-ish) | ~3,000 in 105 countries | British Virgin Islands | KPMG (multiple) | ~$6.67/mo equivalent |
+| ExpressVPN | Lightway (WireGuard-ish) | ~3,000 in 105 countries | British Virgin Islands | KPMG (multiple) | from $4.99/mo (1-yr, Basic) |
 | NordVPN | NordLynx (WireGuard) | ~6,400 in 111 countries | Panama | Deloitte (multiple) | ~$3.39/mo equivalent |
 | Surfshark | WireGuard | ~3,200 in 100 countries | Netherlands | Deloitte | ~$2.19/mo |
 | Proton VPN | WireGuard/OpenVPN | ~8,500 in 110+ countries | Switzerland | Securitum + open source | ~$4.99/mo |
@@ -60,7 +60,7 @@ The TrustedServer infrastructure is genuinely meaningful: RAM-only servers that 
 
 Streaming, checked on April 4–5, 2026: Netflix US, UK, and Japan loaded fine from ExpressVPN's streaming-flagged locations. BBC iPlayer worked on the first London server I tried. Disney+ was fine. This can change next week.
 
-**Where it falls short.** Price. The headline is around $6.67/month on a two-year deal with promos, and the monthly plan is genuinely expensive at $12.95. You're paying a premium for polish, and the polish is real but not transformative.
+**Where it falls short.** Price. ExpressVPN now has tiered pricing — Basic starts at **$4.99/mo** (1-year) or **$3.49/mo** (2-year), with the monthly plan at **$12.99/mo**. Advanced and Pro run higher. That's more competitive than the old flat pricing, but NordVPN still undercuts it significantly on 2-year plans. You're paying a premium for polish, and the polish is real but not transformative.
 
 More importantly: the **Kape Technologies ownership issue** still hasn't been fully resolved in my head. Kape owns ExpressVPN, CyberGhost, PIA, and ZenMate, and Kape's predecessor company (Crossrider) had a historical association with adware/malware toolkits. Express now operates independently with its own audit trail, and there's been no evidence of anything shady post-acquisition. But if you're a jurisdiction-and-ownership purist, this isn't nothing.
 

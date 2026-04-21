@@ -23,7 +23,7 @@ amazon:
 
 The premium-vs-budget debate in consumer VPNs used to be simple: pay more, get better. In 2026, that equation has fractured in interesting ways.
 
-ExpressVPN charges roughly 40% more than Surfshark on introductory pricing — and nearly 60% more at renewal. The question isn't whether that premium is justified in abstract. The question is whether the specific things ExpressVPN does better are the things *you* actually care about.
+ExpressVPN launched tiered pricing in 2026 — Basic starts at **$4.99/mo** on a 1-year plan or **$12.99/mo** monthly, while Pro goes up to **$8.99/mo** annually. Even at the Basic tier, ExpressVPN charges roughly 40% more than Surfshark on introductory pricing — and more at renewal. The question isn't whether that premium is justified in abstract. The question is whether the specific things ExpressVPN does better are the things *you* actually care about.
 
 I've been running both services in parallel for eight weeks on my Arch Linux workstation (AMD 7950X, 64GB RAM) and Pixel 8a, routing traffic through my Frankfurt VPS as a benchmark endpoint and capturing packets with tcpdump on my pfSense router. The results are closer than either vendor's marketing suggests — and the winner shifts depending on your specific use case.
 
@@ -39,14 +39,14 @@ One disclosure before we go further: this article contains affiliate links. If y
 |---|---|---|
 | Best overall value | **Surfshark Starter** | Unlimited devices, lower renewal cost, CleanWeb on cheapest tier |
 | Best for mobile users | **ExpressVPN** | Lightway reconnects in under 1 second on network switches |
-| Best for households | **Surfshark** | Unlimited simultaneous connections vs ExpressVPN's 8 on Basic |
+| Best for households | **Surfshark** | Unlimited simultaneous connections vs ExpressVPN's 10 on Basic |
 | Best for privacy-focused users | **ExpressVPN** (narrow) | BVI jurisdiction, 23 independent audits, post-quantum WireGuard |
 | Best for router installation | **Surfshark** | ExpressVPN dropped third-party router support March 31, 2026 |
 | Best long-term cost | **Surfshark** | ~$147 vs ~$221 over 4 years after renewal rates kick in |
 
 **Top Pick: Surfshark Starter** — $1.99/mo introductory on a 2-year plan (renews at approximately $99/yr). Unlimited device connections, CleanWeb ad blocking, Dynamic MultiHop, third-party router support, and a 30-day money-back guarantee. For the majority of users, it does everything ExpressVPN does at meaningfully lower cost.
 
-**Premium Pick: ExpressVPN Basic** — $2.79/mo introductory on a 2-year plan (renews at approximately $154/yr). Lightway's sub-1-second reconnect, BVI jurisdiction, 23 independent audits, and post-quantum-encrypted WireGuard justify the premium for security-conscious users who need the protocol depth.
+**Premium Pick: ExpressVPN Basic** — $3.49/mo on a 2-year plan or $4.99/mo on a 1-year plan (monthly: $12.99/mo). 10 devices, 30-day money-back guarantee. Lightway's sub-1-second reconnect, BVI jurisdiction, 23 independent audits, and post-quantum-encrypted WireGuard justify the premium for security-conscious users who need the protocol depth.
 
 [Get ExpressVPN Basic](https://vpnverdict.net/go/expressvpn) | [Get Surfshark Starter](https://www.anrdoezrs.net/click-101724885-15438560)
 
@@ -75,13 +75,13 @@ Let me be direct about something most VPN reviews obscure: the introductory pric
 
 *Pricing sourced from expressvpn.com and surfshark.com/pricing as of April 2026. Always verify before purchasing — introductory rates and bundle inclusions shift frequently.*
 
-The four-year math is the number that actually matters. ExpressVPN Basic costs approximately $2.79×24 months + $154 renewal = **~$221 over 4 years**. Surfshark Starter costs approximately $1.99×24 + $99 = **~$147 over 4 years**. That is a $74 difference — enough to buy a [GL.iNet GL-MT3000 travel router](https://www.amazon.com/dp/B0BMXRC36H?tag=vpnverdict-20) that runs Surfshark's WireGuard config natively, with cash left over.
+The four-year math is the number that actually matters. ExpressVPN Basic costs approximately $3.49×24 months upfront + ~$154 renewal = **~$238 over 4 years**. Surfshark Starter costs approximately $1.99×24 + $99 = **~$147 over 4 years**. That is a $91 difference — enough to buy a [GL.iNet GL-MT3000 travel router](https://www.amazon.com/dp/B0BMXRC36H?tag=vpnverdict-20) that runs Surfshark's WireGuard config natively, with cash left over.
 
 Speaking of routers: ExpressVPN discontinued all third-party router app support on March 31, 2026. If you want ExpressVPN at the router level — covering smart TVs, game consoles, and IoT devices — you now need to buy their proprietary Aircove hardware. One subscriber who had used ExpressVPN for nearly 15 years put it on r/VPN: *"I've been an ExpressVPN subscriber for almost 15 years but won't be renewing my subscription because I object to being forced to purchase an ExpressVPN Aircove router."* Surfshark still publishes WireGuard and OpenVPN config files for manual setup on any compatible router.
 
 Both providers offer a 30-day money-back guarantee. Surfshark also provides a 7-day free trial on 12- and 24-month plans via iOS, Android, and macOS with PayPal or credit card — a trial period ExpressVPN does not match.
 
-What the pricing section does not show: ExpressVPN Basic limits you to 8 simultaneous connections; ExpressVPN Advanced and Pro are unlimited. Surfshark is unlimited on every tier including Starter. If you have a household of four people with phones, laptops, and tablets, the 8-device ceiling on ExpressVPN Basic is a gotcha that costs you real money to resolve.
+What the pricing section does not show: ExpressVPN Basic covers 10 simultaneous devices, Advanced covers 12, and Pro covers 14. Surfshark is unlimited on every tier including Starter. For most households, ExpressVPN's tiered device limits are now workable — but Surfshark still wins if you're covering many people or devices without counting.
 
 ---
 
@@ -212,7 +212,7 @@ I break down these jurisdictional distinctions in more depth at [Most Private VP
 
 **Router support removal is a meaningful regression.** Discontinuing all third-party router app support on March 31, 2026 is not a minor change. If you want ExpressVPN protecting everything on your home network — game consoles, smart TVs, IoT devices, guests — you now have to buy their proprietary Aircove router. This turns a subscription into a hardware purchase. Long-term subscribers are correctly treating it as a broken contract, not a minor policy update. Surfshark's willingness to publish config files for any compatible router is, by comparison, the more user-respecting approach. A [GL.iNet GL-MT3000](https://www.amazon.com/dp/B0BMXRC36H?tag=vpnverdict-20) running Surfshark via WireGuard config costs roughly $80 and protects your entire network without proprietary lock-in.
 
-**Device limits on Basic are a household gotcha.** Count the devices in a two-person household: two phones, two laptops, one tablet, one smart TV, one streaming stick. You are at seven before guests or a gaming console. ExpressVPN Basic's 8-device ceiling is a marketing decision designed to push users toward Advanced. Surfshark's unlimited connections on every tier eliminates this calculation entirely.
+**Device limits still tier-gate households.** Basic covers 10 devices — enough for most two-person households, but the limit still exists. A busy household with phones, laptops, tablets, a TV, a streaming stick, and guests will bump up against it. Surfshark's unlimited connections on every tier eliminates this calculation entirely, while ExpressVPN charges more for 12 (Advanced) or 14 (Pro) devices.
 
 **Kape privatisation removes accountability.** This is the hardest concern to quantify precisely because it is structural rather than operational. Kape Technologies — formerly Crossrider, documented as a browser redirect adware distributor — now operates ExpressVPN as a fully private company with no public financial filings, no shareholder oversight, and no external accountability mechanism beyond the audits themselves. The audits are valuable. They are not a substitute for governance transparency. If you are the kind of user who reads privacy policies and Terms of Service for fun, the combination of adware history and deliberate opacity under privatisation is not a trivial concern.
 
@@ -256,11 +256,11 @@ I break down these jurisdictional distinctions in more depth at [Most Private VP
 
 [Get Surfshark Starter →](https://www.anrdoezrs.net/click-101724885-15438560)
 
-**For privacy-focused power users: ExpressVPN Basic.** BVI jurisdiction, TrustedServer RAM-only architecture, 23 independent audits, post-quantum WireGuard, and Lightway's mobile reconnect performance justify the premium for users who read audit reports, understand the difference between connection logs and usage logs, and have a specific threat model that makes the BVI jurisdiction meaningful. The router support removal is a genuine regression — factor in Aircove hardware cost if whole-home coverage is your goal.
+**For privacy-focused power users: ExpressVPN Basic.** BVI jurisdiction, TrustedServer RAM-only architecture, 23 independent audits, post-quantum WireGuard, and Lightway's mobile reconnect performance justify the premium for users who read audit reports, understand the difference between connection logs and usage logs, and have a specific threat model that makes the BVI jurisdiction meaningful. The router support removal is a genuine regression — factor in Aircove hardware cost if whole-home coverage is your goal. Pricing: from $4.99/mo (1-yr) or $3.49/mo (2-yr), $12.99/mo monthly.
 
 [Get ExpressVPN Basic →](https://vpnverdict.net/go/expressvpn)
 
-**If you are evaluating purely on long-term cost:** Run the four-year math. Surfshark is approximately $147. ExpressVPN is approximately $221. Unless the specific features in ExpressVPN's column are on your personal priority list, the difference is hard to defend.
+**If you are evaluating purely on long-term cost:** Run the four-year math. Surfshark Starter is approximately $147. ExpressVPN Basic at $3.49/mo over 2 years + ~$154/yr renewal works out to approximately $238 over 4 years. Unless the specific features in ExpressVPN's column are on your personal priority list, the difference is hard to defend.
 
 **Neither is my top overall pick.** For a comprehensive best-of ranking across more providers — including NordVPN's NordLynx, which benchmarks between 700–850 Mbps on nearby European servers in TechRadar and AV-TEST testing, and ProtonVPN, which recorded 1,521 Mbps in AV-TEST's October 2025 speed evaluation (the highest single-provider result in that test cycle) — see [7 Best VPNs of 2026: Tested, Ranked, and Compared](/best-vpn-2026). For ExpressVPN's full individual breakdown, see [ExpressVPN Review 2026](/expressvpn-review-2026-premium-price-justified). For a three-way price comparison involving NordVPN, see [NordVPN vs Surfshark 2026](/nordvpn-vs-surfshark-2026-budget-vs-premium) or [NordVPN vs ExpressVPN 2026](/nordvpn-vs-expressvpn-2026-comparison).
 
@@ -282,7 +282,7 @@ Operationally, the KPMG February 2026 audit confirms TrustedServer works as desc
 
 ### What happens to the price when ExpressVPN or Surfshark renews?
 
-Neither provider continues your introductory rate after the promotional term. ExpressVPN Basic renews at approximately $154/yr (~$12.84/mo) after your initial 2-year plan — a roughly 360% increase from the $2.79/mo promotional rate. Surfshark Starter renews at approximately $99/yr (~$8.25/mo) after the initial 2-year plan — still a 314% increase from $1.99/mo. This is standard industry practice and represents the single most common complaint across VPN subreddits. Always calculate total 4-year cost before committing. Verify current renewal rates at checkout on expressvpn.com and surfshark.com/pricing before purchasing, as these figures are consistent across multiple sources but promotional structures shift.
+Neither provider continues your introductory rate after the promotional term. ExpressVPN Basic is priced at $3.49/mo on a 2-year plan ($83.76 upfront) and renews at approximately $154/yr (~$12.84/mo) — a significant jump. Surfshark Starter renews at approximately $99/yr (~$8.25/mo) after the initial 2-year plan. This is standard industry practice and represents the single most common complaint across VPN subreddits. Always calculate total 4-year cost before committing. Verify current renewal rates at checkout on expressvpn.com and surfshark.com/pricing before purchasing, as these figures are consistent across multiple sources but promotional structures shift.
 
 ### Can I run Surfshark on a third-party router instead of ExpressVPN?
 
