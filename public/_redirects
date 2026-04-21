@@ -2,6 +2,14 @@ https://www.vpnverdict.net/* https://vpnverdict.net/:splat 301!
 
 /sitemap.xml /sitemap-index.xml 301
 
+# 301 redirects for deleted/renamed articles
+/nordvpn-review /nordvpn-review-2026-complete-test/ 301
+/nordvpn-review/ /nordvpn-review-2026-complete-test/ 301
+/best-vpn-android-ios-2026-mobile-apps /best-vpn-android-2026-mobile-privacy-tested/ 301
+/best-vpn-android-ios-2026-mobile-apps/ /best-vpn-android-2026-mobile-privacy-tested/ 301
+/best-vpn-streaming-netflix-hulu-disney-2026 /best-vpn-streaming/ 301
+/best-vpn-streaming-netflix-hulu-disney-2026/ /best-vpn-streaming/ 301
+
 /go/nordvpn https://www.anrdoezrs.net/click-101724885-16968809 301
 /go/expressvpn https://expressvpn.com 301
 /go/surfshark https://www.anrdoezrs.net/click-101724885-15438560 301
