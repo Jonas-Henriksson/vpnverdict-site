@@ -10,5 +10,6 @@ export default defineConfig({
   integrations: [mdx(), sitemap()],
   output: 'static',
   site: 'https://vpnverdict.net/',
+  trailingSlash: 'always',
   vite: { ssr: { external: ['svgo'] } }
 });
