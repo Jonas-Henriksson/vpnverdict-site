@@ -43,9 +43,9 @@ For journalists, activists, researchers, and anyone who simply values financial 
 
 ## Quick Verdict
 
-**Top pick for anonymous payment: Mullvad** — Flat €5/month, generates a 16-digit account number with no email required, accepts Monero natively, RAM-only servers, and a real-world warrant validation in April 2023 where police walked away with nothing.
+**Top pick for anonymous payment: Mullvad** — €5/month flat (or ~€4.50/mo with the 10% crypto discount), generates a 16-digit account number with no email required, accepts Monero natively, RAM-only servers, and a real-world warrant validation in April 2023 where police walked away with nothing.
 
-**Runner-up: ProtonVPN** — Swiss jurisdiction, self-hosted BTCPay Server for Bitcoin, four consecutive no-logs audits. Email required is a meaningful tradeoff, but manageable with a disposable address.
+**Runner-up: ProtonVPN** — Swiss jurisdiction, accepts Bitcoin directly (BTC only — no Lightning or ERC20), four consecutive no-logs audits. Email required is a meaningful tradeoff, but manageable with a disposable address. Note: no auto-renewal with Bitcoin, so you must manually renew.
 
 **Mainstream crypto option: NordVPN** — Accepts crypto via CoinGate, strong streaming support, but the third-party payment processor is a privacy downgrade worth understanding.
 
@@ -76,11 +76,11 @@ I test each VPN on my Arch Linux workstation and Pixel 8a over a minimum of 14 d
 
 | VPN | Crypto Accepted | Email Required | Audit | Jurisdiction | Monthly (2-yr) | Privacy Score |
 |---|---|---|---|---|---|---|
-| Mullvad | XMR, BTC, cash | No | Assured Security 2025 | Sweden | €5/mo flat | 9.2/10 |
-| ProtonVPN | BTC (BTCPay) | Yes | Securitum 2025 | Switzerland | $4.99/mo | 8.6/10 |
-| NordVPN | BTC, ETH, others via CoinGate | Yes | PwC 2026 | Netherlands | $3.39/mo | 7.8/10 |
+| Mullvad | XMR, BTC, BCH, Lightning, cash | No | Assured Security 2025 | Sweden | €5/mo (~€4.50 crypto) | 9.2/10 |
+| ProtonVPN | BTC only | Yes | Securitum 2025 | Switzerland | $2.99/mo | 8.6/10 |
+| NordVPN | BTC, ETH, others via CoinGate | Yes | Deloitte 2022–2024 (3 audits) | Netherlands | $3.39/mo | 7.8/10 |
 | Surfshark | Crypto via third-party | Yes | Cure53 + Deloitte 2025/26 | Netherlands | $1.99/mo | 7.1/10 |
-| ExpressVPN | BTC | Yes | Deloitte 2026 | British Virgin Islands | $2.44/mo | 6.4/10 |
+| ExpressVPN | BTC (BitPay) | Yes | Deloitte 2026 | British Virgin Islands | $2.79/mo | 6.4/10 |
 
 ---
 
@@ -90,8 +90,8 @@ The VPN decision and the payment decision are intertwined. Not every VPN accepts
 
 The key variables I look for:
 
-1. **No email required at signup.** Mullvad is the only major provider that does this cleanly. Everyone else requires an email, which becomes a metadata trail even if you use a disposable address.
-2. **Self-hosted or direct crypto payment.** ProtonVPN's BTCPay Server is self-hosted — the payment processor is ProtonVPN itself, not a third party. NordVPN and Surfshark route through CoinGate, which is a separate company with its own data retention policies.
+1. **No email required at signup.** Mullvad and IVPN both offer fully anonymous signup with no email required. Everyone else requires an email, which becomes a metadata trail even if you use a disposable address.
+2. **Direct or self-hosted crypto payment.** ProtonVPN accepts Bitcoin directly (BTC only — no Lightning or ERC20 tokens), though the exact payment processing infrastructure is not publicly documented the way IVPN's self-hosted BTCPay Server is. NordVPN and Surfshark route through CoinGate, which is a separate company with its own data retention policies.
 3. **Audited no-logs architecture.** An audit does not guarantee anything, but it establishes a baseline. What actually validates a no-logs policy is a warrant execution — and only Mullvad has that real-world test on record.
 4. **Jurisdiction.** Sweden (Mullvad) and Switzerland (Proton) both have meaningful legal protections, though no jurisdiction is immune to international pressure. Read the full ownership breakdown in [Who Owns Your VPN? The 2026 Ownership Guide Every User Needs to Read](/who-owns-your-vpn-2026-ownership-guide).
 
@@ -159,13 +159,13 @@ Once you have your account number and Monero in Feather Wallet:
 
 Mullvad's XMR payment page is served over their own infrastructure — no third-party processor involved. This is the cleanest crypto payment flow I have tested.
 
-### ProtonVPN BTCPay Server
+### ProtonVPN Bitcoin Payment
 
-ProtonVPN runs its own BTCPay Server instance, which means the payment is processed directly by Proton with no intermediary. Select Bitcoin at checkout, and you get a payment address from BTCPay. If you have gone through the Wasabi CoinJoin process, send from your post-mix wallet. Do not send directly from an exchange.
+ProtonVPN accepts Bitcoin directly at checkout — BTC only, with no Lightning or ERC20 token support. Select Bitcoin at checkout and you get a payment address. If you have gone through the Wasabi CoinJoin process, send from your post-mix wallet. Do not send directly from an exchange. Important: there is no auto-pay with Bitcoin on ProtonVPN. Your subscription will not renew automatically — you must manually pay again before expiry or you lose access.
 
 ### NordVPN CoinGate — Flag This
 
-NordVPN routes crypto payments through CoinGate, a Lithuanian payment processor. CoinGate has its own privacy policy and data retention practices. When you pay through CoinGate, CoinGate sees your IP address, wallet address, and transaction details — separately from NordVPN. This is a meaningful privacy downgrade compared to Mullvad or ProtonVPN's BTCPay. If you are using NordVPN for the streaming features and crypto payment is a secondary priority, this is an acceptable tradeoff. If payment privacy is the primary concern, it is not.
+NordVPN routes crypto payments through CoinGate, a Lithuanian payment processor. CoinGate has its own privacy policy and data retention practices. When you pay through CoinGate, CoinGate sees your IP address, wallet address, and transaction details — separately from NordVPN. This is a meaningful privacy downgrade compared to Mullvad's direct payment or even ProtonVPN's Bitcoin checkout. If you are using NordVPN for the streaming features and crypto payment is a secondary priority, this is an acceptable tradeoff. If payment privacy is the primary concern, it is not.
 
 ---
 
@@ -190,33 +190,35 @@ For DNS, I also configure a DNS-level block at the pfSense router so that any DN
 
 **Privacy Score: 9.2/10**
 
-Mullvad charges a flat €5 per month, no discounts, no annual plans — everyone pays the same. The account number system means there is literally no identity record at signup. Swedish police executed a German warrant at the Mullvad Gothenburg office in April 2023 and left with nothing because there was nothing to retrieve. That is not a marketing claim — it is a documented law enforcement interaction that validated the no-logs architecture under adversarial conditions.
+Mullvad charges a flat €5 per month with no annual plans. There is one exception to the "no discounts" reputation: a 10% discount for cryptocurrency payments (Bitcoin, Bitcoin Cash, Monero) brings the effective cost to ~€4.50/month (~$4.95 USD). This price has not changed since Mullvad's 2009 launch. In August 2025, Mullvad added Bitcoin Lightning as a payment option, and the 10% crypto discount applies to Lightning payments as well. The account number system means there is literally no identity record at signup. Swedish police executed a German warrant at the Mullvad Gothenburg office in April 2023 and left with nothing because there was nothing to retrieve. That is not a marketing claim — it is a documented law enforcement interaction that validated the no-logs architecture under adversarial conditions.
 
 The August 2025 penetration test by Assured Security Consultants (a Swedish firm) found no high-severity issues. SEC Consult conducted an infrastructure audit for 2025–2026 with the same result. Mullvad's servers are RAM-only, meaning there is no persistent storage to image even if physical access is obtained.
 
-WireGuard is the default protocol. Mullvad covers 45 countries. Where Mullvad falls short: it does not optimize for streaming. Netflix, Disney+, and BBC iPlayer are inconsistent, sometimes working and sometimes not. If you need reliable streaming access, this is a real limitation — see [Best VPN for Netflix & Streaming 2026](/best-vpn-streaming) for alternatives. Mullvad also has no dedicated apps with the polish of NordVPN or ProtonVPN — the interface is functional but minimal.
+WireGuard is the only protocol — Mullvad fully discontinued OpenVPN on January 15, 2026, and post-quantum WireGuard has been enabled by default on all platforms since 2025. Mullvad operates ~696+ servers across 90+ countries, with a focus on owned (not rented) hardware. Where Mullvad falls short: it does not optimize for streaming. Netflix, Disney+, and BBC iPlayer are inconsistent, sometimes working and sometimes not. If you need reliable streaming access, this is a real limitation — see [Best VPN for Netflix & Streaming 2026](/best-vpn-streaming) for alternatives. Mullvad also has no dedicated apps with the polish of NordVPN or ProtonVPN — the interface is functional but minimal.
 
-**Pricing:** €5/month flat. No annual plan.
+**Pricing:** €5/month flat (~€4.50/mo with 10% crypto discount). No annual plan. Price unchanged since 2009.
 
 **Pros:**
 - No email required at any point in the signup flow
-- Accepts Monero (XMR) with no third-party processor
+- Accepts Monero (XMR), Bitcoin, Bitcoin Cash, and Bitcoin Lightning with no third-party processor
+- 10% discount on all crypto payments — effective rate ~€4.50/mo (~$4.95 USD)
 - RAM-only servers validated by real warrant execution in April 2023
-- Flat pricing means no renewal shock
+- Post-quantum WireGuard enabled by default since 2025
+- Flat pricing means no renewal shock — price unchanged since 2009
 - Two independent audits in 2025–2026 with no high-severity findings
 - Cash by mail accepted for total payment anonymity
 
 **Cons:**
 - Streaming support is unreliable and not a stated goal
 - No account recovery mechanism — lose the number, lose the account
-- 45-country coverage is smaller than competitors
+- OpenVPN discontinued January 2026 — WireGuard-only may be a blocker for legacy setups
 - No free tier or trial period
 
 [Get Mullvad](https://mullvad.net)
 
 ---
 
-## ProtonVPN — Swiss Privacy With Self-Hosted Bitcoin
+## ProtonVPN — Swiss Privacy With Direct Bitcoin Payment
 
 **Best for: Privacy-focused users who also need streaming and are comfortable with Bitcoin CoinJoin**
 
@@ -224,23 +226,25 @@ WireGuard is the default protocol. Mullvad covers 45 countries. Where Mullvad fa
 
 ProtonVPN is operated by Proton AG, a Swiss non-profit that also runs ProtonMail. The Swiss legal framework provides meaningful protections, though Switzerland is not outside the reach of international legal cooperation. Securitum (a Warsaw-based security firm) conducted ProtonVPN's fourth consecutive annual no-logs audit in August 2025. The full report is publicly published — not just a summary — which is a higher transparency standard than most providers.
 
-ProtonVPN's native WireGuard implementation recorded 1,521 Mbps in October 2025 independent testing, which is the fastest measured speed for any consumer VPN on record. Bitcoin payments go through ProtonVPN's self-hosted BTCPay Server — no third-party processor. This is the correct implementation.
+ProtonVPN's native WireGuard implementation recorded 1,521 Mbps in October 2025 independent testing, which is the fastest measured speed for any consumer VPN on record. They also operate dedicated 10 Gbps streaming servers on the Plus plan. Bitcoin payments are accepted directly — BTC only, with no Lightning or ERC20 token support. One important caveat: there is no auto-renewal with Bitcoin, so you must manually renew before your subscription expires or lose access.
 
 Streaming is strong on the Plus tier: Netflix US and Disney+ were reliable in my Q1 2026 testing. BBC iPlayer was inconsistent — it worked about 60% of the time without manually switching servers. For a fuller comparison with Mullvad, see [ProtonVPN vs Mullvad 2026: Privacy VPN Comparison](/protonvpn-vs-mullvad-2026-privacy-vpn-comparison).
 
-**Pricing:** $4.99/mo on 2-year plan; $9.99/mo base monthly. Free tier available (limited servers, no streaming).
+**Pricing:** $2.99/mo on 2-year plan; $3.99/mo on 1-year plan; $9.99/mo monthly. Free tier available (limited servers, no streaming).
 
 **Pros:**
-- Self-hosted BTCPay Server — no third-party crypto processor
-- Four consecutive annual audits, full report published
+- Bitcoin accepted directly — no third-party crypto processor like CoinGate
+- Four consecutive annual audits (Securitum), full report published
 - 1,521 Mbps peak WireGuard throughput (October 2025 independent testing)
+- 10 Gbps dedicated streaming servers on Plus plan
 - Swiss jurisdiction with strong legal privacy framework
-- Netflix US and Disney+ reliable on Plus tier
+- Unblocks 10+ Netflix regional libraries on Plus tier
 - Free tier is genuinely usable for basic privacy needs
 
 **Cons:**
 - Email required at signup
-- Does not accept Monero — meaningful gap vs Mullvad
+- BTC only — no Monero, no Lightning, no ERC20 (meaningful gap vs Mullvad)
+- No auto-renewal with Bitcoin — manual renewal required or you lose access
 - BBC iPlayer inconsistent without manual server switching
 - Plus tier pricing adds up at monthly rate
 
@@ -254,7 +258,7 @@ Streaming is strong on the Plus tier: Netflix US and Disney+ were reliable in my
 
 **Privacy Score: 7.8/10**
 
-NordVPN is owned by Cyberspace BV, the entity formed when Nord Security and Surfshark merged in 2022. Both brands continue operating on separate infrastructure. The Netherlands jurisdiction means EU legal exposure — relevant if that is part of your threat model. PwC's 2026 audit confirmed no-logs compliance.
+NordVPN is owned by Cyberspace BV, the entity formed when Nord Security and Surfshark merged in 2022. Both brands continue operating on separate infrastructure. The Netherlands jurisdiction means EU legal exposure — relevant if that is part of your threat model. NordVPN has completed three independent no-logs audits (2022, 2023, and 2024) — the most recent by Deloitte. No 2025 or 2026 audit has been published as of this writing.
 
 NordLynx (NordVPN's WireGuard wrapper with double-NAT) benchmarks at 900–1,200 Mbps on nearby servers and maintains 900+ Mbps cross-Atlantic, which is strong for international use cases. Streaming support is the broadest I have tested: Netflix US, UK, JP, and AU; Disney+; BBC iPlayer; Max; Hulu; and Prime Video all worked consistently in Q1 2026 testing.
 
@@ -262,13 +266,15 @@ The crypto payment situation needs a flag. NordVPN routes through CoinGate, a th
 
 The pricing structure has a well-documented renewal trap: the 2-year promo at $3.39/mo renews at approximately $139/year (~$11.58/mo) for Basic. Read [Best VPN Deals & Coupons 2026](/best-vpn-deals-coupons-2026) before committing to a multi-year plan.
 
-**Pricing:** Basic $3.39/mo, Plus $3.89/mo, Complete $5.39/mo, Prime $7.39/mo on 2-year promo. Monthly: $12.99. Renews ~$139/yr Basic.
+**Pricing:** Basic $3.09–$3.39/mo on 2-year promo. 1-year: ~$4.59/mo. Monthly: up to $25.29/mo. Renews ~$139/yr (~$11.59/mo) Basic. Auto-renewal on by default.
 
 **Pros:**
 - Broadest streaming coverage tested (Netflix multi-region, Max, Hulu, Prime Video Q1 2026)
+- 7,150–9,300+ servers in 118–137 countries (largest network in this comparison)
 - 900–1,200 Mbps NordLynx throughput on nearby servers
-- PwC 2026 no-logs audit
-- 50+ cryptocurrencies accepted via CoinGate
+- Three independent no-logs audits (2022, 2023, 2024)
+- Bitcoin, Ethereum, Litecoin, Stablecoin, Dogecoin accepted via CoinGate
+- No auto-renewal with crypto — subscription ends cleanly without surprise charges
 - 10 simultaneous connections
 
 **Cons:**
@@ -322,9 +328,9 @@ ExpressVPN is owned by Kape Technologies / Unikmind Group, which became fully pr
 
 The RDP leak incident from April through June 2025 is the more immediate concern. Debug code left in production versions 12.97 through 12.101.0.2-beta caused RDP port 3389 traffic to bypass the VPN tunnel, exposing users' real IP addresses. The issue was discovered via bug bounty and patched on June 18, 2025 — a nearly two-month window. Deloitte's 2026 audit found "several low-to-medium hardening issues" patched within a week. The audit being clean at time of publication does not undo two months of RDP exposure.
 
-Lightway protocol benchmarks at approximately 898 Mbps. Netflix and Disney+ are consistent; BBC iPlayer is functional but with less server redundancy than NordVPN. Bitcoin is accepted. Email is required.
+Lightway protocol benchmarks at approximately 898 Mbps. Netflix and Disney+ are consistent; BBC iPlayer is functional but with less server redundancy than NordVPN. Bitcoin is accepted via BitPay — which means broad wallet compatibility but no Monero support, and no auto-renewal with BitPay (subscription ends without charge at term). Email is required.
 
-**Pricing:** Monthly Basic $12.99; 2-yr promo $2.44/mo.
+**Pricing:** 2-year plan: $2.79/mo (28 months total, 4 bonus months included). 12-month: $3.49/mo (15 months with 3 bonus). Monthly: up to $19.99/mo.
 
 **Pros:**
 - Lightway protocol ~898 Mbps with built-in obfuscation mode
@@ -333,9 +339,11 @@ Lightway protocol benchmarks at approximately 898 Mbps. Netflix and Disney+ are 
 - Deloitte 2026 audit
 
 **Cons:**
-- Kape Technologies / Crossrider adware ownership history
+- Kape Technologies / Crossrider adware ownership history (same parent as Private Internet Access — consolidated ownership)
 - RDP IP leak persisted for two months in production builds (April–June 2025)
 - Fully private ownership since early 2026 — no public accountability filings
+- Does not accept Monero — Bitcoin via BitPay only
+- Not recommended by Privacy Guides
 - British Virgin Islands is a UK Overseas Territory — UK IPA 2016 amendments create legal pressure
 - Deloitte found multiple hardening issues in 2026 audit
 
@@ -385,7 +393,7 @@ After full setup — crypto acquired, account created, payment made, VPN connect
 
 **Journalist or activist:** Mullvad. No email, Monero accepted, RAM-only servers, warrant-validated no-logs. The streaming limitations are irrelevant for this use case.
 
-**Privacy-focused user who also needs streaming:** ProtonVPN Plus. Swiss jurisdiction, self-hosted BTCPay, Netflix and Disney+ reliable. Use a disposable email at signup. See [Most Private VPNs 2026: 12 No-Logs Policies Audited](/best-vpn-privacy-2026) for broader context.
+**Privacy-focused user who also needs streaming:** ProtonVPN Plus. Swiss jurisdiction, direct Bitcoin payment, 10+ Netflix libraries on Plus tier. Use a disposable email at signup and set a calendar reminder to manually renew (no auto-pay with BTC). See [Most Private VPNs 2026: 12 No-Logs Policies Audited](/best-vpn-privacy-2026) for broader context.
 
 **Mainstream user who wants crypto payment:** NordVPN. Acknowledge the CoinGate privacy tradeoff, use Wasabi CoinJoin on your Bitcoin before paying, use a disposable email. Streaming coverage is unmatched.
 
@@ -399,11 +407,11 @@ After full setup — crypto acquired, account created, payment made, VPN connect
 
 | VPN | 2-yr Promo | Monthly Rate | Renewal Rate | Money-Back | Crypto |
 |---|---|---|---|---|---|
-| Mullvad | €5/mo flat | €5/mo flat | €5/mo (no shock) | Not offered | XMR, BTC, cash |
-| ProtonVPN | $4.99/mo | $9.99/mo | Varies by tier | 30 days | BTC (BTCPay) |
-| NordVPN Basic | $3.39/mo | $12.99/mo | ~$139/yr (~$11.58/mo) | 30 days | BTC, ETH (CoinGate) |
+| Mullvad | €5/mo (~€4.50 crypto) | €5/mo flat | €5/mo (no shock) | Not offered | XMR, BTC, BCH, Lightning, cash |
+| ProtonVPN | $2.99/mo | $9.99/mo | Varies by tier | 30 days | BTC only (no auto-renew) |
+| NordVPN Basic | $3.09–$3.39/mo | up to $25.29/mo | ~$139/yr (~$11.59/mo) | 30 days | BTC, ETH, LTC, DOGE (CoinGate) |
 | Surfshark | $1.99/mo | $15.45/mo | ~$99/yr (~$8.25/mo) | 30 days | Crypto (third-party) |
-| ExpressVPN | $2.44/mo | $12.99/mo | Not publicly stated | 30 days | BTC |
+| ExpressVPN | $2.79/mo | up to $19.99/mo | Not publicly stated | 30 days | BTC (BitPay, no auto-renew) |
 
 Mullvad's flat pricing is the only honest pricing model in this group. Every other provider uses promotional pricing followed by a meaningful renewal increase. If you value price predictability alongside payment anonymity, Mullvad is structurally different from the rest.
 
@@ -425,9 +433,9 @@ VPN plus crypto payment does not protect against:
 
 ## Final Verdict
 
-Mullvad wins this comparison without much contest when the criterion is anonymous payment. The combination of no-email account creation, native Monero acceptance, RAM-only servers, and a real-world warrant execution that validated the no-logs architecture is not matched by any competitor. The flat €5/month pricing is also the most honest pricing structure in the industry.
+Mullvad wins this comparison without much contest when the criterion is anonymous payment. The combination of no-email account creation, native Monero acceptance, Bitcoin Lightning support, post-quantum WireGuard, RAM-only servers, and a real-world warrant execution that validated the no-logs architecture is not matched by any competitor. The ~€4.50/month effective price with the crypto discount — unchanged since 2009 — is also the most honest pricing structure in the industry.
 
-ProtonVPN is the right runner-up for anyone who needs streaming access or who is already in the Proton ecosystem. The self-hosted BTCPay Server and four consecutive public audits keep it in strong privacy territory despite the email requirement.
+ProtonVPN is the right runner-up for anyone who needs streaming access or who is already in the Proton ecosystem. Direct Bitcoin acceptance and four consecutive public audits keep it in strong privacy territory despite the email requirement and the lack of Monero support.
 
 NordVPN is functional for mainstream users who want crypto payment and broad streaming support, but the CoinGate processor and renewal pricing structure are both things you need to understand before committing.
 
