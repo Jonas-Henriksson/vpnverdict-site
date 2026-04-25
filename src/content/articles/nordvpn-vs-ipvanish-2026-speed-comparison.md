@@ -60,7 +60,7 @@ Promotional pricing in this industry is a dark pattern worth understanding befor
 | 1-year renewal rate | ~$139/yr (~$11.58/mo) | ~$155.88/yr (~$12.99/mo) |
 | Money-back guarantee | 30 days | 30 days |
 | Free trial | No | 7 days (iOS/Android) |
-| Crypto payment | Yes | Yes |
+| Crypto payment | Yes | No |
 
 The renewal trap is worse for IPVanish on paper — your $2.19/mo promo rate can jump to roughly $12.99/mo at renewal, a **493% increase**. NordVPN's jump from $3.09/mo to ~$11.58/mo is still a **275% increase**. Both are aggressive; IPVanish's is steeper. Set a calendar reminder to renegotiate or cancel before year two.
 
