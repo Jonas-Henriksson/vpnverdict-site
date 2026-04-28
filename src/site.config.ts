@@ -34,6 +34,7 @@ export const siteConfig = {
       'iolo-system-mechanic': { name: 'Iolo System Mechanic', affiliateUrl: 'https://vpnverdict.net/go/iolo-system-mechanic', program: 'CJ', commission: 'USD 10.00' },
       'kaspersky-lab-denmark-aps-nordics': { name: 'Kaspersky Lab Denmark ApS (Nordics)', affiliateUrl: 'https://vpnverdict.net/go/kaspersky-lab-denmark-aps-nordics', program: 'CJ', commission: '30.00%' },
       'roboform-password-manager-affiliate-program': { name: 'RoboForm Password Manager Affiliate Program', affiliateUrl: 'https://vpnverdict.net/go/roboform-password-manager-affiliate-program', program: 'CJ', commission: 'USD 25.00' },
+      malwarebytes: { name: 'Malwarebytes', affiliateUrl: 'https://vpnverdict.net/go/malwarebytes', program: 'CJ', commission: '30.00%' },
   },
   impactVerification: '0702cea6-0336-4910-b67c-a7671741e912',
   keywords: 'VPN reviews, VPN comparison, best VPN, VPN service, privacy VPN, fast VPN, VPN for streaming',
