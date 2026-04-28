@@ -26,7 +26,7 @@ I've spent the past several weeks running both managers through my standard eval
 |---|---|---|
 | Best security track record | **NordPass** | Clean breach history, Cure53 2024 audit passed, metadata encrypted |
 | Best price | **NordPass** | $1.49/mo (2-yr plan) vs LastPass minimum $3/mo |
-| Best free tier | **NordPass** | Unlimited passwords, all devices; LastPass restricts to one device type |
+| Best free tier | **Tie** | NordPass: unlimited passwords, 1 device, 3 GB storage; LastPass: unlimited passwords, 1 device type (all-mobile or all-desktop), 50 MB storage |
 | Best for business | **NordPass** | $3.59/user/mo vs LastPass Business $7/user/mo |
 | Best passkey support | **Tie** | Both launched full passkey support in 2025 |
 | Most trust concerns | **LastPass** | 7 vulnerabilities from ETH Zurich Feb 2026; $24.5M breach settlement ongoing |
@@ -53,7 +53,7 @@ This is where NordPass wins most decisively before we even get to security.
 
 | Plan | NordPass | LastPass |
 |---|---|---|
-| Free | Unlimited passwords, all devices | Unlimited passwords, 1 device type only |
+| Free | Unlimited passwords, 1 device; 3 GB encrypted storage | Unlimited passwords, 1 device type only (all-mobile or all-desktop); 50 MB storage |
 | Premium (monthly) | $2.99/mo | $3/mo |
 | Premium (1-year) | $1.99/mo ($23.88/yr) | $3/mo ($36/yr) |
 | Premium (2-year) | **$1.49/mo** ($35.76 total) | Not available |
@@ -68,7 +68,7 @@ The NordPass 2-year plan at $1.49/mo is among the most competitive price points 
 
 For families, NordPass at $2.79/mo for six users works out to under $0.47 per person per month. LastPass Families at $4/mo for six licenses is more expensive but not dramatically so — the real differentiator there is which vendor you trust with your family's credentials.
 
-**Business pricing is where the gap becomes financially significant.** NordPass Business at $3.59/user/mo versus LastPass Business at $7/user/mo means a 50-person team pays $2,154/yr more for LastPass. LastPass Business Max ($6.30/user/mo) adds workstation MFA and shadow IT detection, but the per-seat cost still runs nearly double NordPass's equivalent tier.
+**Business pricing is where the gap becomes financially significant.** NordPass Business at $3.59/user/mo versus LastPass Business at $7/user/mo means a 50-person team pays $2,046/yr more for LastPass ($3.41 per-user monthly difference × 50 seats × 12 months). LastPass Business Max ($6.30/user/mo) adds workstation MFA and shadow IT detection, but the per-seat cost still runs nearly double NordPass's equivalent tier.
 
 For a broader look at budget-friendly options in this category, see our [Best Cheap Password Managers 2026: Under $3/Month, Tested and Ranked](/best-cheap-password-managers-2026-under-3-per-month).
 
@@ -78,11 +78,11 @@ For a broader look at budget-friendly options in this category, see our [Best Ch
 
 | Feature | NordPass | LastPass |
 |---|---|---|
-| Encryption algorithm | XChaCha20 | AES-256-GCM + PBKDF2 SHA-256 |
+| Encryption algorithm | XChaCha20 | AES-256 with PBKDF2 SHA-256 |
 | Zero-knowledge architecture | Yes — Cure53 verified 2024 | Claimed — ETH Zurich found potential bypass (Feb 2026) |
 | Metadata encryption (URLs, item names) | **Yes** | **No** — stored unencrypted |
 | Passkey storage and autofill | All plans | All plans (launched Aug 2025) |
-| Multi-device sync | Unlimited — all plans | Free tier: 1 device type only |
+| Multi-device sync | Free: 1 device; Paid: unlimited devices | Free: 1 device type only (mobile or desktop); Paid: unlimited |
 | Encrypted file storage | 3 GB (free plan) | 50 MB (free), 1 GB (paid) |
 | Dark web monitoring | Paid plans | Premium and above |
 | Email masking | Yes | No |
@@ -140,7 +140,7 @@ One scenario I run on all security tools: what happens when you open a laptop on
 
 **3. Pricing that doesn't bury the value.** NordPass's promotional pricing is aggressive, and like most VPN-adjacent products, renewal rates will be higher than introductory rates. But even at $1.99/mo (1-year plan), NordPass Premium undercuts LastPass Premium at $3/mo. The 2-year plan at $1.49/mo is genuinely the best price for a fully audited, no-breach password manager in this category.
 
-**4. The free tier is actually usable in 2026.** Unlimited passwords, unlimited devices, 3 GB encrypted file storage. NordPass free is the most functional free tier from any major paid-first password manager. Compare this to LastPass free's single-device-type restriction, which functions as a hard trial ceiling rather than a genuine free product.
+**4. The free plan offers genuine utility, within a single device.** Unlimited passwords, 3 GB encrypted file storage, and full passkey support — all on the free plan. The constraint is a 1-device limit: NordPass free works on one registered device at a time, which rules it out for multi-device users without upgrading. LastPass free is more flexible on device access (all your phones or all your computers), but caps storage at 50 MB and excludes passkeys. For a user with one primary device, NordPass free wins on features; for a multi-device household, neither free tier cuts it.
 
 **5. NordProtect adds post-breach response tooling.** Launched December 2025, NordProtect bundles TransUnion credit monitoring, credit lock, and loan monitoring. For users who store financial account credentials in their password manager — which is most people — having breach response capability in the same product is genuinely useful, not just a marketing bundle.
 
@@ -152,9 +152,9 @@ One scenario I run on all security tools: what happens when you open a laptop on
 
 **1. Enterprise feature depth that NordPass doesn't match.** LastPass Business Max, launched in 2025, includes workstation MFA — securing Windows and Mac login with LastPass MFA rather than just web authentication. For IT administrators managing endpoint access alongside SaaS credentials, this is a meaningful consolidation. NordPass has no equivalent.
 
-**2. SaaS Protect shadow IT detection.** Debuted at Black Hat 2025, SaaS Protect gives administrators visibility into unauthorized SaaS usage across the organization — a genuine pain point for security and compliance teams. This feature has no NordPass equivalent, and for enterprises running SOC 2 Type II programs, shadow IT visibility is a real requirement, not a nice-to-have.
+**2. SaaS Protect shadow IT detection.** SaaS Protect gives administrators visibility into unauthorized SaaS usage across the organization — a genuine pain point for security and compliance teams that NordPass has no equivalent for. For enterprises running SOC 2 Type II programs, shadow IT visibility is an auditable requirement, not a nice-to-have. If your IT team is already in LastPass Business Max, this alone can justify the per-seat premium versus migrating and rebuilding the detection workflow elsewhere.
 
-**3. Passkey implementation breadth.** LastPass's passkey support, launched August 2025, covers Chrome, Firefox, Safari, and Edge across Windows, macOS, iOS, and Android. The coverage is comprehensive and the cross-platform sync works as advertised. NordPass also supports passkeys, but LastPass's passkey autofill was slightly more consistent across browser-and-OS combinations in my testing.
+**3. Passkey implementation maturity.** LastPass's passkey support, launched August 2025, covers Chrome, Firefox, Safari, and Edge across Windows, macOS, iOS, and Android. NordPass's passkey support spans the same browsers and platforms, and both work as advertised for standard FIDO2/WebAuthn credential creation and autofill. The implementations are functionally equivalent for most users — the differentiation is elsewhere.
 
 **4. Established enterprise ecosystem integrations.** Years of SIEM integrations, SSO connectors (Okta, Azure AD, OneLogin), and SCIM provisioning configurations are baked into IT teams' workflows. Migration from LastPass in an enterprise context isn't purely a product decision — it's a weeks-long integration project. For large organizations, this switching cost is real even if the security argument favors moving.
 
@@ -204,7 +204,7 @@ At $2.79/mo (2-year) for six users, NordPass Family undercuts LastPass Families 
 
 ### Small business (under 50 seats): NordPass
 
-$3.59/user/mo versus $7/user/mo. For 25 people, that's $1,077/yr difference. Unless you specifically need workstation MFA or shadow IT detection — features most small businesses don't require — NordPass Business provides comparable core functionality at roughly half the price.
+$3.59/user/mo versus $7/user/mo. For 25 people, that's $1,023/yr difference ($3.41/user/mo × 25 seats × 12 months). Unless you specifically need workstation MFA or shadow IT detection — features most small businesses don't require — NordPass Business provides comparable core functionality at roughly half the price.
 
 ### Enterprise with deep LastPass integration: Evaluate carefully
 
@@ -224,7 +224,7 @@ Password management is one layer of your security stack — VPN protection is an
 
 ### Is NordPass actually secure, or does it just benefit from LastPass's bad reputation?
 
-NordPass's security case stands independently. The Cure53 2024 audit found no critical vulnerabilities. XChaCha20 encryption is cryptographically sound — not a marketing choice but a genuinely strong algorithm. Zero-knowledge architecture means NordPass cannot access your decryption key. The August 2025 DEF CON 33 clickjacking disclosure was handled responsibly: the researcher notified NordPass four months before the conference, NordPass patched it before public disclosure. That's how responsible disclosure is supposed to work. The clean breach record is meaningful, but the audit credibility and architecture transparency are what make NordPass trustworthy on their own merits.
+NordPass's security case stands independently. The Cure53 2024 audit found no critical vulnerabilities. XChaCha20 encryption is cryptographically sound — not a marketing choice but a genuinely strong algorithm. Zero-knowledge architecture means NordPass cannot access your decryption key. NordPass's public vulnerability disclosure record is clean: known issues have been handled through coordinated disclosure, with vendors notified in advance and patches deployed before public presentation. The clean breach record matters, but the audit credibility and architecture transparency are what make NordPass trustworthy on their own merits — not simply the absence of incidents.
 
 ### Should I leave LastPass after the 2022 breach?
 
@@ -240,7 +240,7 @@ Yes. NordPass accepts CSV imports, and LastPass lets you export your vault as a 
 
 ### Does LastPass free still sync across all devices in 2026?
 
-No. LastPass free restricts you to one device type — either mobile (phones and tablets) or desktop (computers and browser extensions). You cannot use both without upgrading to Premium. This restriction has been in place since 2021 and was not removed as of April 2026. Verify current policy at lastpass.com/pricing before relying on it — the restriction has changed historically. In contrast, NordPass free syncs unlimited passwords across unlimited devices on all platforms.
+No. LastPass free restricts you to one device type — either mobile (phones and tablets) or desktop (computers and browser extensions). You cannot use both without upgrading to Premium. This restriction has been in place since 2021 and was not removed as of April 2026. Verify current policy at lastpass.com/pricing before relying on it — the restriction has changed historically. NordPass free stores unlimited passwords with a 1-device limit — no device-type restriction, but only one registered device at a time without upgrading to Premium.
 
 ### What did ETH Zurich actually find in the February 2026 LastPass research?
 
